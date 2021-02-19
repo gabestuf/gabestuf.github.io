@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+}
+
+.hero-bg {
+    font-family: 'Montserrat', sans-serif;
+    background: url('../images/skyrim.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: left;
+}
+
+.header {
+    width: 100%;
+    background-color: rgba(37, 37, 37, .5);
+    display: flex;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.randomButton {
+    border: 3px solid white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 100px;
+    color: blue;
+}
+
+.randomButton:hover {
+    background-color: red;
+    border: 10px solid green;
+    color: gold;
+}
+
+.aboutNoBody {
+    background-color: black;
+    color: white;
+    font-family: 'Truculenta';
+    font-weight: bold;
+    font-size: 20ch;
+}
+
+.home {
+    font-family: 'Truculenta';
+    text-transform: capitalize;
+    color: #44DFFF;
+    font-size: 5ch;
+    font-weight: 600;
+    margin: auto 10%;
+}
+
+.header ul {
+    text-align: center;
+    margin: 0% 15% 0% 15%;
+}
+
+.header ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.header ul li a {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2ch;
+    font-weight: 500;
+    padding: 1.5rem 1rem;
+    transition: all ease .1s;
+}
+
+.header ul li a:hover {
+    background-color: #131c4636;
+}
+
+.title-text {
+    height: 50%;
+    width: 100%;
+    text-align: left;
+    color: #02345a;
+    font-family: Truculenta;
+    .title {
+        margin-left: 27%;
+        margin-top: 7.5%;
+        margin-bottom: -1%;
+        font-size: 11ch;
+        font-weight: 700;
+    }
+    .line {
+        height: .45vh;
+        width: 35%;
+        background-color: #02345a;
+        margin-left: 25%;
+    }
+    .description {
+        font-family: 'Truculenta';
+        margin-left: 33%;
+        margin-top: .2vh;
+        font-size: 5ch;
+        font-weight: 500;
+    }
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+}
+
+.bottomSection {
+    position: absolute;
+    text-align: center;
+}
+
+.testButton {
+    margin-top: 200px;
+}

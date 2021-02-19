@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@400;800&display=swap');
+body {
+    box-sizing: border-box;
+    font-family: Truculenta;
+    font-size: 110%;
+    font-weight: bold;
+    margin: 0;
+    background: url('../images/sample.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: left;
+}
+
+.hero-bg {
+    color: rgb(0, 0, 0);
+    display: flex;
+    margin-left: 2rem;
+}
+
+.label1 {
+    padding-right: .25vw;
+}
+
+button {
+    border-radius: 3ch;
+    border: rgb(0, 0, 0)
+}
