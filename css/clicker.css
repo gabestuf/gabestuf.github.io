@@ -5,23 +5,40 @@ body {
     font-size: 110%;
     font-weight: bold;
     margin: 0;
-    background: url('../images/sample.jpg');
+    background: url('../images/Maze/Maze1.jpg');
     background-size: cover;
     height: 100vh;
     background-position: left;
 }
 
 .hero-bg {
-    color: rgb(0, 0, 0);
-    display: flex;
+    color: rgb(255, 255, 255);
     margin-left: 2rem;
+}
+
+.header {
+    display: flex;
+    padding-left: 5%;
 }
 
 .label1 {
     padding-right: .25vw;
 }
 
+.btn-panel {
+    display: flex;
+    padding: 5px;
+}
+
 button {
     border-radius: 3ch;
-    border: rgb(0, 0, 0)
+    margin: 0 25px;
+    border: rgb(0, 0, 0);
+    width: 5vw;
+    height: 3vh;
+    background-color: blanchedalmond;
+}
+
+button:hover {
+    background-color: rgb(255, 215, 154);
 }
