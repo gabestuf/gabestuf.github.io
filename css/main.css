@@ -1,128 +1,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
-    margin: 0;
+  margin: 0;
 }
 
-.hero-bg {
-    font-family: "Montserrat", sans-serif;
-    background: url("/images/space/space2.png") no-repeat;
-    background-size: cover;
-    height: 100vh;
-    background-position: left;
-}
-
-.header {
-    width: 100%;
-    background-color: rgba(37, 37, 37, 0.5);
-    display: flex;
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {
-    display: block;
-    text-decoration: none;
+  display: block;
+  text-decoration: none;
 }
 
-.randomButton {
-    border: 3px solid white;
-    border-radius: 50%;
-    text-align: center;
-    padding: 100px;
-    color: blue;
+.hero-bg {
+  font-family: "Montserrat", sans-serif;
+  background: url("/images/space/space2.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.randomButton:hover {
-    background-color: red;
-    border: 10px solid green;
-    color: gold;
+.header {
+  width: 100%;
+  background-color: rgba(37, 37, 37, 0.5);
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-
-.aboutNoBody {
-    background-color: black;
-    color: white;
-    font-family: "Truculenta";
-    font-weight: bold;
-    font-size: 20ch;
+.header .name {
+  font-family: "Truculenta";
+  text-transform: capitalize;
+  color: #44DFFF;
+  font-size: 5ch;
+  font-weight: 600;
+  flex-grow: 1;
+  text-align: center;
+  margin: auto 0;
+  background-color: rgba(0, 0, 0, 0.75);
 }
-
-.home {
-    font-family: "Truculenta";
-    text-transform: capitalize;
-    color: #44DFFF;
-    font-size: 5ch;
-    font-weight: 600;
-    margin: auto 10%;
+.header .menu {
+  display: flex;
 }
-
-.header ul {
-    text-align: center;
-    margin: 0% 15% 0% 15%;
+.header .menu a {
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+  padding: 0.75vh 0 0.5vh 0;
+  font-size: 1.75ch;
+  text-transform: uppercase;
 }
-
-.header ul li {
-    list-style: none;
-    display: inline-block;
+.header .menu a:hover {
+  background-color: #131c4636;
 }
-
-.header ul li a {
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 2ch;
-    font-weight: 500;
-    padding: 1.5rem 1rem;
-    transition: all ease 0.1s;
-}
-
-.header ul li a:hover {
-    background-color: #131c4636;
+.header .div-line {
+  background-color: white;
+  width: 100%;
+  height: 0.25vh;
 }
 
 .title-text {
-    height: 50%;
-    width: 100%;
-    text-align: left;
-    color: #02345a;
-    font-family: Truculenta;
+  color: white;
+  margin-top: 10vh;
+  margin-left: 1vw;
+  width: 50vw;
 }
-
-.title-text .title {
-    margin-left: 27%;
-    margin-top: 7.5%;
-    margin-bottom: -1%;
-    font-size: 11ch;
-    font-weight: 700;
+.title-text .slogan-desc {
+  text-align: left;
+  margin-left: 5vw;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1vh;
 }
-
-.title-text .line {
-    height: 0.45vh;
-    width: 35%;
-    background-color: #02345a;
-    margin-left: 25%;
+.title-text .slogan-desc span {
+  margin-left: -2vw;
 }
-
-.title-text .description {
-    font-family: "Truculenta";
-    margin-left: 33%;
-    margin-top: 0.2vh;
-    font-size: 5ch;
-    font-weight: 500;
+.title-text .div-line {
+  background-color: white;
+  margin-left: 4.2vw;
+  margin-bottom: 1.5vh;
+  width: 69%;
+  height: 0.25vh;
+  font-size: large;
+  font-weight: bold;
+}
+.title-text .slogan {
+  text-transform: uppercase;
+  margin-left: 2.4vw;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 85%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.title-text .slogan .undashed-out {
+  display: none;
+}
+.title-text .slogan .dashed-out {
+  display: flex;
 }
 
 .bottom {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    color: white;
+  position: absolute;
+  bottom: 0;
+  height: 15vh;
+  width: 100vw;
+  text-align: right;
+  color: white;
+}
+.bottom img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bottom p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-.bottomSection {
-    position: absolute;
-    text-align: center;
+@media screen and (max-width: 972px) {
+  .menu a {
+    color: red;
+  }
 }
-
 .testButton {
-    margin-top: 200px;
-}
-
-
-/*# sourceMappingURL=main.css.map */
+  margin-top: 200px;
+}/*# sourceMappingURL=main.css.map */

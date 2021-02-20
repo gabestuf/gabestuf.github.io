@@ -46,7 +46,8 @@ var randWordsArr = [
     'A man who keeps his feet firmly on the ground has trouble putting on his pants',
     'A man who eats crackers in bed wakes up feeling crummy',
     'One difference between Turtles and Tortoises are that they are not the same',
-    'If you are not sure the difference between there their and they\'re, you probably have never tried to eat a palm tree'
+    'If you are not sure the difference between there their and they\'re, you probably have never tried to eat a palm tree',
+    'Honey does not spoil'
 
 
 

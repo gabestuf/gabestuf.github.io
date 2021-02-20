@@ -1,0 +1,62 @@
+body {
+    background: url('/images/space/longspace.png');
+    color: white;
+    font-family: 'Truculenta';
+    font-weight: bold;
+    font-size: 20ch;
+}
+
+.randomButton {
+    border: 3px solid white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 100px;
+    color: blue;
+}
+
+.randomButton:hover {
+    background-color: red;
+    border: 10px solid green;
+    color: gold;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+}
+
+.one {
+    background: white;
+}
+
+.two {
+    background: green;
+}
+
+.three {
+    background: blue;
+}
+
+.four {
+    background: red;
+}
+
+.five {
+    background: yellow;
+}
+
+.six {
+    background: brown;
+}
+
+.outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg);
+}
