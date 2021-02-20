@@ -48,14 +48,9 @@ var randWordsArr = [
     'One difference between Turtles and Tortoises are that they are not the same',
     'If you are not sure the difference between there their and they\'re, you probably have never tried to eat a palm tree',
     'Honey does not spoil'
-
-
-
-
-
-
-
 ]
+
+
 var randInt = 0;
 var randomWord = ''
 
