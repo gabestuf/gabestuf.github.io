@@ -1,15 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@400;800&display=swap');
 body {
-    background: url('/images/space/longspace.png');
     color: white;
-    font-family: 'Truculenta';
     font-weight: bold;
     font-size: 20ch;
 }
 
-.slider {
-    width: 500vw;
+.slide {
+    width: 100vw;
     height: 100vh;
-    background: url('/images/space/longspace.png')
 }
 
 .wrapper {
@@ -18,6 +16,32 @@ body {
     width: 500vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
+    background: url('/images/space/longspace.png');
+}
+
+.one {
+    background: rgba(0, 0, 0, 0);
+}
+
+.one p {
+    color: green;
+    font-family: Truculenta;
+}
+
+.two {
+    background: rgba(0, 0, 0, 0);
+}
+
+.three {
+    background: rgba(0, 0, 0, 0);
+}
+
+.four {
+    background: rgba(0, 0, 0, 0);
+}
+
+.five {
+    background: rgba(0, 0, 0, 0);
 }
 
 .outer-wrapper {
@@ -36,6 +60,12 @@ body {
     display: none;
 }
 
+.title {
+    position: relative;
+    width: 55vw;
+    height: 40vh;
+}
+
 .randomButton {
     border: 3px solid white;
     border-radius: 50%;
@@ -46,17 +76,18 @@ body {
 
 a {
     text-decoration: none;
-    margin-left: 200vw;
-}
-
-p {
-    padding-left: 320vh;
 }
 
 .randomButton:hover {
-    background-color: red;
     border: 10px solid green;
-    color: gold;
+    background-color: red;
+    color: yellow;
+}
+
+.title h3 {
+    font-size: 10rem;
+    margin-top: 17vh;
+    margin-left: -39vw;
 }
 
 .bottom {

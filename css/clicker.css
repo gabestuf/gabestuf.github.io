@@ -42,3 +42,8 @@ button {
 button:hover {
     background-color: rgb(255, 215, 154);
 }
+
+p {
+    color: white;
+    margin-top: 10vh;
+}
