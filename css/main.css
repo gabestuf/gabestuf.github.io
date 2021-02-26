@@ -5,7 +5,6 @@
 }
 
 body {
-  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -19,17 +18,15 @@ a {
   background: url("/images/space/space3.png") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
   overflow: hidden;
 }
-
-.header {
+.hero-bg .header {
   width: 100%;
   background-color: rgba(37, 37, 37, 0.5);
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.header .name {
+.hero-bg .header .name {
   font-family: "Truculenta";
   text-transform: capitalize;
   color: #44DFFF;
@@ -40,69 +37,67 @@ a {
   margin: auto 0;
   background-color: rgba(0, 0, 0, 0.75);
 }
-.header .menu {
+.hero-bg .header .menu {
   display: flex;
+  margin-left: 3%;
+  margin-right: 3%;
 }
-.header .menu a {
+.hero-bg .header .menu a {
   color: white;
   flex-grow: 1;
   text-align: center;
-  padding: 0.75vh 0 0.5vh 0;
+  padding: 0.75% 0% 0.5% 0%;
   font-size: 1.75ch;
   text-transform: uppercase;
 }
-.header .menu a:hover {
+.hero-bg .header .menu a:hover {
   background-color: #131c4636;
 }
-.header .div-line {
+.hero-bg .header .div-line {
   background-color: white;
   width: 100%;
   height: 0.25vh;
 }
-
-.title-text {
+.hero-bg .title-text {
+  position: absolute;
+  left: 2%;
+  top: 40%;
   color: white;
-  margin-top: 10vh;
-  margin-left: 1vw;
-  width: 50vw;
+  width: 75%;
 }
-.title-text .slogan-desc {
+.hero-bg .title-text .slogan-desc {
   text-align: left;
   margin-left: 5vw;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   padding-bottom: 1vh;
+  width: 75%;
+  line-height: 100%;
 }
-.title-text .slogan-desc span {
+.hero-bg .title-text .slogan-desc span {
   margin-left: -2vw;
 }
-.title-text .div-line {
+.hero-bg .title-text .div-line {
   background-color: white;
-  margin-left: 4.2vw;
+  margin-left: 4vw;
   margin-bottom: 1.5vh;
-  width: 69%;
-  height: 0.25vh;
+  width: 75%;
+  height: 2px;
   font-size: large;
   font-weight: bold;
 }
-.title-text .slogan {
+.hero-bg .title-text .slogan {
   text-transform: uppercase;
   margin-left: 2.4vw;
-  font-size: 3.5rem;
+  font-size: 300%;
   font-weight: bold;
   line-height: 85%;
   display: flex;
   flex-wrap: wrap;
+  width: 90%;
 }
-.title-text .slogan .undashed-out {
-  display: none;
-}
-.title-text .slogan .dashed-out {
-  display: flex;
-}
-
-.bottom {
+.hero-bg .bottom {
   position: absolute;
   bottom: 0;
   height: 15vh;
@@ -110,23 +105,82 @@ a {
   text-align: right;
   color: white;
 }
-.bottom img {
+.hero-bg .bottom img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.bottom p {
+.hero-bg .bottom p {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-@media screen and (max-width: 972px) {
-  .menu a {
-    color: red;
+.testButton {
+  margin-top: 2000px;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  .hero-bg .title-text .div-line {
+    width: 65%;
+  }
+
+  .hero-bg .title-text .slogan {
+    line-height: 95%;
   }
 }
-.testButton {
-  margin-top: 6969px;
+@media (max-width: 365px) {
+  .hero-bg .header .menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hero-bg .header .menu a {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+@media (min-width: 600px) {
+  .hero-bg .header .menu {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .hero-bg .title-text .div-line {
+    width: 69%;
+  }
+
+  .hero-bg .title-text .slogan-desc {
+    font-size: 300%;
+  }
+
+  .hero-bg .title-text .slogan {
+    font-size: 500%;
+  }
+}
+@media (min-width: 724px) {
+  .hero-bg .title-text {
+    width: 69%;
+  }
+
+  .hero-bg .title-text .slogan-desc {
+    font-size: 200%;
+    margin-left: 7%;
+    line-height: normal;
+  }
+
+  .hero-bg .title-text .div-line {
+    width: 69%;
+  }
+
+  .hero-bg .title-text .slogan {
+    margin-left: 7%;
+    font-size: 450%;
+  }
+}
+@media (min-width: 1400px) {
+  .hero-bg .title-text .div-line {
+    width: 660px;
+  }
 }/*# sourceMappingURL=main.css.map */
