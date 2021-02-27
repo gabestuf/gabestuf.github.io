@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -18,6 +22,7 @@ a {
   background: url("/images/space/space3.png") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 .hero-bg .header {

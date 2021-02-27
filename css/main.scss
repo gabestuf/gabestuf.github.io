@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 a {
     display: block;
     text-decoration: none;
@@ -20,7 +24,7 @@ a {
     background: url('/images/space/space3.png') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    //width: 100vw; why does it go off screen with 100vw?? same goes for height but its not as bad
+    width: 100vw; //why does it go off screen with 100vw?? same goes for height but its not as bad
     overflow: hidden;
     //header 
     .header {
