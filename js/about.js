@@ -1,28 +1,46 @@
-TweenLite.defaultEase = Linear.easeNone;
-const content = document.querySelectorAll(".content");
-const controller = new ScrollMagic.Controller();
+// $(function() { // wait for document ready
 
-const t1 = new TimelineMax();
+//     var controller = new ScrollMagic.Controller();
 
-t1.to("#js-slideContainer", 0.5, { xPercent: -20 });
-t1.from(content[1], 0.5, { opacity: 0, scale: 2.5 });
-t1.to("#js-slideContainer", 0.5, { xPercent: -40 });
-t1.from(content[2], 0.5, { opacity: 0, scale: 2.5, left: 400, top: 400 });
-t1.to("#js-slideContainer", 0.5, { xPercent: -60 });
-t1.from(content[3], 0.5, { opacity: 0, scale: 2.5, right: 400, bottom: 400 });
-t1.to("#js-slideContainer", 0.5, { xPercent: -80 });
-t1.from(content[4], 0.5, { opacity: 0, scale: 2.5, rotation: 27 });
+//     var horizontalSlide = new TimelineMax()
+//         // animate panels
+//         .to("#js-slideContainer", 1, { x: "-20%" })
+//         .to("#js-slideContainer", 1, { x: "-40%" })
+//         .to("#js-slideContainer", 1, { x: "-60%" })
+//         .to("#js-slideContainer", 1, { x: "-80%" })
 
-new ScrollMagic.Scene({
-        triggerElement: "#js-wrapper",
-        triggerHook: "onLeave",
-        duration: "400%",
-    })
-    .setPin("#js-wrapper")
-    .setTween(t1)
-    //.addIndicators({
-    //        colorTrigger: "White",
-    //       colorStart: "black",
-    //    colorEnd: "red",
-    // })
-    .addTo(controller);
+
+//     // create scene to pin and link animation
+//     new ScrollMagic.Scene({
+//             triggerElement: "#js-wrapper",
+//             triggerHook: "onLeave",
+//             duration: "400%"
+//         })
+//         .setPin("#js-wrapper")
+//         .setTween(horizontalSlide)
+//         //.addIndicators() // add indicators (requires plugin)
+//         .addTo(controller);
+
+
+
+// });
+jQuery(function($) {
+    $.fn.hScroll = function(amount) {
+        amount = amount || 120;
+        $(this).bind("DOMMouseScroll mousewheel", function(event) {
+            var oEvent = event.originalEvent,
+                direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+                position = $(this).scrollLeft();
+            position += direction > 0 ? -amount : amount;
+            $(this).scrollLeft(position);
+            event.preventDefault();
+        })
+    };
+});
+
+$(document).ready(function() {
+    $('#js-wrapper').hScroll(100); // You can pass (optionally) scrolling amount
+
+    $('body').scrollTo('#212'); // Scroll screen 500 pixels down
+
+});
