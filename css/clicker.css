@@ -47,3 +47,18 @@ p {
     color: white;
     margin-top: 10vh;
 }
+
+fieldset {
+    color: white;
+    width: 25%;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+fieldset input {
+    padding: 7px;
+}
+
+fieldset button {
+    height: 50%;
+}
