@@ -140,7 +140,7 @@ a {
     }
 }
 
-//anything above 600px, use this code
+
 @media (max-width: 365px) {
     .hero-bg .header .menu {
         display: flex;
@@ -151,7 +151,7 @@ a {
         padding-right: 3vw;
     }
 }
-
+//anything above 600px, use this code
 @media (min-width: 600px) {
     .hero-bg .header .menu {
         margin-left: 0%;
