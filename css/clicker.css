@@ -1,64 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@400;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Truculenta:wght@400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    box-sizing: border-box;
-    font-family: Truculenta;
-    font-size: 110%;
-    font-weight: bold;
-    margin: 0;
-    background: url('/images/space/space3.png');
-    background-size: cover;
-    height: 100vh;
-    background-position: left;
+  font-family: Truculenta;
+  font-size: 110%;
+  font-weight: bold;
+  overflow: hidden;
+  background-color: black;
+  background-size: cover;
+  height: 100vh;
+}
+body .blackgrond {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+body .blackgrond span {
+  position: absolute;
+  pointer-events: none;
+  background: white;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) translateY(-500%) rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) translateY(-500%) rotate(360deg);
+  }
 }
 
 .hero-bg {
-    color: rgb(255, 255, 255);
-    margin-left: 2rem;
+  color: white;
+  margin-left: 2rem;
 }
 
 .header {
-    display: flex;
-    padding-left: 5%;
+  display: flex;
+  padding-left: 5%;
 }
 
 .label1 {
-    padding-right: .25vw;
+  padding-right: 0.25vw;
 }
 
 .btn-panel {
-    display: flex;
-    padding: 5px;
+  display: flex;
+  padding: 5px;
 }
 
 button {
-    border-radius: 3ch;
-    margin: 0 25px;
-    border: rgb(0, 0, 0);
-    width: 5vw;
-    height: 3vh;
-    background-color: blanchedalmond;
+  border-radius: 3ch;
+  margin: 0 25px;
+  border: black;
+  width: 5vw;
+  height: 3vh;
+  background-color: blanchedalmond;
 }
 
 button:hover {
-    background-color: rgb(255, 215, 154);
+  background-color: #ffd79a;
 }
 
 p {
-    color: white;
-    margin-top: 10vh;
+  color: white;
+  margin-top: 10vh;
 }
 
 fieldset {
-    color: white;
-    width: 25%;
-    align-content: center;
-    margin-bottom: 20px;
+  color: white;
+  width: 25%;
+  align-content: center;
+  margin-bottom: 20px;
 }
 
 fieldset input {
-    padding: 7px;
+  padding: 7px;
 }
 
 fieldset button {
-    height: 50%;
-}
+  height: 50%;
+}/*# sourceMappingURL=clicker.css.map */

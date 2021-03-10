@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Truculenta:wght@400;800&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+  font-family: Truculenta;
+  font-size: 110%;
+  font-weight: bold;
+overflow: hidden;
+  background-color: black;
+  background-size: cover;
+  height: 100vh;
+  
+  
+
+.blackgrond {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    
+    span {
+        position: absolute;
+        pointer-events: none;
+        background: white;
+        animation: animate 5s linear infinite;
+    }
+
+    @keyframes animate {
+        0%
+        {
+            transform: scale(0) translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        10%
+        {
+            opacity: 1;
+        }
+        90%{
+            opacity: 1;
+        }
+        100%
+        {
+            opacity: 0;
+            transform: scale(1) translateY(-500%) rotate(360deg);
+        }
+    }
+}
+
+}
+
+.hero-bg {
+  color: rgb(255, 255, 255);
+  margin-left: 2rem;
+}
+
+.header {
+  display: flex;
+  padding-left: 5%;
+}
+
+.label1 {
+  padding-right: 0.25vw;
+}
+
+.btn-panel {
+  display: flex;
+  padding: 5px;
+}
+
+button {
+  border-radius: 3ch;
+  margin: 0 25px;
+  border: rgb(0, 0, 0);
+  width: 5vw;
+  height: 3vh;
+  background-color: blanchedalmond;
+}
+
+button:hover {
+  background-color: rgb(255, 215, 154);
+}
+
+p {
+  color: white;
+  margin-top: 10vh;
+}
+
+fieldset {
+  color: white;
+  width: 25%;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+fieldset input {
+  padding: 7px;
+}
+
+fieldset button {
+  height: 50%;
+}
+
