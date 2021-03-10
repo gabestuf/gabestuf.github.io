@@ -1,71 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Arapey');
+
 body {
     margin: 0;
-    font-family: 'Arapey';
-    h1 {
-        font-size: 2em;
-        text-align: center;
-        margin-top: 30%;
-    }
-}
-
-section {
-    padding: 3em;
-    height: 100vh;
-    position: relative;
+    padding: 0;
     box-sizing: border-box;
-    blockquote {
-        font-size: 2.3em;
-        width: 30%;
-        margin-top: 17%;
-        position: absolute;
-        span {
-            width: 100%;
-            background: red;
-            display: block;
-            height: 5px;
-            margin-top: 20px;
+    background: url('/images/space/space3.png');
+    font-family: Truculenta;
+    color: white;
+    font-size: 5ch;
+    fieldset {
+        min-height: 10vh;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+    input {
+        font-size: 2ch;
+    }
+    
+    .middle {
+        
+        a {
+            position: relative;
+            top: 5vh;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid lightblue;
+            border-radius: 15px;
+            margin-left: 10vw;
+            padding: 10px 20px;
+            margin-top: 6vh;
+            color: lightblue;
+            
+        }
+        a:hover {
+            background-color: rgba(69,69,69,.90);
+            border: 2px solid rgb(41, 179, 224);
+        }
+        .fieldsets {
+            position: relative;
+            top: 8vh;
+            button {
+                border-radius: 10px;
+                border: 2px solid red;
+                height: 37px;
+                width: 69px;
+                font-weight: bold;
+                color: red;
+                background: yellow;
+            }
+            button:hover {
+                background-color: lightgreen;
+                border: 2px solid purple;
+                color: purple;
+                cursor: pointer;
+            }
         }
     }
-    img {
-        position: absolute;
+    p {
+        font-size: .95ch;
     }
-    img:nth-of-type(1) {
-        width: 40%;
-        right: 0;
-        top: 20%;
-    }
-    img:nth-of-type(2) {
-        width: 25%;
-        right: 40%;
-        top: 29%;
-        margin-top: 15%;
-    }
-}
-
-section:nth-child(odd) {
-    background: #f1f1f1;
-}
-
-.sticky {
-    background: white !important;
-}
-
-.percentage {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-}
-
-#box {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    border: 5px solid lightgray;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }

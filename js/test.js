@@ -15,7 +15,7 @@ function printNumber() {
     for (let i = 0; i < num; i++) {
         str += "0";
       }
-      output.innerHTML += `<p>${str}<p>`;
+      output.innerHTML = `<p>${str}<p>`;
 }
 
 buttonClick();
