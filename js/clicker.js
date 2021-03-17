@@ -86,15 +86,13 @@ btnClear.onclick = function () {
 
 
 
-
+//background animation
 const colors = [
   '#2196f3',
   '#e91e63',
   '#ffeb3b',
   '#74ff1d'
 ]
-
-
 function createSquare() {
   const section = document.getElementById('blackgrond');
   const square = document.createElement('span');

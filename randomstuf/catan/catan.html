@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catan Data</title>
+    <link rel="stylesheet" href="catan.css">
+</head>
+<body>
+    <h1>Catan Game Data Analysis</h1>
+    <div class="wrapper">
+        <fieldset>
+            <legend>Dice</legend>
+            <div class="dice-area">
+                <p id='btn-up-red'>▲</p>
+                <img id='red-die-img' alt="red die">
+                <p id='btn-down-red'>▼</p>
+            </div>
+            <div class="dice-area">
+                <p id='btn-up-yellow'>▲</p>
+                <img id='yellow-die-img' alt="yellow die">
+                <p id='btn-down-yellow'>▼</p>
+            </div>
+            <h2 id='dice-sum'>sum:</h2>
+            <button id='roll-again'>Roll Dice</button>
+            <button id='log-value'>Log Roll</button>
+            <button id='clear-btn'>Clear Storage</button>
+        </fieldset>
+        <fieldset class='dice-output'>
+            <legend>Past Rolls</legend>
+            <div id='lsOutput' class="output"></div>
+        </fieldset>
+    </div>
+    
+    <div class="resource-wrapper">
+        <fieldset>
+           <p class='resource-label'>Wheat</p>
+           <p class='resource-label'>Sheep</p>
+           <p class='resource-label'>Tree</p>
+           <p class='resource-label'>Mud</p>
+           <p class='resource-label'>Rock</p>
+        </fieldset>
+    </div>
+    
+</body>
+<script src='catan.js' charset="uth"></script>
+</html>

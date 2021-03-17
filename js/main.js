@@ -20,8 +20,7 @@ function test() {
 
 //For shit
 var randWordsArr = [
-    'penis',
-    'vagina',
+    'lmao',
     'donut != marshmellow',
     'I can\'t spell orangitang',
     'there is a 1/100 chance you get this sentence.',
