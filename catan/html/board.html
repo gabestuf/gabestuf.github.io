@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <link rel="stylesheet" href="../css/board.css">
+</head>
+<body>
+    <div class="backgroundWrapper">
+        <div class="hex" id="hex1"> <p>A</p> </div>
+        <div class="hex" id="hex2"> <p>B</p> </div>
+        <div class="hex" id="hex3"> <p>C</p> </div>
+        <div class="hex" id="hex4"> <p>D</p> </div>
+        <div class="hex" id="hex5"> <p>E</p> </div>
+        <div class="hex" id="hex6"> <p>F</p> </div>
+        <div class="hex" id="hex7"> <p>G</p> </div>
+        <div class="hex" id="hex8"> <p>H</p></div>
+        <div class="hex" id="hex9"> <p>I</p> </div>
+        <div class="hex" id="hex10"> <p>J</p> </div>
+        <div class="hex" id="hex11"> <p>K</p> </div>
+        <div class="hex" id="hex12"> <p>L</p> </div>
+        <div class="hex" id="hex13"> <p>M</p> </div>
+        <div class="hex" id="hex14"> <p>N</p> </div>
+        <div class="hex" id="hex15"> <p>O</p> </div>
+        <div class="hex" id="hex16"> <p>P</p> </div>
+        <div class="hex" id="hex17"> <p>Q</p> </div>
+        <div class="hex" id="hex18"> <p>R</p> </div>
+        <div class="hex" id="hex19"> <p>S</p> </div>
+    </div>
+
+    <div class="infoContainer">
+        <div class="actionContainer">
+            <fieldset>
+                <h4>Initialize Board</h4>
+                <p id='testP'>Select Tile</p>
+                <p id='hexResource'>Resource:</p>
+                <p id='hexDiceNumber'>Number:</p>
+            </fieldset>
+        </div>
+        <div class="hexInfoContainer">
+            <fieldset>
+                <div class="dropdown">
+                    <button class="dropbtn" id='initSelectionButton'>Resource</button>
+                    <div class="dropdown-content">
+                      <button class='hexResourceSelector'>Wool</button>
+                      <button class='hexResourceSelector'>Tree</button>
+                      <button class='hexResourceSelector'>Rock</button>
+                      <button class='hexResourceSelector'>Mud</button>
+                      <button class='hexResourceSelector'>Wheat</button>
+                      <button class='hexResourceSelector'>Sand</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" id='initSelectionButton'>Number</button>
+                    <div class="dropdown-content">
+                      <button class='hexDiceNumber'>2</button>
+                      <button class='hexDiceNumber'>3</button>
+                      <button class='hexDiceNumber'>4</button>
+                      <button class='hexDiceNumber'>5</button>
+                      <button class='hexDiceNumber'>6</button>
+                      <button class='hexDiceNumber'>7</button>
+                      <button class='hexDiceNumber'>8</button>
+                      <button class='hexDiceNumber'>9</button>
+                      <button class='hexDiceNumber'>10</button>
+                      <button class='hexDiceNumber'>11</button>
+                      <button class='hexDiceNumber'>12</button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+<script defer src="../js/board.js"></script>
+</html>
+

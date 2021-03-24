@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 2rem;
+}
+
+.backgroundWrapper {
+  height: 100vh;
+  background: linear-gradient(45deg, red, yellow);
+  z-index: -1;
+}
+
+.hex {
+  position: absolute;
+  width: 200px;
+  height: 220px;
+  background: url("/images/catan/empty.png");
+}
+.hex p {
+  position: relative;
+  text-align: center;
+  margin-top: 90px;
+  font-size: 2rem;
+}
+
+.hex:hover {
+  background: url("/images/catan/emptyHighlighted.png");
+  cursor: pointer;
+}
+
+.hex:nth-of-type(1) {
+  top: 25px;
+  left: 600px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(2) {
+  top: 25px;
+  left: 800px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(3) {
+  top: 25px;
+  left: 1000px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(4) {
+  top: 188px;
+  left: 500px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(5) {
+  top: 188px;
+  left: 700px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(6) {
+  top: 188px;
+  left: 900px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(7) {
+  top: 188px;
+  left: 1100px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(8) {
+  top: 351px;
+  left: 400px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(9) {
+  top: 351px;
+  left: 600px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(10) {
+  top: 351px;
+  left: 800px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(11) {
+  top: 351px;
+  left: 1000px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(12) {
+  top: 351px;
+  left: 1200px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(13) {
+  top: 514px;
+  left: 500px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(14) {
+  top: 514px;
+  left: 700px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(15) {
+  top: 514px;
+  left: 900px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(16) {
+  top: 514px;
+  left: 1100px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(17) {
+  top: 677px;
+  left: 600px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(18) {
+  top: 677px;
+  left: 800px;
+  background-size: 200px 220px;
+}
+
+.hex:nth-of-type(19) {
+  top: 677px;
+  left: 1000px;
+  background-size: 200px 220px;
+}
+
+.infoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 390px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  min-width: 140px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px 350px 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  /* Links inside the dropdown */
+}
+.dropdown-content button {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  min-width: 140px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content button:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #b1b1b1;
+}/*# sourceMappingURL=board.css.map */
