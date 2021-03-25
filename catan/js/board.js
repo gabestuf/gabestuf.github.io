@@ -103,47 +103,187 @@ function showHexInfo() {
     mudSelectorBtn.addEventListener('click', function () { replaceHexResource('mud') });
     wheatSelectorBtn.addEventListener('click', function () { replaceHexResource('wheat') });
     sandSelectorBtn.addEventListener('click', function () { replaceHexResource('sand') });
+
+    const hexDiceNumberBtn2 = document.querySelectorAll('.hexDiceNumber')[0];
+    const hexDiceNumberBtn3 = document.querySelectorAll('.hexDiceNumber')[1];
+    const hexDiceNumberBtn4 = document.querySelectorAll('.hexDiceNumber')[2];
+    const hexDiceNumberBtn5 = document.querySelectorAll('.hexDiceNumber')[3];
+    const hexDiceNumberBtn6 = document.querySelectorAll('.hexDiceNumber')[4];
+    const hexDiceNumberBtn7 = document.querySelectorAll('.hexDiceNumber')[5];
+    const hexDiceNumberBtn8 = document.querySelectorAll('.hexDiceNumber')[6];
+    const hexDiceNumberBtn9 = document.querySelectorAll('.hexDiceNumber')[7];
+    const hexDiceNumberBtn10 = document.querySelectorAll('.hexDiceNumber')[8];
+    const hexDiceNumberBtn11 = document.querySelectorAll('.hexDiceNumber')[9];
+    const hexDiceNumberBtn12 = document.querySelectorAll('.hexDiceNumber')[10];
+
+    hexDiceNumberBtn2.addEventListener('click', function () { replaceHexDiceNumber(2) });
+    hexDiceNumberBtn3.addEventListener('click', function () { replaceHexDiceNumber(3) });
+    hexDiceNumberBtn4.addEventListener('click', function () { replaceHexDiceNumber(4) });
+    hexDiceNumberBtn5.addEventListener('click', function () { replaceHexDiceNumber(5) });
+    hexDiceNumberBtn6.addEventListener('click', function () { replaceHexDiceNumber(6) });
+    hexDiceNumberBtn7.addEventListener('click', function () { replaceHexDiceNumber(7) });
+    hexDiceNumberBtn8.addEventListener('click', function () { replaceHexDiceNumber(8) });
+    hexDiceNumberBtn9.addEventListener('click', function () { replaceHexDiceNumber(9) });
+    hexDiceNumberBtn10.addEventListener('click', function () { replaceHexDiceNumber(10) });
+    hexDiceNumberBtn11.addEventListener('click', function () { replaceHexDiceNumber(11) });
+    hexDiceNumberBtn12.addEventListener('click', function () { replaceHexDiceNumber(12) });
+}
+
+function replaceHexDiceNumber(num) {
+    hexArray[selectedHexID].hexDiceNumber = num;
+    hexDiceNumberLabel.innerHTML = 'Number: ' + num;
+
+    const currentHex = document.querySelectorAll('.hex')[selectedHexID];
+    switch (num) {
+        case 0:
+            currentHex.innerHTML = '';
+            currentHex.style.color = 'black';
+            break;
+        case 2:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 2 </p>";
+            currentHex.style.color = 'black';
+            break;
+        case 3:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 3 </p>";
+            currentHex.style.color = 'black';
+            break;
+        case 4:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 4 </p>";
+            currentHex.style.color = 'black';
+            break;
+        case 5:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 5 </p>";
+            currentHex.style.color = 'black';
+            break;
+        case 6:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 6 </p>";
+            currentHex.style.color = 'red';
+            break;
+        case 7:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 7 </p>";
+            currentHex.style.color = 'black';
+            break;
+        case 8:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 8 </p>";
+            currentHex.style.color = 'red';
+            break;
+        case 9:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 9 </p>";
+            currentHex.style.color = 'black';
+            break;
+        case 10:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 10 </p>";
+            currentHex.style.color = 'black';
+            break;
+        case 11:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 11 </p>";
+            currentHex.style.color = 'black';
+            break;
+        case 12:
+            currentHex.innerHTML = "<p class='diceNumberIcon'> 12 </p>";
+            currentHex.style.color = 'black';
+            break;
+        default:
+            console.log('error: in function: replaceHexDiceNumber | the num does not exist: ' + num);
+            break;
+    }
 }
 
 function replaceHexResource(resource) {
     hexArray[selectedHexID].hexResourceName = resource;
     hexResourceLabel.innerHTML = 'Resource: ' + resource;
 
-    const currentBtn = document.querySelectorAll('.hex')[selectedHexID];
-    switch(resource){
+    const currentHex = document.querySelectorAll('.hex')[selectedHexID];
+    switch (resource) {
         case 'wool':
-            currentBtn.style.background = "url('/images/catan/wool.png')";
-            currentBtn.style.backgroundSize = '200px 220px';
-            currentBtn.innerHTML = "";
+            currentHex.style.background = "url('/images/catan/wool.png')";
+            currentHex.style.backgroundSize = '200px 220px';
             break;
         case 'tree':
-            currentBtn.style.background = "url('/images/catan/tree.png')";
-            currentBtn.style.backgroundSize = '200px 220px';
-            currentBtn.innerHTML = "";
+            currentHex.style.background = "url('/images/catan/tree.png')";
+            currentHex.style.backgroundSize = '200px 220px';
             break;
         case 'rock':
-            currentBtn.style.background = "url('/images/catan/rock.png')";
-            currentBtn.style.backgroundSize = '200px 220px';
-            currentBtn.innerHTML = "";
+            currentHex.style.background = "url('/images/catan/rock.png')";
+            currentHex.style.backgroundSize = '200px 220px';
             break;
         case 'mud':
-            currentBtn.style.background = "url('/images/catan/mud.png')";
-            currentBtn.style.backgroundSize = '200px 220px';
-            currentBtn.innerHTML = "";
+            currentHex.style.background = "url('/images/catan/mud.png')";
+            currentHex.style.backgroundSize = '200px 220px';
             break;
         case 'wheat':
-            currentBtn.style.background = "url('/images/catan/wheat.png')";
-            currentBtn.style.backgroundSize = '200px 220px';
-            currentBtn.innerHTML = "";
+            currentHex.style.background = "url('/images/catan/wheat.png')";
+            currentHex.style.backgroundSize = '200px 220px';
+
             break;
         case 'sand':
-            currentBtn.style.background = "url('/images/catan/sand.png')";
-            currentBtn.style.backgroundSize = '200px 220px';
-            currentBtn.innerHTML = "";
+            currentHex.style.background = "url('/images/catan/sand.png')";
+            currentHex.style.backgroundSize = '200px 220px';
             break;
-        default: 
+        default:
             console.log('replaceHexBackground: No resource identified');
             break;
     }
+}
+
+
+
+const testBtn69 = document.getElementById('test69');
+testBtn69.addEventListener('click', function () {
+    // for (i = 0; i < hexArray.length; i++) {
+    //     console.log(hexArray[i].hexName);
+    //     console.log(hexArray[i].hexID);
+    //     console.log(hexArray[i].hexResourceName);
+    //     console.log(hexArray[i].hexDiceNumber);
+    //     console.log(hexArray[i].hasRobber);
+    // }
+    generateRandomBoard();
+})
+
+function generateRandomBoard() {
+    var possibleResourcesArray = ['wool', 'wool', 'wool', 'wool', 'wheat', 'wheat', 'wheat', 'wheat', 'mud', 'mud', 'mud', 'sand', 'rock', 'rock', 'rock', 'tree', 'tree', 'tree', 'tree'];
+    shuffleArray(possibleResourcesArray);
+    var possibleNumbersArray = [2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12];
+    shuffleArray(possibleNumbersArray);
+
+    for (i = 0; i < hexArray.length; i++) {
+        const resource = possibleResourcesArray.pop();
+        if (resource == 'sand') {
+            selectedHexID = i;
+            hexArray[i].hexResourceName = resource;
+            hexArray[i].hexDiceNumber = 'NULL';
+            replaceHexResource(resource);
+            replaceHexDiceNumber(0);
+        } else {
+            const number = possibleNumbersArray.pop();
+            selectedHexID = i;
+            hexArray[i].hexResourceName = resource;
+            hexArray[i].hexDiceNumber = number;
+            replaceHexResource(resource);
+            replaceHexDiceNumber(number);
+        }
+
+
+    }
+}
+
+//for shuffling arrays (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+function shuffleArray(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
 }
 
