@@ -74,9 +74,10 @@
         <div class="actionContainer">
             <fieldset>
                 <h4>Initialize Board</h4>
-                <p id='testP'>Select Tile</p>
+                <p id='infoLabel'>Select Tile</p>
                 <p id='hexResource'>Resource:</p>
                 <p id='hexDiceNumber'>Number:</p>
+                <button id='scrambleBoardBtn'>SCRAMPLE</button>
             </fieldset>
         </div>
         <div class="hexInfoContainer">
@@ -84,7 +85,7 @@
                 <div class="dropdown">
                     <button class="dropbtn" id='initSelectionButton'>Resource</button>
                     <div class="dropdown-content">
-                        <button class='hexResourceSelector'>Wool</button>
+                        <button class='hexResourceSelector'>Sheep</button>
                         <button class='hexResourceSelector'>Tree</button>
                         <button class='hexResourceSelector'>Rock</button>
                         <button class='hexResourceSelector'>Mud</button>
@@ -111,8 +112,11 @@
             </fieldset>
         </div>
     </div>
-    <button id='test69'>SCRAMPLE</button>
+
 </body>
-<script defer src="../js/board.js"></script>
+<script defer src="../js/boardClasses.js"></script>
+<script defer src="../js/boardConstantsAndVariables.js"></script>
+<script defer src="../js/boardMain.js"></script>
+
 
 </html>
