@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clicker</title>
-    <link rel="stylesheet" href="../css/clicker.css" />
-    
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clicker</title>
+  <link rel="stylesheet" href="../css/clicker.css" />
 
-    
+</head>
 
-    <div class="hero-bg">
-      <section class="header">
-        <h1 class="label1">Counter:</h1>
-        <h1 id="counter-btn">0</h1>
-      </section>
-      <div class="btn-panel">
-        <button id="btn">Click</button>
-        <button id="home-btn">back</button>
-      </div>
+<body>
+
+
+
+  <div class="hero-bg">
+    <section class="header">
+      <h1 class="label1">Counter:</h1>
+      <h1 id="counter-btn">0</h1>
+    </section>
+    <div class="btn-panel">
+      <button id="btn">Click</button>
+      <button id="home-btn">back</button>
     </div>
+  </div>
 
-    <p>Just trying to test some javascript here</p>
+  <p>Just trying to test some javascript here</p>
 
-    <fieldset>
-      <legend>Local Storage Test</legend>
-      <input id="inpKey" type="text" placeholder="Enter Key..." />
-      <input id="inpValue" type="text" placeholder="Enter Value..." />
-      <button type="button" id="btnInsert">Insert Data</button>
-    </fieldset>
+  <fieldset>
+    <legend>Local Storage Test</legend>
+    <input id="inpKey" type="text" placeholder="Enter Key..." />
+    <input id="inpValue" type="text" placeholder="Enter Value..." />
+    <button type="button" id="btnInsert">Insert Data</button>
+  </fieldset>
 
-    <fieldset>
-      <legend>Local Storage</legend>
-      <div id="lsOutput"></div>
-      <button type="button" id="btnClear">clear</button>
-    </fieldset>
+  <fieldset>
+    <legend>Local Storage</legend>
+    <div id="lsOutput"></div>
+    <button type="button" id="btnClear">clear</button>
+  </fieldset>
+  <fieldset class='fizzbuzz'>
+    <legend>FizzBuzz</legend>
+    <input type="number" id="fizzbuzzInput" placeholder="Enter length...">
+    <button id='fizzbuzz-btn'>FizzBuzz!</button>
+    <div id='fizzbuzzOutput'></div>
+  </fieldset>
 
-    <section id='blackgrond' class="blackgrond"></section>
+  <section id='blackgrond' class="blackgrond"></section>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="../js/clicker.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script defer src="../js/clicker.js"></script>
+</body>
+
 </html>

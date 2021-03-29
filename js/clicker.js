@@ -98,8 +98,8 @@ function createSquare() {
   const square = document.createElement('span');
 
   var size = Math.random() * 50;
-  square.style.width = 20 + size +'px';
-  square.style.height = 20 + size +'px';
+  square.style.width = 20 + size + 'px';
+  square.style.height = 20 + size + 'px';
 
   square.style.top = Math.random() * innerHeight + 'px';
   square.style.left = Math.random() * innerWidth + 'px';
@@ -109,10 +109,42 @@ function createSquare() {
 
   section.appendChild(square);
 
-  setTimeout(() =>{
-      square.remove()
+  setTimeout(() => {
+    square.remove()
   }, 5000)
 }
 
 setInterval(createSquare, 150)
+
+
+//FizzBuzz!
+
+const fizzBtn = document.getElementById('fizzbuzz-btn');
+const fizzOut = document.getElementById('fizzbuzzOutput');
+
+fizzBtn.addEventListener('click', function () {
+  const numberInput = document.getElementById('fizzbuzzInput');
+  fizzBuzz(numberInput.value);
+})
+
+const fizzMult = 3;
+const buzzMult = 5;
+
+function fizzBuzz(length) {
+  fizzOut.innerHTML = "";
+  for (i = 0; i < length; i++) {
+    const divideby3 = (i % fizzMult === 0);
+    const divideby5 = (i % buzzMult === 0);
+    const divideBoth = divideby3 & divideby5;
+    if (divideBoth) {
+      fizzOut.innerHTML += "FizzBuzz \n";
+    } else if (divideby3) {
+      fizzOut.innerHTML += "Fizz \n";
+    } else if (divideby5) {
+      fizzOut.innerHTML += "Buzz \n";
+    } else {
+      fizzOut.innerHTML += i + "\n";
+    }
+  }
+}
 
