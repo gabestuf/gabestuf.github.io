@@ -291,9 +291,10 @@ class Board {
             const s = i;
             this.nodeBtnArray[i].addEventListener('click', () => {
                 console.log(s);
-                this.nodeBtnArray[s].disabled = true;
+                //this.nodeBtnArray[s].disabled = true;
 
-                if (settlementsPlaced == 0) {
+
+                if (settlementsPlaced == 0) { //first settlement 
                     infoLabel.innerHTML = "Place Second Settlement";
                     this.nodeBtnArray[s].style.background = 'green';
                     this.nodeArray[s].hasSettlement = true;
@@ -305,7 +306,7 @@ class Board {
                     settlementsLayer.style.background = 'none';
 
 
-                    if (this.nodeArray[s].hasSettlement) {
+                    if (this.nodeArray[s].hasSettlement) { // more than one settlement
                         console.log(this.nodeArray[s].hasSettlement);
                         //update to city
                         if (this.nodeArray[s].hasCity) {
@@ -341,7 +342,6 @@ class Board {
 
         }
     }
-
 
     generateRandomBoard() {
         var possibleResourcesArray = ['sheep', 'sheep', 'sheep', 'sheep', 'wheat', 'wheat', 'wheat', 'wheat', 'mud', 'mud', 'mud', 'sand', 'rock', 'rock', 'rock', 'tree', 'tree', 'tree', 'tree'];
