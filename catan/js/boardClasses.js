@@ -38,27 +38,21 @@ class Board {
             if (i < firstRowLength) {
                 rowID = 1;
                 NodesInRow = 7;
-                //console.log(i + 'first row');
             } else if (i >= firstRowLength && i < 2 * firstRowLength + 2) {
                 rowID = 2;
                 NodesInRow = 9;
-                //console.log(i + 'second row');
             } else if (i >= 2 * firstRowLength + 2 && i < 27) {
                 rowID = 3;
                 NodesInRow = 11;
-                //console.log(i + 'third row');
             } else if (i >= 27 && i < 38) {
                 rowID = 4;
                 NodesInRow = 11;
-                //console.log(i + 'fourth row');
             } else if (i >= 38 && i < 47) {
                 rowID = 5;
                 NodesInRow = 9;
-                //console.log(i + 'fifth row');
             } else if (i >= 47 && i < 54) {
                 rowID = 6;
                 NodesInRow = 7;
-                //console.log(i + 'sixth row');
             } else {
                 console.log('error, array out of bounds board.nodeArray');
             }
@@ -295,8 +289,6 @@ class Board {
             this.nodeBtnArray[i] = document.querySelectorAll('.nodeBtn')[i];
             const s = i;
             this.nodeBtnArray[i].addEventListener('click', () => {
-                console.log(s);
-
 
                 if (settlementsPlaced == 0) { //first settlement 
                     infoLabel.innerHTML = "Place Second Settlement";
@@ -312,7 +304,6 @@ class Board {
 
 
                     if (this.nodeArray[s].hasSettlement) { // more than one settlement
-                        console.log(this.nodeArray[s].hasSettlement);
                         //update to city
                         if (this.nodeArray[s].hasCity) {
                             this.nodeArray[s].hasCity = false;

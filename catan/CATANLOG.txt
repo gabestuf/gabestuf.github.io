@@ -1,0 +1,54 @@
+Day 1 - 4/7/2021
+actually more like week 2 but I am just now creating the log
+
+CHANGELOG 
+
+V1.0 4/7/2021
+- Released first iteration of app
+- Able to place settlements on any node 
+- Roll or input dice rolls 
+- Game will track roll #'s and resources collected per turn
+
+V1.1
+- Settlements can be upgraded to cities without having to use settlement button. (For consistency)
+
+V1.2
+- Updated UI, still very wack but slightly better
+
+
+GOALS FOR V2
+- Be able to read the JSON FILE and look at data on another html page
+- look at data such as:
+  1. Resources gained graph, # of resources on Y, turn on X
+  2. Dice information, such as sum of dice frequency, also individual red vs yellow die stats
+  3. Resource frequency
+  4. Dice Resource correlation
+
+GOALS FOR V3
+- Implement Inventory System
+- Be able to have buttons to buy roads, settlements, cities, and dev cards and track inflow and outflow of resources,
+- Be able to discard if a seven is rolled
+- On analysis html page, add resources gained vs resources lost, 
+- Analyze resource efficiency 
+- What resources were most valuable/rare, which were most useless
+
+GOALS FOR V4
+- Better UI, make sure trading UI is good
+- Clean up code, improve the CSS and HTML by doing it with JS
+- Work on that node making function
+- Document 
+
+GOALS FOR V5
+- Implement tracking for multiple people (3-4 person games)
+- Track whose turn it is
+- Be able to trade between players 
+- Player names
+
+GOALS FOR V6
+- Analyze that information to see who got the most/best trades, who got the least/worst trades
+
+GOALS FOR V7 
+- Database to store previous games 
+
+
+

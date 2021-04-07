@@ -232,7 +232,7 @@ logBtn.addEventListener('click', () => {
 });
 
 finishBtn.addEventListener('click', () => {
-    gameLogJSON = JSON.stringify(player.turnInformation);
+    gameLogJSON = JSON.stringify(player.turnInformation, null, "\t");
     console.log(gameLogJSON);
 
 });
