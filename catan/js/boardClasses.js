@@ -9,15 +9,20 @@ class Board {
             case 'vanilla':
 
                 //setup Hexes and buttons 
+                this.initializeHTML();
                 this.initializeHexBtns();
                 this.initializeNodeBtns();
+
                 break;
             default:
                 console.log('incorrect boardType specified');
                 break
         }
     }
-
+    // sets up backgroundWrapper hexes
+    initializeHTML() {
+        initializeHexHTML();
+    }
     //Once user has clicked done, board cannot be changed
     // initNodes needs to be better
     initNodes() {
@@ -291,18 +296,18 @@ class Board {
             const s = i;
             this.nodeBtnArray[i].addEventListener('click', () => {
                 console.log(s);
-                //this.nodeBtnArray[s].disabled = true;
 
 
                 if (settlementsPlaced == 0) { //first settlement 
                     infoLabel.innerHTML = "Place Second Settlement";
-                    this.nodeBtnArray[s].style.background = 'green';
+                    this.nodeBtnArray[s].style.background = cssGreen;
                     this.nodeArray[s].hasSettlement = true;
                     settlementsPlaced++;
                 } else if (settlementsPlaced >= 1) {
                     settlementsPlaced++;
                     infoContainer.style.display = 'none';
                     dicePanel.style.display = 'block';
+                    dicePanel.style.zIndex = '69';
                     settlementsLayer.style.background = 'none';
 
 
@@ -311,16 +316,16 @@ class Board {
                         //update to city
                         if (this.nodeArray[s].hasCity) {
                             this.nodeArray[s].hasCity = false;
-                            this.nodeBtnArray[s].style.background = 'green';
+                            this.nodeBtnArray[s].style.background = cssGreen;
                         } else {
                             this.nodeArray[s].hasCity = true;
-                            this.nodeBtnArray[s].style.background = 'red';
+                            this.nodeBtnArray[s].style.background = cssRed;
                         }
 
                     } else {
                         //add settlement
                         this.nodeArray[s].hasSettlement = true;
-                        this.nodeBtnArray[s].style.background = 'green';
+                        this.nodeBtnArray[s].style.background = cssGreen;
                     }
 
 

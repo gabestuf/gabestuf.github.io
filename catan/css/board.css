@@ -1,16 +1,5 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 2rem;
-}
-
-.backgroundWrapper {
-  height: 100vh;
-  background: linear-gradient(45deg, red, yellow);
-  z-index: 0;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .hex {
   position: absolute;
   width: 200px;
@@ -23,6 +12,15 @@ body {
   text-align: center;
   margin-top: 90px;
   font-size: 2rem;
+}
+.hex .diceNumberIcon {
+  background: #ecc24f;
+  height: 48px;
+  width: 48px;
+  margin-left: 78px;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-weight: bold;
 }
 
 .hex:hover {
@@ -144,76 +142,6 @@ body {
   background-size: 200px 220px;
 }
 
-.infoContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 390px;
-}
-
-.diceNumberIcon {
-  z-index: 2;
-  font-weight: bolder;
-  font-size: 69px;
-  background: #d3bb52;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  padding: 0;
-}
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: white;
-  color: black;
-  padding: 8px;
-  font-size: 16px;
-  border: none;
-  min-width: 140px;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin: 0 10px 350px 10px;
-  min-height: 100px;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  /* Links inside the dropdown */
-}
-.dropdown-content button {
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
-  border: none;
-  min-width: 140px;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content button:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #b1b1b1;
-}
-
 .settlementsLayer {
   display: none;
   z-index: 69;
@@ -225,15 +153,17 @@ body {
   height: 100%;
 }
 .settlementsLayer .nodeBtn {
+  min-width: 0;
   position: absolute;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid black;
+  outline: none;
 }
 .settlementsLayer .nodeBtn:hover {
-  background-color: rgba(251, 255, 0, 0.69);
+  background-color: rgba(255, 0, 200, 0.69);
 }
 .settlementsLayer .nodeBtn:nth-of-type(1) {
   position: absolute;
@@ -506,35 +436,171 @@ body {
   left: 1179px;
 }
 
+/* Dropdown Button */
+button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid black;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  min-width: 140px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  flex-grow: 1;
+  min-height: 100px;
+}
+.dropdown .one {
+  margin-left: 5px;
+}
+.dropdown .two {
+  margin-left: 31px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  /* Links inside the dropdown */
+}
+.dropdown-content .one {
+  margin-left: 5px;
+}
+.dropdown-content .two {
+  margin-left: 31px;
+}
+.dropdown-content button {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  min-width: 140px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: rgba(255, 0, 200, 0.6);
+}
+
+button:hover {
+  background-color: rgba(255, 0, 200, 0.6);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-family: Montserrat, sans-serif;
+}
+
+.backgroundWrapper {
+  height: 100vh;
+  background: linear-gradient(45deg, red, yellow);
+  z-index: 0;
+}
+
+.infoContainer {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 325px;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 6px solid black;
+  color: white;
+  font-size: 2rem;
+}
+.infoContainer h4 {
+  text-align: center;
+}
+.infoContainer p {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.5rem;
+}
+.infoContainer .staticbtn1 {
+  border: 2px solid black;
+  margin-left: 5px;
+}
+.infoContainer .staticbtn2 {
+  margin-left: 29px;
+  border: 2px solid black;
+}
+.infoContainer .line {
+  height: 2px;
+  margin-top: 20px;
+  background-color: white;
+}
+.infoContainer .hexInfoContainer {
+  margin-top: 10px;
+  display: flex;
+}
+
 .dicePanel {
-  z-index: 69;
   display: none;
   position: absolute;
   top: 0;
   left: 0;
-  width: 335px;
-}
-.dicePanel fieldset {
-  width: 100%;
+  width: 325px;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 6px solid black;
+  color: white;
   font-size: 2rem;
-  font-weight: bold;
 }
-.dicePanel fieldset .dice-area {
-  margin: 0px 30px;
+.dicePanel .dice-area {
   text-align: center;
   display: inline-block;
+  margin: auto;
 }
-.dicePanel fieldset .dice-output {
+.dicePanel .dice-area p {
+  margin: auto;
+  font-size: 3rem;
+}
+.dicePanel .dice-area p:hover {
+  color: rgba(255, 0, 0, 0.69);
+  cursor: pointer;
+}
+.dicePanel .dice-area img {
+  width: 154px;
+  height: 154px;
+}
+.dicePanel .dice-sum {
+  text-align: center;
+}
+.dicePanel .dice-output {
   overflow-y: scroll;
 }
-.dicePanel fieldset img {
-  width: 100px;
+.dicePanel button {
+  font-family: Montserrat, sans-serif;
+  min-width: 150px;
+  margin: 10px 20px;
+  border: 2px solid black;
+  outline: none;
 }
-.dicePanel fieldset p {
-  font-size: 2rem;
-  color: black;
-}
-.dicePanel fieldset p:hover {
-  color: green;
-  cursor: pointer;
+.dicePanel button:active {
+  background-color: rgba(0, 0, 0, 0.69);
 }/*# sourceMappingURL=board.css.map */

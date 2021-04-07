@@ -234,5 +234,14 @@ logBtn.addEventListener('click', () => {
 finishBtn.addEventListener('click', () => {
     gameLogJSON = JSON.stringify(player.turnInformation);
     console.log(gameLogJSON);
+
 });
 
+
+function DownloadJson() {
+    var blob = new Blob([gameLogJSON]);
+    var link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.download = 'catan-game.txt';
+    link.click();
+}

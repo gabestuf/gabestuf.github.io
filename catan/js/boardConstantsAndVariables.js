@@ -1,6 +1,7 @@
 //Initialize HTML Labels 
 
 // Hex Info Panel 
+const backgroundWrapper = document.querySelector('.backgroundWrapper');
 const infoContainer = document.querySelector('.infoContainer');
 const hexInfoContainer = document.querySelector('.hexInfoContainer');
 const hexResourceLabel = document.getElementById('hexResource');
@@ -31,6 +32,11 @@ var turnNumber = 0;
 
 var gameLogJSON;
 
+// CSS Colors and variables
+var cssRed = 'rgba(255, 11, 11, 0.69)';
+var cssGreen = 'rgba(18, 172, 13, 0.69)';
+
+
 const scrambleBoardBtn = document.getElementById('scrambleBoardBtn');
 scrambleBoardBtn.addEventListener('click', function () {
     board.generateRandomBoard();
@@ -44,3 +50,15 @@ toSettlementLayerBtn.addEventListener('click', function () {
     infoLabel.innerHTML = "Place First Settlement";
 });
 
+
+
+function initializeHexHTML() {
+    const alphabetList = ['S', 'R', 'Q', 'P', 'O', 'N', 'M', 'L', 'K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'];
+
+    var i = 0;
+    for (i = 0; i < 19; i++) {
+
+        var string = '<div class="hex"> <p>' + alphabetList.pop() + '</p> </div>';
+        backgroundWrapper.innerHTML += string;
+    }
+}
