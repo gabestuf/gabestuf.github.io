@@ -1,22 +1,46 @@
-//Initialize global variables and BTN Arrays
-let hexArray, selectedHex;
-selectedHexID = '69';
-hexArray = new Array(19);
-const hexBtnArray = new Array(19);
 //Initialize HTML Labels 
+
+// Hex Info Panel 
+const infoContainer = document.querySelector('.infoContainer');
+const hexInfoContainer = document.querySelector('.hexInfoContainer');
 const hexResourceLabel = document.getElementById('hexResource');
 const hexDiceNumberLabel = document.getElementById('hexDiceNumber');
 var infoLabel = document.getElementById('infoLabel');
 
-function initializeHexBtns() {
-    //initiate hexArray list and btnArray list(btnArray makes the hex btns and gives them event listeners)
-    const alphabetList = ['S', 'R', 'Q', 'P', 'O', 'N', 'M', 'L', 'K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'];
-    for (i = 0; i < hexArray.length; i++) {
-        //creates 19 Hex objects for the board
-        hexArray[i] = new Hex(alphabetList.pop(), i, '', '', false);
-        //creates buttons with event listeners for adjusting the board
-        hexBtnArray[i] = document.querySelectorAll('.hex')[i];
-        const s = i; //why did I have to make a constant to make i work in the selectHex function?
-        hexBtnArray[i].addEventListener('click', function () { selectHex(s) });
-    }
-}
+// Settlements Layer
+const settlementsLayer = document.getElementById('settlementsLayer');
+const toSettlementLayerBtn = document.getElementById('toSettlementLayerBtn');
+
+//Dice Panel
+const dicePanel = document.getElementById('dicePanel');
+//roll dice
+const rollAgainBtn = document.getElementById('roll-again');
+//log roll
+const logBtn = document.getElementById('log-value');
+//finish game
+const finishBtn = document.getElementById('finish-game');
+// build settlements or cities
+const buildSettlementBtn = document.getElementById('build-settlement');
+
+
+//Variables 
+const hexBtnArray = new Array(19);
+var selectedHexID = 0;
+var settlementsPlaced = 0;
+var turnNumber = 0;
+
+var gameLogJSON;
+
+const scrambleBoardBtn = document.getElementById('scrambleBoardBtn');
+scrambleBoardBtn.addEventListener('click', function () {
+    board.generateRandomBoard();
+})
+
+toSettlementLayerBtn.addEventListener('click', function () {
+    settlementsLayer.style.display = 'block';
+    hexInfoContainer.style.display = 'none';
+    hexResourceLabel.style.display = 'none';
+    hexDiceNumberLabel.style.display = 'none';
+    infoLabel.innerHTML = "Place First Settlement";
+});
+

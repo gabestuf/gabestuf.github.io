@@ -1,4 +1,4 @@
-var firstRandomNum,secondRandomNum,sum,firstDiceImage,secondDiceImage;
+var firstRandomNum, secondRandomNum, sum, firstDiceImage, secondDiceImage;
 
 //INIT
 firstRandomNum = Math.floor(Math.random() * 6) + 1;
@@ -14,8 +14,6 @@ document.getElementById('dice-sum').innerHTML = 'sum: ' + sum;
 
 
 //ROLL DICE 
-const rollAgainBtn = document.getElementById('roll-again');
-rollAgainBtn.addEventListener('click', rollDice)
 function rollDice() {
     //rand num 1-6
     firstRandomNum = Math.floor(Math.random() * 6) + 1;
@@ -31,22 +29,22 @@ function rollDice() {
 
 
 //INCREASE OR DECREASE DICE VALUE
-document.getElementById('btn-up-red').addEventListener('click', function() {
+document.getElementById('btn-up-red').addEventListener('click', function () {
     updateDie(0, true);
 });
-document.getElementById('btn-down-red').addEventListener('click', function() {
+document.getElementById('btn-down-red').addEventListener('click', function () {
     updateDie(0, false);
 });
-document.getElementById('btn-up-yellow').addEventListener('click', function() {
-    updateDie(1,true);
+document.getElementById('btn-up-yellow').addEventListener('click', function () {
+    updateDie(1, true);
 });
-document.getElementById('btn-down-yellow').addEventListener('click', function() {
-    updateDie(1,false);
+document.getElementById('btn-down-yellow').addEventListener('click', function () {
+    updateDie(1, false);
 });
 //UPDATE DICE NUMBER UP OR DOWN
 function updateDie(dieNumber, isUp) {
     //red = 0 yellow = 1
-    switch (dieNumber){
+    switch (dieNumber) {
         case 0:
             if (isUp) {
                 if (firstRandomNum < 6) {
@@ -83,7 +81,7 @@ function updateDie(dieNumber, isUp) {
                 document.getElementById('yellow-die-img').setAttribute('src', secondDiceImage);
                 sum = firstRandomNum + secondRandomNum;
                 document.getElementById('dice-sum').innerHTML = 'sum: ' + sum;
-            }else if(!isUp) {
+            } else if (!isUp) {
                 if (secondRandomNum > 1) {
                     secondRandomNum -= 1;
                 } else {
@@ -94,70 +92,14 @@ function updateDie(dieNumber, isUp) {
                 sum = firstRandomNum + secondRandomNum;
                 document.getElementById('dice-sum').innerHTML = 'sum: ' + sum;
             } else {
-                console.log('something in the if statement is wrong')
+                console.log('something in the if statement is wrong');
             }
             break;
         default:
-            console.log('updateDie dieNumber error')
-    }
-    
-}
-
-
-const clearBtn = document.getElementById('clear-btn');
-const logBtn = document.getElementById('log-value');
-const lsOutput = document.getElementById('lsOutput');
-
-logBtn.addEventListener('click', logDiceRolls);
-function logDiceRolls() {
-
-    if (localStorage.getItem('rollNumber')) {
-        var x = parseInt(localStorage.getItem('rollNumber'));
-        x += 1;
-        localStorage.setItem('rollNumber', x);
-    } else {
-        localStorage.setItem('rollNumber' , 1);
+            console.log('updateDie dieNumber error');
     }
 
-    var rollNumber = parseInt(localStorage.getItem('rollNumber'));
-    //console.log(rollNumber);
-
-    const sumKey = 'sum' + rollNumber;
-    const redKey = 'red' + rollNumber;
-    const yellowKey = 'yellow' + rollNumber;
-
-    //starts with sum1
-    localStorage.setItem(sumKey, sum);
-    localStorage.setItem(redKey, firstRandomNum);
-    localStorage.setItem(yellowKey, secondRandomNum);
-
-          //red
-          const value1 = localStorage.getItem(redKey);
-          //sum
-          const value2 = localStorage.getItem(sumKey);
-          //yellow
-          const value3 = localStorage.getItem(yellowKey);
-          //rollnum
-          const value4 = localStorage.getItem('rollNumber');
-      
-
-          lsOutput.innerHTML = `Roll: ${value4} | Red: ${value1} | Yellow: ${value3} | Sum: ${value2}<br />` + lsOutput.innerHTML;
- 
-          
-    //location.reload();
 }
-
-
-  clearBtn.addEventListener('click', function() {
-    localStorage.clear();
-    location.reload();
-}); 
-
-const wheatLabel = document.querySelectorAll('.resource-label')[0];
-const sheepLabel = document.querySelectorAll('.resource-label')[1];
-const treeLabel = document.querySelectorAll('.resource-label')[2];
-const mudLabel = document.querySelectorAll('.resource-label')[3];
-const rockLabel = document.querySelectorAll('.resource-label')[4];
 
 
 

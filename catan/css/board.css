@@ -152,7 +152,7 @@ body {
 }
 
 .diceNumberIcon {
-  z-index: 42069;
+  z-index: 2;
   font-weight: bolder;
   font-size: 69px;
   background: #d3bb52;
@@ -178,6 +178,7 @@ body {
   position: relative;
   display: inline-block;
   margin: 0 10px 350px 10px;
+  min-height: 100px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -211,4 +212,329 @@ body {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #b1b1b1;
+}
+
+.settlementsLayer {
+  display: none;
+  z-index: 69;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.settlementsLayer .nodeBtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid black;
+}
+.settlementsLayer .nodeBtn:hover {
+  background-color: rgba(251, 255, 0, 0.69);
+}
+.settlementsLayer .nodeBtn:nth-of-type(1) {
+  position: absolute;
+  top: 61px;
+  left: 582px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(2) {
+  position: absolute;
+  top: 10px;
+  left: 679px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(3) {
+  position: absolute;
+  top: 61px;
+  left: 781px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(4) {
+  position: absolute;
+  top: 10px;
+  left: 879px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(5) {
+  position: absolute;
+  top: 61px;
+  left: 981px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(6) {
+  position: absolute;
+  top: 10px;
+  left: 1079px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(7) {
+  position: absolute;
+  top: 61px;
+  left: 1178px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(8) {
+  position: absolute;
+  top: 225px;
+  left: 482px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(9) {
+  position: absolute;
+  top: 171px;
+  left: 581px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(10) {
+  position: absolute;
+  top: 225px;
+  left: 681px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(11) {
+  position: absolute;
+  top: 171px;
+  left: 781px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(12) {
+  position: absolute;
+  top: 225px;
+  left: 880px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(13) {
+  position: absolute;
+  top: 171px;
+  left: 981px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(14) {
+  position: absolute;
+  top: 225px;
+  left: 1080px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(15) {
+  position: absolute;
+  top: 171px;
+  left: 1181px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(16) {
+  position: absolute;
+  top: 225px;
+  left: 1278px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(17) {
+  position: absolute;
+  top: 388px;
+  left: 383px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(18) {
+  position: absolute;
+  top: 333px;
+  left: 482px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(19) {
+  position: absolute;
+  top: 388px;
+  left: 582px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(20) {
+  position: absolute;
+  top: 333px;
+  left: 682px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(21) {
+  position: absolute;
+  top: 388px;
+  left: 782px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(22) {
+  position: absolute;
+  top: 333px;
+  left: 882px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(23) {
+  position: absolute;
+  top: 388px;
+  left: 982px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(24) {
+  position: absolute;
+  top: 333px;
+  left: 1082px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(25) {
+  position: absolute;
+  top: 388px;
+  left: 1182px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(26) {
+  position: absolute;
+  top: 333px;
+  left: 1278px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(27) {
+  position: absolute;
+  top: 388px;
+  left: 1379px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(28) {
+  position: absolute;
+  top: 493px;
+  left: 383px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(29) {
+  position: absolute;
+  top: 548px;
+  left: 482px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(30) {
+  position: absolute;
+  top: 493px;
+  left: 582px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(31) {
+  position: absolute;
+  top: 548px;
+  left: 681px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(32) {
+  position: absolute;
+  top: 493px;
+  left: 781px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(33) {
+  position: absolute;
+  top: 548px;
+  left: 880px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(34) {
+  position: absolute;
+  top: 493px;
+  left: 980px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(35) {
+  position: absolute;
+  top: 548px;
+  left: 1079px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(36) {
+  position: absolute;
+  top: 493px;
+  left: 1179px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(37) {
+  position: absolute;
+  top: 548px;
+  left: 1279px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(38) {
+  position: absolute;
+  top: 493px;
+  left: 1379px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(39) {
+  position: absolute;
+  top: 656px;
+  left: 482px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(40) {
+  position: absolute;
+  top: 710px;
+  left: 582px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(41) {
+  position: absolute;
+  top: 656px;
+  left: 681px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(42) {
+  position: absolute;
+  top: 710px;
+  left: 781px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(43) {
+  position: absolute;
+  top: 656px;
+  left: 880px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(44) {
+  position: absolute;
+  top: 710px;
+  left: 980px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(45) {
+  position: absolute;
+  top: 656px;
+  left: 1079px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(46) {
+  position: absolute;
+  top: 710px;
+  left: 1179px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(47) {
+  position: absolute;
+  top: 656px;
+  left: 1278px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(48) {
+  position: absolute;
+  top: 818px;
+  left: 582px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(49) {
+  position: absolute;
+  top: 869px;
+  left: 682px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(50) {
+  position: absolute;
+  top: 818px;
+  left: 781px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(51) {
+  position: absolute;
+  top: 869px;
+  left: 881px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(52) {
+  position: absolute;
+  top: 818px;
+  left: 980px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(53) {
+  position: absolute;
+  top: 869px;
+  left: 1081px;
+}
+.settlementsLayer .nodeBtn:nth-of-type(54) {
+  position: absolute;
+  top: 818px;
+  left: 1179px;
+}
+
+.dicePanel {
+  z-index: 69;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 335px;
+}
+.dicePanel fieldset {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.dicePanel fieldset .dice-area {
+  margin: 0px 30px;
+  text-align: center;
+  display: inline-block;
+}
+.dicePanel fieldset .dice-output {
+  overflow-y: scroll;
+}
+.dicePanel fieldset img {
+  width: 100px;
+}
+.dicePanel fieldset p {
+  font-size: 2rem;
+  color: black;
+}
+.dicePanel fieldset p:hover {
+  color: green;
+  cursor: pointer;
 }/*# sourceMappingURL=board.css.map */

@@ -78,6 +78,7 @@
                 <p id='hexResource'>Resource:</p>
                 <p id='hexDiceNumber'>Number:</p>
                 <button id='scrambleBoardBtn'>SCRAMPLE</button>
+                <button id='toSettlementLayerBtn'>DONE</button>
             </fieldset>
         </div>
         <div class="hexInfoContainer">
@@ -107,15 +108,39 @@
                         <button class='hexDiceNumber'>10</button>
                         <button class='hexDiceNumber'>11</button>
                         <button class='hexDiceNumber'>12</button>
+                        <button class='hexDiceNumber'>NONE</button>
                     </div>
                 </div>
             </fieldset>
         </div>
     </div>
 
+    <div id="settlementsLayer" class='settlementsLayer'></div>
+    <div id='dicePanel' class='dicePanel'>
+        <fieldset>
+            <legend>Dice</legend>
+            <div class="dice-area">
+                <p id='btn-up-red'>▲</p>
+                <img id='red-die-img' alt="red die">
+                <p id='btn-down-red'>▼</p>
+            </div>
+            <div class="dice-area">
+                <p id='btn-up-yellow'>▲</p>
+                <img id='yellow-die-img' alt="yellow die">
+                <p id='btn-down-yellow'>▼</p>
+            </div>
+            <h2 id='dice-sum'>sum:</h2>
+            <button id='roll-again'>Roll Dice</button>
+            <button id='log-value'>Log Roll</button>
+            <button id="finish-game">Finish Game</button>
+            <button id="build-settlement">Settlement</button>
+        </fieldset>
+    </div>
+
 </body>
 <script defer src="../js/boardClasses.js"></script>
 <script defer src="../js/boardConstantsAndVariables.js"></script>
+<script defer src="../js/catan.js"></script>
 <script defer src="../js/boardMain.js"></script>
 
 

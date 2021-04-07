@@ -8,21 +8,20 @@ CATAN TO-DO LIST
 
 // THE FOLLOWING FUNCTIONS ALLOW YOU TO CHANGE THE HEX PLACEMENT AND UPDATES THE DISPLAY ACCORDINGLY 
 function selectHex(hexID) {
-    infoLabel.innerHTML = 'Hex ' + hexArray[hexID].hexName + ' Selected';
-    hexResourceLabel.innerHTML = 'Resource: ' + hexArray[hexID].hexResourceName;
-    hexDiceNumberLabel.innerHTML = 'Number: ' + hexArray[hexID].hexDiceNumber;
+    infoLabel.innerHTML = 'Hex ' + board.hexArray[hexID].hexName + ' Selected';
+    hexResourceLabel.innerHTML = 'Resource: ' + board.hexArray[hexID].hexResourceName;
+    hexDiceNumberLabel.innerHTML = 'Number: ' + board.hexArray[hexID].hexDiceNumber;
 
-    selectedHexID = hexArray[hexID].hexID;
+    selectedHexID = board.hexArray[hexID].hexID;
     showHexInfo();
 }
-
 function showHexInfo() {
 
-    hexResourceLabel.innerHTML = 'Resource: ' + hexArray[selectedHexID].hexResourceName;
-    hexDiceNumberLabel.innerHTML = 'Number: ' + hexArray[selectedHexID].hexDiceNumber;
+    hexResourceLabel.innerHTML = 'Resource: ' + board.hexArray[selectedHexID].hexResourceName;
+    hexDiceNumberLabel.innerHTML = 'Number: ' + board.hexArray[selectedHexID].hexDiceNumber;
 
     const selectorBtnArray = new Array(6);
-    const hexDiceNumberBtnArray = new Array(11);
+    const hexDiceNumberBtnArray = new Array(12);
     const resourceArray = ['sheep', 'tree', 'rock', 'mud', 'wheat', 'sand'];
 
     for (i = 0; i < selectorBtnArray.length; i++) {
@@ -36,11 +35,18 @@ function showHexInfo() {
         //creates buttons with event listeners 
         hexDiceNumberBtnArray[i] = document.querySelectorAll('.hexDiceNumber')[i];
         const s = i + 2;
-        hexDiceNumberBtnArray[i].addEventListener('click', function () { replaceHexDiceNumber(s) });
+        hexDiceNumberBtnArray[i].addEventListener('click', function () {
+            if (s == 13) {
+                replaceHexDiceNumber(0)
+            } else {
+                replaceHexDiceNumber(s)
+            }
+
+        });
     }
 }
 function replaceHexDiceNumber(num) {
-    hexArray[selectedHexID].hexDiceNumber = num;
+    board.hexArray[selectedHexID].hexDiceNumber = num;
     hexDiceNumberLabel.innerHTML = 'Number: ' + num;
 
     const currentHex = document.querySelectorAll('.hex')[selectedHexID];
@@ -67,7 +73,7 @@ function replaceHexDiceNumber(num) {
             break;
         case 6:
             currentHex.innerHTML = "<p class='diceNumberIcon'> 6 </p>";
-            currentHex.style.color = 'rgb(117, 15, 7)';
+            currentHex.style.color = 'rgb(223, 14, 14)';
             break;
         case 7:
             currentHex.innerHTML = "<p class='diceNumberIcon'> 7 </p>";
@@ -75,7 +81,7 @@ function replaceHexDiceNumber(num) {
             break;
         case 8:
             currentHex.innerHTML = "<p class='diceNumberIcon'> 8 </p>";
-            currentHex.style.color = 'rgb(117, 15, 7)';
+            currentHex.style.color = 'rgb(223, 14, 14)';
             break;
         case 9:
             currentHex.innerHTML = "<p class='diceNumberIcon'> 9 </p>";
@@ -99,7 +105,7 @@ function replaceHexDiceNumber(num) {
     }
 }
 function replaceHexResource(resource) {
-    hexArray[selectedHexID].hexResourceName = resource;
+    board.hexArray[selectedHexID].hexResourceName = resource;
     hexResourceLabel.innerHTML = 'Resource: ' + resource;
 
     const currentHex = document.querySelectorAll('.hex')[selectedHexID];
@@ -134,10 +140,7 @@ function replaceHexResource(resource) {
             break;
     }
 }
-const testBtn69 = document.getElementById('scrambleBoardBtn');
-testBtn69.addEventListener('click', function () {
-    board.generateRandomBoard();
-})
+
 
 //for shuffling arrays (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 function shuffleArray(array) {
@@ -163,7 +166,73 @@ function shuffleArray(array) {
 
 
 
-
 //START
-const board = new Board();
-board.initializeBoard(0);
+const board = new Board(new Array(54), new Array(19), new Array(54));
+
+boardType = 'vanilla';
+
+board.initBoard('vanilla');
+console.log(board.nodeArray);
+
+const player = new Player([]);
+
+
+buildSettlementBtn.addEventListener('click', () => {
+    for (i = 0; i < board.nodeArray.length; i++) {
+        board.nodeBtnArray[i].disabled = false;
+        board.nodeBtnArray[i].style.display = 'block';
+    }
+});
+
+
+logBtn.addEventListener('click', () => {
+
+    //variables 
+    // firstRandomNum is RED
+    // secondRandomNum is Yellow
+    turnNumber++;
+    var resourcesGained = [];
+    var adjacentHexIDArray = [];
+
+    // search nodes for nodes with settlements on them. If there is a settlement, get the adjacentHexIDs
+    // using the hexIDs, search those hexes and see if any of the hexDiceNumbers == sum
+    // if they do, check if settlement is a city and then add hexResourceName to a list of resourcesGained (x2 if city)
+
+    // gets list of adjacentHexIDs
+    for (n of board.nodeArray) {
+        if (n.hasSettlement) {
+            // check if it's a city
+            if (n.hasCity) {
+                for (x of n.adjacentHexIDs) {
+                    adjacentHexIDArray.push(x);
+                }
+            }
+            for (x of n.adjacentHexIDs) {
+                adjacentHexIDArray.push(x);
+            }
+        }
+    }
+    //i is the hexID
+    for (i of adjacentHexIDArray) {
+        if (board.hexArray[i].hexDiceNumber == sum) {
+
+            resourcesGained.push(board.hexArray[i].hexResourceName);
+        }
+    }
+
+    var turnInformationObj = {
+        "turn": turnNumber,
+        "redDie": firstRandomNum,
+        "yellowDie": secondRandomNum,
+        "sum": sum,
+        "resourcesGained": resourcesGained
+    }
+    player.turnInformation.push(turnInformationObj);
+    console.log(player.turnInformation);
+});
+
+finishBtn.addEventListener('click', () => {
+    gameLogJSON = JSON.stringify(player.turnInformation);
+    console.log(gameLogJSON);
+});
+
