@@ -351,7 +351,7 @@ class Board {
             if (resource == 'sand') {
                 selectedHexID = i;
                 this.hexArray[i].hexResourceName = resource;
-                this.hexArray[i].hexDiceNumber = 'NULL';
+                this.hexArray[i].hexDiceNumber = '';
                 replaceHexResource(resource);
                 replaceHexDiceNumber(0);
             } else {

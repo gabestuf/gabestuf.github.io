@@ -15,6 +15,8 @@ V1.1
 V1.2
 - Updated UI, still very wack but slightly better
 
+V1.3 
+- Added basic robber functionality
 
 GOALS FOR V2
 - Be able to read the JSON FILE and look at data on another html page
@@ -23,6 +25,9 @@ GOALS FOR V2
   2. Dice information, such as sum of dice frequency, also individual red vs yellow die stats
   3. Resource frequency
   4. Dice Resource correlation
+- Can't build two settlements next to each other
+- Work on balanced map making?
+- be able to type in dice rolls with tab and enter (no mouse)
 
 GOALS FOR V3
 - Implement Inventory System
@@ -47,7 +52,7 @@ GOALS FOR V5
 GOALS FOR V6
 - Analyze that information to see who got the most/best trades, who got the least/worst trades
 
-GOALS FOR V7 
+GOALS FOR V7
 - Database to store previous games 
 
 

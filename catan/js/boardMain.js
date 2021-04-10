@@ -47,12 +47,16 @@ function showHexInfo() {
 }
 function replaceHexDiceNumber(num) {
     board.hexArray[selectedHexID].hexDiceNumber = num;
+
     hexDiceNumberLabel.innerHTML = 'Number: ' + num;
+    // if (num == 0) {
+    //     hexDiceNumberLabel.innerHTML = 'Number: ' + 'im a desert';
+    // }
 
     const currentHex = document.querySelectorAll('.hex')[selectedHexID];
     switch (num) {
         case 0:
-            currentHex.innerHTML = '';
+            currentHex.innerHTML = "<p class='diceNumberIcon'></p>";
             currentHex.style.color = 'black';
             break;
         case 2:
@@ -172,10 +176,9 @@ const board = new Board(new Array(54), new Array(19), new Array(54));
 boardType = 'vanilla';
 
 board.initBoard('vanilla');
-console.log(board.nodeArray);
+//console.log(board.nodeArray);
 
 const player = new Player([]);
-
 
 buildSettlementBtn.addEventListener('click', () => {
     for (i = 0; i < board.nodeArray.length; i++) {
@@ -183,7 +186,6 @@ buildSettlementBtn.addEventListener('click', () => {
         board.nodeBtnArray[i].style.display = 'block';
     }
 });
-
 
 logBtn.addEventListener('click', () => {
 
@@ -201,14 +203,27 @@ logBtn.addEventListener('click', () => {
     // gets list of adjacentHexIDs
     for (n of board.nodeArray) {
         if (n.hasSettlement) {
+
+            // // checks to make sure robber isn't on hex
+            // for (let i = 0; i < n.adjacentHexIDs.length; i++){
+            //     if (!board.hexArray[n.adjacentHexIDs[i]].hasRobber) {
+
+            //     } 
+            // }
+
             // check if it's a city
             if (n.hasCity) {
-                for (x of n.adjacentHexIDs) {
-                    adjacentHexIDArray.push(x);
+                for (x of n.adjacentHexIDs) { // x is a hexID 
+                    if (!board.hexArray[x].hasRobber) {
+                        adjacentHexIDArray.push(x);
+                    }
+
                 }
             }
             for (x of n.adjacentHexIDs) {
-                adjacentHexIDArray.push(x);
+                if (!board.hexArray[x].hasRobber) {
+                    adjacentHexIDArray.push(x);
+                }
             }
         }
     }
@@ -231,11 +246,7 @@ logBtn.addEventListener('click', () => {
     console.log(player.turnInformation);
 });
 
-finishBtn.addEventListener('click', () => {
-    gameLogJSON = JSON.stringify(player.turnInformation, null, "\t");
-    console.log(gameLogJSON);
 
-});
 
 
 function DownloadJson() {

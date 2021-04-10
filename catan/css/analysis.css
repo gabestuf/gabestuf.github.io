@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --main-radius: 10px;
+    --main-padding: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.backgroundWrapper2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, red, yellow);
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 2fr;
+    grid-template-rows: .2fr 1.2fr 1fr;
+
+    grid-template-areas:
+        "nav nav nav"
+        "sidebar main main"
+        "sidebar content1 content2";
+    grid-gap: 0.2rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.glassContainer {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 2.0px );
+    -webkit-backdrop-filter: blur( 2.0px );
+    border-radius: var(--main-radius);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#navigation {
+    grid-area: nav;
+    padding-top: var(--main-padding);
+}
+
+#mainArea {
+    grid-area: main;
+    padding-top: var(--main-padding);
+}
+
+#sidebar {
+    grid-area: sidebar;
+    padding-top: var(--main-padding);
+}
+
+#content1 {
+    grid-area: content1;
+    padding-top: var(--main-padding);
+}
+#content2 {
+    grid-area: content2;
+    padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width: 900px) {
+    #sidebar{
+        display: none;
+    }
+    .backgroundWrapper2 {
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .2fr 1.2fr 1fr;
+        grid-template-areas:
+            "nav nav"
+            "main main"
+            "content1 content2"
+            
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .backgroundWrapper2{
+        grid-template-columns: 1fr;
+        grid-template-rows: .15fr .6fr .5fr .5fr;
+        grid-template-areas:
+            "nav"
+            "main"
+            "content1"
+            "content2"
+    }
+}
