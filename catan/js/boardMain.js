@@ -194,54 +194,55 @@ logBtn.addEventListener('click', () => {
     // secondRandomNum is Yellow
     turnNumber++;
     var resourcesGained = [];
-    var adjacentHexIDArray = [];
+    var resourcesBlocked = [];
 
     // search nodes for nodes with settlements on them. If there is a settlement, get the adjacentHexIDs
     // using the hexIDs, search those hexes and see if any of the hexDiceNumbers == sum
     // if they do, check if settlement is a city and then add hexResourceName to a list of resourcesGained (x2 if city)
 
     // gets list of adjacentHexIDs
-    for (n of board.nodeArray) {
-        if (n.hasSettlement) {
-
-            // // checks to make sure robber isn't on hex
-            // for (let i = 0; i < n.adjacentHexIDs.length; i++){
-            //     if (!board.hexArray[n.adjacentHexIDs[i]].hasRobber) {
-
-            //     } 
-            // }
-
-            // check if it's a city
-            if (n.hasCity) {
-                for (x of n.adjacentHexIDs) { // x is a hexID 
-                    if (!board.hexArray[x].hasRobber) {
-                        adjacentHexIDArray.push(x);
+    for (n of board.nodeArray) { //for each node 
+        if (n.hasSettlement) {   // if the node has a settlement
+            if (n.hasCity) { // check if it's a city
+                for (x of n.adjacentHexIDs) { // for every hexID (x) of nodes that have cities
+                    if (!board.hexArray[x].hasRobber) { //if the hex at hexID (x) doesn't have the robber
+                        if (board.hexArray[x].hexDiceNumber == sum) { // check if the hex was the number rolled
+                            console.log(x);
+                            resourcesGained.push(board.hexArray[x].hexResourceName); //if true, add the resource 
+                        }
+                    } else if ((board.hexArray[x].hasRobber)) { //if it does have the robber, 
+                        if (board.hexArray[x].hexDiceNumber == sum) { // check if the ID had the number rolled
+                            resourcesBlocked.push(board.hexArray[x].hexResourceName);
+                        }
                     }
 
                 }
             }
-            for (x of n.adjacentHexIDs) {
-                if (!board.hexArray[x].hasRobber) {
-                    adjacentHexIDArray.push(x);
+            // if it is just a settlement without a city
+            for (x of n.adjacentHexIDs) { // for every hexID (x) of nodes with settlements
+                if (!board.hexArray[x].hasRobber) { // if there is no robber
+                    if (board.hexArray[x].hexDiceNumber == sum) { // check if the hex was the number rolled
+                        resourcesGained.push(board.hexArray[x].hexResourceName); //if true, add the resource 
+                    }
+                } else if (board.hexArray[x].hasRobber) { // else if there was a robber
+                    if (board.hexArray[x].hexDiceNumber == sum) { //if the number on the hex was rolled
+                        resourcesBlocked.push(board.hexArray[x].hexResourceName); //add that resource to a list of blocked resources
+                    }
                 }
             }
         }
     }
-    //i is the hexID
-    for (i of adjacentHexIDArray) {
-        if (board.hexArray[i].hexDiceNumber == sum) {
 
-            resourcesGained.push(board.hexArray[i].hexResourceName);
-        }
-    }
 
     var turnInformationObj = {
         "turn": turnNumber,
         "redDie": firstRandomNum,
         "yellowDie": secondRandomNum,
         "sum": sum,
-        "resourcesGained": resourcesGained
+        "resourcesGained": resourcesGained,
+        "resourcedBlocked": resourcesBlocked
     }
+
     player.turnInformation.push(turnInformationObj);
     console.log(player.turnInformation);
 });

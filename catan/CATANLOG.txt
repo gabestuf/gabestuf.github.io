@@ -18,15 +18,30 @@ V1.2
 V1.3 
 - Added basic robber functionality
 
+V1.4 
+- Added buttons to select dice numbers 
+- Added resources blocked variable to JSON object for analysis 
+- slightly improved UI using grid and JS for robber button highlighting
+- logged JSON in local storage
+- Added fogged out effect when finish game is clicked to end interaction with the board and some endgame changes to prep for V2 
+- Encountered bugs: 
+  1. Encountered a strange bug where when rolled a 6, hex 4 was a 6 and contained mud. The desert was on hex 3 with the robber on it.
+     I should have gained 1 mud, but instead I gained 1 sheep. I have not been able to recreate a situation like this since. Pls fix :(
+  2. If you click settlement button, then robber button, zIndexing creates some weird things. 
+     To fix, clicking one will toggle the other off. Will also give me a chance to turn some ugly bits of code into nice functions 
+     such as showSettlementLayer, hideSettlementLayer, showBoardLayer,HideBoardLayer
+
+
 GOALS FOR V2
 - Be able to read the JSON FILE and look at data on another html page
+- Actually, maybe make it on the same page at a higher z index with game blurred in background 
 - look at data such as:
   1. Resources gained graph, # of resources on Y, turn on X
   2. Dice information, such as sum of dice frequency, also individual red vs yellow die stats
   3. Resource frequency
   4. Dice Resource correlation
 - Can't build two settlements next to each other
-- Work on balanced map making?
+- Work on balanced map making? Start with making sure 8s and 6s can't be adjacent 
 - be able to type in dice rolls with tab and enter (no mouse)
 
 GOALS FOR V3

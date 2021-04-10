@@ -57,27 +57,54 @@
     </div>
 
     <div id="settlementsLayer" class='settlementsLayer'></div>
+    <div id="finishLayer" class='finishLayer'></div>
 
     <div id='dicePanel' class='dicePanel'>
 
-        <div class="dice-area">
-            <p id='btn-up-red'>▲</p>
-            <img id='red-die-img' alt="red die">
-            <p id='btn-down-red'>▼</p>
+        <div class="diceAreaContainer">
+            <div class="dice-area">
+                <p id='btn-up-red'>▲</p>
+                <img id='red-die-img' alt="red die">
+                <p id='btn-down-red'>▼</p>
+            </div>
+            <div class="dice-area">
+                <p id='btn-up-yellow'>▲</p>
+                <img id='yellow-die-img' alt="yellow die">
+                <p id='btn-down-yellow'>▼</p>
+            </div>
         </div>
-        <div class="dice-area">
-            <p id='btn-up-yellow'>▲</p>
-            <img id='yellow-die-img' alt="yellow die">
-            <p id='btn-down-yellow'>▼</p>
+
+        <div class="diceButtonContainer">
+            <div class="redButtonContainer">
+                <button class='redDiceNumberBtn'>1</button>
+                <button class='redDiceNumberBtn'>2</button>
+                <button class='redDiceNumberBtn'>3</button>
+                <button class='redDiceNumberBtn'>4</button>
+                <button class='redDiceNumberBtn'>5</button>
+                <button class='redDiceNumberBtn'>6</button>
+            </div>
+            <div class="yellowButtonContainer">
+                <button class='yellowDiceNumberBtn'>1</button>
+                <button class='yellowDiceNumberBtn'>2</button>
+                <button class='yellowDiceNumberBtn'>3</button>
+                <button class='yellowDiceNumberBtn'>4</button>
+                <button class='yellowDiceNumberBtn'>5</button>
+                <button class='yellowDiceNumberBtn'>6</button>
+            </div>
         </div>
+
         <h2 id='dice-sum' class='dice-sum'>sum:</h2>
-        <button id='roll-again'>Roll Dice</button>
-        <button id='log-value'>Log Roll</button>
-        <button id="build-settlement">Settlement</button>
-        <button id="move-robber">Robber</button>
-        <button id="finish-game">Finish Game</button>
-        <button id='analysis-btn'>Analyze</button>
-        <button type="button" value="Download JSON" onclick="DownloadJson()"> Download JSON </button>
+
+        <div class="otherButtonsContainer">
+            <button id='roll-again'>Roll Dice</button>
+            <button id='log-value'>Log Roll</button>
+            <button id="build-settlement">Settlement</button>
+            <button id="move-robber">Robber</button>
+            <button id="finish-game">Finish Game</button>
+            <button type="button" value="Download JSON" onclick="DownloadJson()"> Download JSON </button>
+            <button id='analysis-btn'>Analyze</button>
+        </div>
+
 
     </div>
 

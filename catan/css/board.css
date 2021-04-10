@@ -144,7 +144,7 @@
 
 .settlementsLayer {
   display: none;
-  z-index: 69;
+  z-index: 67;
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0;
@@ -571,10 +571,33 @@ body {
   color: white;
   font-size: 2rem;
 }
+.dicePanel .diceButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+.dicePanel .redButtonContainer, .dicePanel .yellowButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.dicePanel .redButtonContainer button, .dicePanel .yellowButtonContainer button {
+  margin: 0;
+  padding: 0;
+  width: 55px;
+  height: 55px;
+  min-width: 0px;
+  outline: none;
+}
+.dicePanel .redButtonContainer {
+  margin-right: 53px;
+}
+.dicePanel .diceAreaContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .dicePanel .dice-area {
   text-align: center;
   display: inline-block;
-  margin: auto;
 }
 .dicePanel .dice-area p {
   margin: auto;
@@ -589,6 +612,8 @@ body {
   height: 154px;
 }
 .dicePanel .dice-sum {
+  margin-top: 12px;
+  margin-bottom: 10px;
   text-align: center;
 }
 .dicePanel .dice-output {
@@ -596,11 +621,29 @@ body {
 }
 .dicePanel button {
   font-family: Montserrat, sans-serif;
-  min-width: 150px;
-  margin: 10px 20px;
   border: 2px solid black;
   outline: none;
 }
 .dicePanel button:active {
   background-color: rgba(0, 0, 0, 0.69);
+}
+.dicePanel .otherButtonsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.dicePanel .otherButtonsContainer button {
+  margin: 5px 5px 5px 5px;
+}
+
+.finishLayer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 68;
+  background: rgba(53, 53, 53, 0.25);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }/*# sourceMappingURL=board.css.map */

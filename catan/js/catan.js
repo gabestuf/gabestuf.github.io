@@ -8,7 +8,7 @@ firstDiceImage = '/images/dice/red' + firstRandomNum + '.png';
 secondDiceImage = '/images/dice/yellow' + secondRandomNum + '.png';
 document.getElementById('red-die-img').setAttribute('src', firstDiceImage);
 document.getElementById('yellow-die-img').setAttribute('src', secondDiceImage);
-document.getElementById('dice-sum').innerHTML = 'sum: ' + sum;
+diceSumLabel.innerHTML = 'sum: ' + sum;
 
 
 
@@ -25,6 +25,22 @@ function rollDice() {
     document.getElementById('red-die-img').setAttribute('src', firstDiceImage);
     document.getElementById('yellow-die-img').setAttribute('src', secondDiceImage);
     document.getElementById('dice-sum').innerHTML = 'sum: ' + sum;
+}
+
+function setDie(isRedDie, aNumber) {
+    if (isRedDie) {
+        firstRandomNum = aNumber;
+        sum = firstRandomNum + secondRandomNum;
+        firstDiceImage = '/images/dice/red' + firstRandomNum + '.png';
+        document.getElementById('red-die-img').setAttribute('src', firstDiceImage);
+        document.getElementById('dice-sum').innerHTML = 'sum: ' + sum;
+    } else {
+        secondRandomNum = aNumber;
+        sum = firstRandomNum + secondRandomNum;
+        secondDiceImage = '/images/dice/yellow' + secondRandomNum + '.png';
+        document.getElementById('yellow-die-img').setAttribute('src', secondDiceImage);
+        document.getElementById('dice-sum').innerHTML = 'sum: ' + sum;
+    }
 }
 
 

@@ -25,6 +25,12 @@ const buildSettlementBtn = document.getElementById('build-settlement');
 const analysisBtn = document.getElementById('analysis-btn');
 const robberBtn = document.getElementById('move-robber');
 
+const diceSumLabel = document.getElementById('dice-sum');
+const diceButtonContainer = document.querySelector('.diceButtonContainer');
+const diceAreaContainer = document.querySelector('.diceAreaContainer');
+
+//Finish layer
+const finishLayer = document.getElementById('finishLayer');
 
 //Variables 
 const hexBtnArray = new Array(19);
@@ -65,32 +71,22 @@ toSettlementLayerBtn.addEventListener('click', function () {
 
             board.hexArray[s].hasRobber = true;
 
-            // for (node in board.nodeArray) { // for every node in nodeArray
-            //     for (hexID in node.adjacentHexIDs) { // we need to find the node's adjacent hexes 
-            //         // for each adjacent hex, check if that hexID == s
-            //         if (hexID == s) {// if it does, set board.hexArray[s].hasRobber = true; 
-            //             board.hexArray[s].hasRobber = true;
-            //         }
-            //     }
-            // }
-
-
-
             for (x = 0; x < board.hexArray.length; x++) { // reset all hex diceNumberIcons to default color 
-                if (backgroundWrapper.querySelectorAll('.hex')[x].querySelector('.diceNumberIcon')) {
-                    backgroundWrapper.querySelectorAll('.hex')[x].querySelector('.diceNumberIcon').style.background = 'rgb(236, 194, 79)';
-                }
+
+                backgroundWrapper.querySelectorAll('.hex')[x].querySelector('.diceNumberIcon').style.background = 'rgb(236, 194, 79)';
+
             }
-            if (backgroundWrapper.querySelectorAll('.hex')[s].querySelector('.diceNumberIcon')) {
-                backgroundWrapper.querySelectorAll('.hex')[s].querySelector('.diceNumberIcon').style.background = 'rgb(255,0,0,.69)'; // set selected hex to different color
-            }
+
+            backgroundWrapper.querySelectorAll('.hex')[s].querySelector('.diceNumberIcon').style.background = 'rgb(255,0,0,.69)'; // set selected hex to different color
+
             settlementsLayer.style.zIndex = '69'; //reapplies the settlements Layer
-            //robberBtn.style.background = 'rgba(0, 0, 0, .2)';
+            robberBtn.style.background = 'rgba(0, 0, 0, .2)';
+
+            robberBtn.onmouseover = () => { robberBtn.style.background = 'rgba(255, 0, 200, 0.6' };
+            robberBtn.onmouseout = () => { robberBtn.style.background = 'rgba(0, 0, 0, .2)' };
         });
     }
 });
-
-
 
 function initializeHexHTML() {
     const alphabetList = ['S', 'R', 'Q', 'P', 'O', 'N', 'M', 'L', 'K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'];
@@ -106,10 +102,26 @@ function initializeHexHTML() {
 // Be able to select a hex to place the robber
 robberBtn.addEventListener('click', () => {
     settlementsLayer.style.zIndex = '0'; // get rid of the settlements layer so selecting a hex is possible
-    //robberBtn.style.background = 'rgba(0, 0, 0, 0.69)';
-
-
-
+    robberBtn.style.background = 'rgba(0, 0, 0, 0.69)';
 });
 
+//DICE NUMBER SELECTING BUTTONS
+var redBtnArray = [];
+for (let i = 0; i < 6; i++) {
+    redBtnArray[i] = document.querySelectorAll('.redDiceNumberBtn')[i];
+}
+for (let i = 0; i < 6; i++) {
+    redBtnArray[i].addEventListener('click', () => {
+        setDie(true, i + 1);
+    })
+}
+var yellowBtnArray = [];
+for (let i = 0; i < 6; i++) {
+    yellowBtnArray[i] = document.querySelectorAll('.yellowDiceNumberBtn')[i];
+}
+for (let i = 0; i < 6; i++) {
+    yellowBtnArray[i].addEventListener('click', () => {
+        setDie(false, i + 1);
+    })
+}
 
