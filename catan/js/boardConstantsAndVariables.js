@@ -31,6 +31,7 @@ const diceAreaContainer = document.querySelector('.diceAreaContainer');
 
 //analysis
 const analysisWrapper = document.querySelector('.analysisWrapper');
+const sidebarElement = document.querySelector('.sidebar');
 
 //Finish layer
 const finishLayer = document.getElementById('finishLayer');

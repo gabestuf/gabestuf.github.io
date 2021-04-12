@@ -18,7 +18,7 @@ V1.2
 V1.3 
 - Added basic robber functionality
 
-V1.4 
+V1.4  4/10
 - Added buttons to select dice numbers 
 - Added resources blocked variable to JSON object for analysis 
 - slightly improved UI using grid and JS for robber button highlighting
@@ -31,13 +31,15 @@ V1.4
      To fix, clicking one will toggle the other off. Will also give me a chance to turn some ugly bits of code into nice functions 
      such as showSettlementLayer, hideSettlementLayer, showBoardLayer,HideBoardLayer
 
-V1.5
+V1.5 4/11
 - More CSS safauhsof
+
+V1.6 4/12
+- Added Chart JS library for analyzing data 
+- Added Sum graph and Resource percentage pie chart 
 
 
 GOALS FOR V2
-- Be able to read the JSON FILE and look at data on another html page
-- Actually, maybe make it on the same page at a higher z index with game blurred in background 
 - look at data such as:
   1. Resources gained graph, # of resources on Y, turn on X
   2. Dice information, such as sum of dice frequency, also individual red vs yellow die stats
@@ -45,7 +47,7 @@ GOALS FOR V2
   4. Dice Resource correlation
 - Can't build two settlements next to each other
 - Work on balanced map making? Start with making sure 8s and 6s can't be adjacent 
-- be able to type in dice rolls with tab and enter (no mouse)
+
 
 GOALS FOR V3
 - Implement Inventory System

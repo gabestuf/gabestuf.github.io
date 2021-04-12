@@ -22,15 +22,19 @@ analysisBtn.addEventListener('click', () => {
 });
 
 //Testing
-makeCharts();
+//makeCharts('');
+
 function makeCharts(gameLog) {
-    //test Data
-    gameLog = '[{"turn": 1,"redDie": 4,"yellowDie": 6,"sum": 10,"resourcesGained": ["mud"],"resourcedBlocked": []},{"turn": 2,"redDie": 3,"yellowDie": 3,"sum": 6,"resourcesGained": ["rock"],"resourcedBlocked": []},{"turn": 3,"redDie": 1,"yellowDie": 6,"sum": 7,"resourcesGained": [],"resourcedBlocked": []},{"turn": 4,"redDie": 5,"yellowDie": 5,"sum": 10,"resourcesGained": ["mud"],"resourcedBlocked": []},{"turn": 5,"redDie": 4,"yellowDie": 6,"sum": 10,"resourcesGained": ["tree","mud","sheep","wheat"],"resourcedBlocked": ["rock","sheep"]}]'
+    // TEST DATA
+    //gameLog = '[{"turn": 1,"redDie": 4,"yellowDie": 6,"sum": 6,"resourcesGained": ["mud"],"resourcedBlocked": []},{"turn": 2,"redDie": 3,"yellowDie": 3,"sum": 6,"resourcesGained": ["rock"],"resourcedBlocked": []},{"turn": 3,"redDie": 1,"yellowDie": 6,"sum": 7,"resourcesGained": [],"resourcedBlocked": []},{"turn": 4,"redDie": 5,"yellowDie": 5,"sum": 10,"resourcesGained": ["mud"],"resourcedBlocked": []},{"turn": 5,"redDie": 4,"yellowDie": 6,"sum": 10,"resourcesGained": ["tree","mud","sheep","wheat"],"resourcedBlocked": ["rock","sheep"]}]'
 
     const parsedJSON = JSON.parse(gameLog);
     var jsonArrayObj = {
         "jsonarray": parsedJSON
     }
+
+    //SIDEBAR 
+    sideBarLogging(parsedJSON);
 
     const listOfResources = ['wheat', 'sheep', 'rock', 'mud', 'tree'];
 
@@ -52,6 +56,9 @@ function makeCharts(gameLog) {
     var resourcedBlockedArrayData = jsonArrayObj.jsonarray.map(function (e) {
         return e.resourcedBlocked;
     });
+
+
+
     //chart colors 
     const wheatColor = 'rgba(255,255,7,1)';
     const sheepColor = 'rgba(139,255,178,1)';
@@ -107,12 +114,10 @@ function makeCharts(gameLog) {
                     enabled: true,
                     callbacks: {
                         title: function (tooltipItem) {
-                            console.log(tooltipItem);
                             return 'Rolled ' + countSumData(sumData)[Number(tooltipItem[0].dataIndex)] + ' times';
                         },
                         label: function (tooltipItem) {
-                            console.log(tooltipItem);
-                            return "     " + (tooltipItem.dataset.data[tooltipItem.dataIndex] / sumData.length) * 100 + "%";
+                            return "     " + ((tooltipItem.dataset.data[tooltipItem.dataIndex] / sumData.length) * 100).toFixed(2) + "%";
                         }
                     }
                 }
@@ -127,7 +132,7 @@ function makeCharts(gameLog) {
         data: {
             labels: listOfResources,
             datasets: [{
-                label: 'THING',
+                label: 'Resource',
                 data: numberOfResourcesGained,
                 backgroundColor: [wheatColor, sheepColor, rockColor, mudColor, treeColor]
             }]
@@ -138,10 +143,11 @@ function makeCharts(gameLog) {
                 tooltip: {
                     enabled: true,
                     callbacks: {
+                        title: function (tooltipItem) {
+                            return tooltipItem[0].label + ' ' + tooltipItem[0].dataset.data[tooltipItem[0].dataIndex];
+                        },
                         label: function (tooltipItem) {
-                            console.log();
-
-                            return "     " + ((tooltipItem.dataset.data[tooltipItem.dataIndex] / (Number(tooltipItem.dataset.data[0]) + Number(tooltipItem.dataset.data[1]) + Number(tooltipItem.dataset.data[2]) + Number(tooltipItem.dataset.data[3]) + Number(tooltipItem.dataset.data[4]))).toFixed(4)) * 100 + "%";
+                            return "     " + ((tooltipItem.dataset.data[tooltipItem.dataIndex] / (Number(tooltipItem.dataset.data[0]) + Number(tooltipItem.dataset.data[1]) + Number(tooltipItem.dataset.data[2]) + Number(tooltipItem.dataset.data[3]) + Number(tooltipItem.dataset.data[4]))) * 100).toFixed(2) + "%";
                         }
                     }
                 }
@@ -205,6 +211,19 @@ function countSumData(arrayOfSums) {
     return ans;
 }
 
-function sideBarLogging() {
+// TEST DATA
+gameLog = '[{"turn": 1,"redDie": 4,"yellowDie": 6,"sum": 6,"resourcesGained": ["mud"],"resourcedBlocked": []},{"turn": 2,"redDie": 3,"yellowDie": 3,"sum": 6,"resourcesGained": ["rock"],"resourcedBlocked": []},{"turn": 3,"redDie": 1,"yellowDie": 6,"sum": 7,"resourcesGained": [],"resourcedBlocked": []},{"turn": 4,"redDie": 5,"yellowDie": 5,"sum": 10,"resourcesGained": ["mud"],"resourcedBlocked": []},{"turn": 5,"redDie": 4,"yellowDie": 6,"sum": 10,"resourcesGained": ["tree","mud","sheep","wheat","tree","tree","mud","sheep","wheat","tree","tree","mud","sheep","wheat","tree","mud"],"resourcedBlocked": ["rock","sheep"]}]'
 
+const parsedJSON = JSON.parse(gameLog);
+var jsonArrayObj = {
+    "jsonarray": parsedJSON
 }
+
+
+function sideBarLogging(json) {
+    for (i of json) {
+        sidebarElement.innerHTML += '<div class="sidebarContent"> <h6 class="sidebarTitle">Turn: ' + i.turn + '</h6> <p class="sidebarInfo"> Roll: ' + i.sum + '</p><p class="sidebarInfo"> Resources: ' + i.resourcesGained + '</p> </div>';
+        console.log(i);
+    }
+}
+

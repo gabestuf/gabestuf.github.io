@@ -658,7 +658,7 @@ body {
 }
 
 .analysisWrapper {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -720,6 +720,16 @@ body {
   /* Firefox */
   position: sticky;
 }
+.analysisWrapper .sidebar .sidebarContent {
+  margin-top: 5px;
+}
+.analysisWrapper .sidebar .sidebarTitle {
+  margin-top: 3px;
+}
+.analysisWrapper .sidebar .sidebarInfo {
+  font-size: 0.5em;
+  word-wrap: break-word;
+}
 .analysisWrapper .sidebar::-webkit-scrollbar {
   display: none;
 }
@@ -729,7 +739,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 7vh auto;
-  overflow: scroll;
+  overflow-y: scroll;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;
   /* IE and Edge */
