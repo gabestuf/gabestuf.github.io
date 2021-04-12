@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/board.css">
 
 
@@ -21,8 +22,10 @@
         <p id='infoLabel'>Select Tile</p>
         <p id='hexResource'>Resource:</p>
         <p id='hexDiceNumber'>Number:</p>
-        <button class='staticbtn1' id='scrambleBoardBtn'>SCRAMPLE</button>
-        <button class='staticbtn2' id='toSettlementLayerBtn'>DONE</button>
+        <div class="staticBtnContainer">
+            <button class='staticbtn1' id='scrambleBoardBtn'>SCRAMPLE</button>
+            <button class='staticbtn2' id='toSettlementLayerBtn'>DONE</button>
+        </div>
         <div class="line"></div>
         <div class="hexInfoContainer">
             <div class="dropdown">
@@ -101,11 +104,39 @@
             <button id="build-settlement">Settlement</button>
             <button id="move-robber">Robber</button>
             <button id="finish-game">Finish Game</button>
-            <button type="button" value="Download JSON" onclick="DownloadJson()"> Download JSON </button>
+            <button type="button" value="Download JSON" onclick="DownloadJson()"><i class="fa fa-download"></i>&nbsp;
+                JSON</button>
             <button id='analysis-btn'>Analyze</button>
         </div>
+    </div>
+
+    <div class="analysisWrapper">
+        <div class="navbar">
+            <button class="logo">Catan</button>
+            <button class="nav-btn">Button</button>
+            <button class="nav-btn">Button</button>
+            <button class="nav-btn">Button</button>
+            <button class="nav-btn">Button</button>
+            <button class="nav-btn">Button</button>
+            <button class="nav-btn">Button</button>
+
+        </div>
+        <div class="content">
+            <div class="sidebar">
+
+            </div>
+            <div class="analysisContainer">
+                <p></p>
+                <canvas class="glassBackground" id="gridElement1"></canvas>
+                <canvas class="glassBackground" id='gridElement2'></canvas>
+                <canvas class="glassBackground" id='gridElement3'> </canvas>
+                <canvas class="glassBackground" id="gridElement4"></canvas>
+                <canvas class="glassBackground" id="gridElement5"></canvas>
+                <canvas class="glassBackground" id="gridElement6"></canvas>
 
 
+            </div>
+        </div>
     </div>
 
 </body>
@@ -114,6 +145,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous"></script>
+
+<script src='https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js'></script>
 
 <script defer src="../js/boardClasses.js"></script>
 <script defer src="../js/boardConstantsAndVariables.js"></script>

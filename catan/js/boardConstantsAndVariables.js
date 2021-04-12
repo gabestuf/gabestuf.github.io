@@ -29,6 +29,9 @@ const diceSumLabel = document.getElementById('dice-sum');
 const diceButtonContainer = document.querySelector('.diceButtonContainer');
 const diceAreaContainer = document.querySelector('.diceAreaContainer');
 
+//analysis
+const analysisWrapper = document.querySelector('.analysisWrapper');
+
 //Finish layer
 const finishLayer = document.getElementById('finishLayer');
 

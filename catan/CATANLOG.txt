@@ -31,6 +31,9 @@ V1.4
      To fix, clicking one will toggle the other off. Will also give me a chance to turn some ugly bits of code into nice functions 
      such as showSettlementLayer, hideSettlementLayer, showBoardLayer,HideBoardLayer
 
+V1.5
+- More CSS safauhsof
+
 
 GOALS FOR V2
 - Be able to read the JSON FILE and look at data on another html page
