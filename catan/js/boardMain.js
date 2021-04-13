@@ -198,8 +198,6 @@ buildSettlementBtn.addEventListener('click', () => {
     }
 });
 
-console.log(board.getAdjacentNodeIDs(11));
-
 logBtn.addEventListener('click', () => {
 
     //variables 
@@ -220,7 +218,6 @@ logBtn.addEventListener('click', () => {
                 for (x of n.adjacentHexIDs) { // for every hexID (x) of nodes that have cities
                     if (!board.hexArray[x].hasRobber) { //if the hex at hexID (x) doesn't have the robber
                         if (board.hexArray[x].hexDiceNumber == sum) { // check if the hex was the number rolled
-                            console.log(x);
                             resourcesGained.push(board.hexArray[x].hexResourceName); //if true, add the resource 
                         }
                     } else if ((board.hexArray[x].hasRobber)) { //if it does have the robber, 
@@ -246,7 +243,6 @@ logBtn.addEventListener('click', () => {
         }
     }
 
-
     var turnInformationObj = {
         "turn": turnNumber,
         "redDie": firstRandomNum,
@@ -256,10 +252,7 @@ logBtn.addEventListener('click', () => {
         "resourcedBlocked": resourcesBlocked
     }
 
-
-
     player.turnInformation.push(turnInformationObj);
-    console.log(player.turnInformation);
 });
 
 

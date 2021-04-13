@@ -112,7 +112,7 @@ function makeCharts(gameLog) {
                         display: true,
                         text: 'Times Rolled',
                         font: {
-                            size: 10
+                            size: 25
                         }
                     }
                 },
@@ -121,7 +121,7 @@ function makeCharts(gameLog) {
                         display: true,
                         text: 'Sum',
                         font: {
-                            size: 10
+                            size: 25
                         }
                     }
                 }

@@ -44,6 +44,7 @@ V1.7 4/13
 
 v1.7.1
 - fixed but where 2nd row Odd ID'd nodes were hiding the wrong nodes that it thought were adjacent 
+- spent about 2 hours chasing a bug because I forgot to comment out some test code bruh
 
 
 GOALS FOR V2
