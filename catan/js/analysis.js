@@ -100,7 +100,7 @@ function makeCharts(gameLog) {
         data: {
             labels: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
             datasets: [{
-                label: 'Dice Sums (' + sumData.length + ") rolls",
+                label: '',
                 data: countSumData(sumData),
                 backgroundColor: [twoColor, threeColor, fourColor, fiveColor, sixColor, sevenColor, eightColor, nineColor, tenColor, elevenColor, twelveColor]
             }]
@@ -110,11 +110,18 @@ function makeCharts(gameLog) {
                 padding: 50
             },
             plugins: {
+                title: {
+                    display: true,
+                    text: 'Dice Rolls | ' + sumData.length + ' Total Rolls'
+                },
+                legend: {
+                    display: false
+                },
                 tooltip: {
                     enabled: true,
                     callbacks: {
                         title: function (tooltipItem) {
-                            return 'Rolled ' + countSumData(sumData)[Number(tooltipItem[0].dataIndex)] + ' times';
+                            return 'Dice Rolls: ' + countSumData(sumData)[Number(tooltipItem[0].dataIndex)];
                         },
                         label: function (tooltipItem) {
                             return "     " + ((tooltipItem.dataset.data[tooltipItem.dataIndex] / sumData.length) * 100).toFixed(2) + "%";
@@ -140,6 +147,15 @@ function makeCharts(gameLog) {
         options: {
             maintainAspectRatio: false,
             plugins: {
+                legend: {
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Resource Ratio in Pie Form',
+                    padding: 30,
+                    position: 'top'
+                },
                 tooltip: {
                     enabled: true,
                     callbacks: {

@@ -13,6 +13,7 @@ body {
   background-color: black;
   background-size: cover;
   height: 100vh;
+  overflow: hidden;
 }
 body .blackgrond {
   z-index: -1;

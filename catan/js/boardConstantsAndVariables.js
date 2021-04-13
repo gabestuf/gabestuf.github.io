@@ -61,7 +61,7 @@ toSettlementLayerBtn.addEventListener('click', function () {
     hexDiceNumberLabel.style.display = 'none';
     infoLabel.innerHTML = "Place First Settlement";
 
-
+    //BELOW IS ROBBER STUFF
     // makes a new event listener for every hex so when triggered it will 1. change the color to indicate the robber 2. update the hex that has the robber on it 3. re apply the settlements layer on z index 69 
     for (let i = 0; i < board.hexArray.length; i++) {
         const s = i;
@@ -72,13 +72,10 @@ toSettlementLayerBtn.addEventListener('click', function () {
             for (let e = 0; e < board.hexArray.length; e++) {
                 board.hexArray[e].hasRobber = false;
             }
-
             board.hexArray[s].hasRobber = true;
 
             for (x = 0; x < board.hexArray.length; x++) { // reset all hex diceNumberIcons to default color 
-
                 backgroundWrapper.querySelectorAll('.hex')[x].querySelector('.diceNumberIcon').style.background = 'rgb(236, 194, 79)';
-
             }
 
             backgroundWrapper.querySelectorAll('.hex')[s].querySelector('.diceNumberIcon').style.background = 'rgb(255,0,0,.69)'; // set selected hex to different color

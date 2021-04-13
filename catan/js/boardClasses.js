@@ -251,6 +251,14 @@ class Board {
             }
         }
     }
+    //gets an array of adjacent node IDs
+    getAdjacentNodeIDs(nodeID) {
+        var ans = [];
+        for (let i = 0; i < this.nodeArray[nodeID].adjacentNodeIDs.length; i++) {
+            ans.push(this.nodeArray[nodeID].adjacentNodeIDs[i]);
+        }
+        return ans;
+    }
 
     //GET HTML ELEMENTS
     // create hex buttons and initializes board.hexArray
@@ -287,7 +295,7 @@ class Board {
 
             // create 54 Node buttons with event listeners
             this.nodeBtnArray[i] = document.querySelectorAll('.nodeBtn')[i];
-            const s = i;
+            const s = i; //s is the nodeID / nodeBtnID 
             this.nodeBtnArray[i].addEventListener('click', () => {
 
                 if (settlementsPlaced == 0) { //first settlement 
@@ -295,6 +303,11 @@ class Board {
                     this.nodeBtnArray[s].style.background = cssGreen;
                     this.nodeArray[s].hasSettlement = true;
                     settlementsPlaced++;
+
+                    var adjacentNodeIDToSettlement = this.getAdjacentNodeIDs(s);
+                    for (let k = 0; k < adjacentNodeIDToSettlement.length; k++) {
+                        this.nodeBtnArray[adjacentNodeIDToSettlement[k]].style.display = 'none';
+                    }
                 } else if (settlementsPlaced >= 1) {
                     settlementsPlaced++;
                     infoContainer.style.display = 'none';
@@ -345,8 +358,8 @@ class Board {
         var possibleNumbersArray = [2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12];
         shuffleArray(possibleNumbersArray);
 
-        var i = 0;
-        for (i = 0; i < this.hexArray.length; i++) {
+        var thereAreAdjacent68s = false;
+        for (let i = 0; i < this.hexArray.length; i++) {
             const resource = possibleResourcesArray.pop();
             if (resource == 'sand') {
                 selectedHexID = i;
@@ -363,8 +376,104 @@ class Board {
                 replaceHexDiceNumber(number);
             }
         }
+        //balancing
+        thereAreAdjacent68s = this.checkIfAdjacent68();
+
+        //console.log('still adjacent 6s and 8s? ' + thereAreAdjacent68s);
+        // if (thereAreAdjacent68s) {
+
+        //     this.generateRandomBoard(); //BOGOSORT YEET
+
+        //     thereAreAdjacent68s = this.checkIfAdjacent68();
+        // }
+
+    }
+    checkIfAdjacent68() {
+        var check = false;
+        for (let i = 0; i < this.hexArray.length; i++) { //for every hex
+            if (this.hexArray[i].hexDiceNumber == 6 || this.hexArray[i].hexDiceNumber == 8) {
+
+                for (let k = 0; k < this.getAdjacentHexIDs(i).length; k++) { //for every adjacent hexID 
+                    //console.log('First Hex DiceNumber: ' + this.hexArray[i].hexDiceNumber + ' AdjacentHexDiceNumber: ' + this.hexArray[this.getAdjacentHexIDs(i)[k]].hexDiceNumber);
+                    if (this.hexArray[this.getAdjacentHexIDs(i)[k]].hexDiceNumber == 6) {
+                        check = true;
+                    }
+                    if (this.hexArray[this.getAdjacentHexIDs(i)[k]].hexDiceNumber == 8) {
+                        check = true;
+                    }
+                }
+            }
+        }
+        return check;
+    }
+
+    getAdjacentHexIDs(hexID) {
+        var ans = [];
+        switch (hexID) {
+            case 0:
+                ans = [1, 3, 4];
+                break;
+            case 1:
+                ans = [0, 2, 4, 5];
+                break;
+            case 2:
+                ans = [1, 5, 6];
+                break;
+            case 3:
+                ans = [0, 4, 7, 8];
+                break;
+            case 4:
+                ans = [0, 1, 3, 5, 8, 9];
+                break;
+            case 5:
+                ans = [1, 2, 4, 6, 9, 10];
+                break;
+            case 6:
+                ans = [2, 5, 10, 11];
+                break;
+            case 7:
+                ans = [3, 8, 12];
+                break;
+            case 8:
+                ans = [3, 4, 7, 9, 12, 13];
+                break;
+            case 9:
+                ans = [4, 5, 8, 10, 13, 14];
+                break;
+            case 10:
+                ans = [5, 6, 9, 11, 14, 15];
+                break;
+            case 11:
+                ans = [6, 10, 15];
+                break;
+            case 12:
+                ans = [7, 8, 13, 16];
+                break;
+            case 13:
+                ans = [8, 9, 12, 14, 16, 17];
+                break;
+            case 14:
+                ans = [9, 10, 13, 15, 17, 18];
+                break;
+            case 15:
+                ans = [10, 11, 14, 18];
+                break;
+            case 16:
+                ans = [12, 13, 17];
+                break;
+            case 17:
+                ans = [13, 14, 16, 18];
+                break;
+            case 18:
+                ans = [14, 15, 17];
+                break;
+            default:
+                break;
+        }
+        return ans;
     }
 }
+
 
 class Hex {
     constructor(hexName_, hexID_, hexResourceName_, hexDiceNumber_, hasRobber_) {

@@ -38,6 +38,9 @@ V1.6 4/12
 - Added Chart JS library for analyzing data 
 - Added Sum graph and Resource percentage pie chart 
 
+V1.7 4/13
+- Can no longer place settlements directly next to one another 
+- started thinking about ways to balance the board generator, (NOT BOGOSORT pls :/)
 
 GOALS FOR V2
 - look at data such as:

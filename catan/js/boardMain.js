@@ -181,9 +181,20 @@ board.initBoard('vanilla');
 const player = new Player([]);
 
 buildSettlementBtn.addEventListener('click', () => {
-    for (i = 0; i < board.nodeArray.length; i++) {
+    for (let i = 0; i < board.nodeArray.length; i++) {
         board.nodeBtnArray[i].disabled = false;
         board.nodeBtnArray[i].style.display = 'block';
+    }
+    for (let k = 0; k < board.nodeArray.length; k++) {
+        if (board.nodeArray[k].hasSettlement) {
+            var adjacentNodeIDToSettlement = board.getAdjacentNodeIDs(k);
+            for (let d = 0; d < adjacentNodeIDToSettlement.length; d++) {
+                board.nodeBtnArray[adjacentNodeIDToSettlement[d]].disabled = true;
+                board.nodeBtnArray[adjacentNodeIDToSettlement[d]].style.display = 'none';
+            }
+
+
+        }
     }
 });
 
@@ -259,3 +270,4 @@ function DownloadJson() {
     link.download = 'catan-gamelog.txt';
     link.click();
 }
+
