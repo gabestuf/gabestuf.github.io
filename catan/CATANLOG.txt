@@ -42,6 +42,10 @@ V1.7 4/13
 - Can no longer place settlements directly next to one another 
 - started thinking about ways to balance the board generator, (NOT BOGOSORT pls :/)
 
+v1.7.1
+- fixed but where 2nd row Odd ID'd nodes were hiding the wrong nodes that it thought were adjacent 
+
+
 GOALS FOR V2
 - look at data such as:
   1. Resources gained graph, # of resources on Y, turn on X

@@ -106,13 +106,36 @@ function makeCharts(gameLog) {
             }]
         },
         options: {
+            scales: {
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Times Rolled',
+                        font: {
+                            size: 10
+                        }
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Sum',
+                        font: {
+                            size: 10
+                        }
+                    }
+                }
+            },
             layout: {
                 padding: 50
             },
             plugins: {
                 title: {
                     display: true,
-                    text: 'Dice Rolls | ' + sumData.length + ' Total Rolls'
+                    text: 'Dice Rolls | ' + sumData.length + ' Total Rolls',
+                    font: {
+                        size: 40
+                    }
                 },
                 legend: {
                     display: false
@@ -154,7 +177,10 @@ function makeCharts(gameLog) {
                     display: true,
                     text: 'Resource Ratio in Pie Form',
                     padding: 30,
-                    position: 'top'
+                    position: 'top',
+                    font: {
+                        size: 40
+                    }
                 },
                 tooltip: {
                     enabled: true,
@@ -171,8 +197,71 @@ function makeCharts(gameLog) {
         }
     };
 
+    var ctx3 = document.getElementById('gridElement3').getContext('2d');
+    var config3 = {
+        type: 'bar',
+        data: {
+            labels: listOfResources,
+            datasets: [{
+                label: '',
+                data: numberOfResourcesGained, //need a list of number of each card drawn
+                backgroundColor: [wheatColor, sheepColor, rockColor, mudColor, treeColor]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Number Of Resources',
+                        font: {
+                            size: 25
+                        }
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Resource Name',
+                        font: {
+                            size: 25
+                        }
+                    }
+                },
+            },
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Resource Cards Drawn',
+                    padding: 30,
+                    position: 'top',
+                    font: {
+                        size: 40
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        title: function (tooltipItem) {
+                            return tooltipItem[0].label + ' ' + tooltipItem[0].dataset.data[tooltipItem[0].dataIndex];
+                        },
+                        label: function (tooltipItem) {
+                            return "     " + ((tooltipItem.dataset.data[tooltipItem.dataIndex] / (Number(tooltipItem.dataset.data[0]) + Number(tooltipItem.dataset.data[1]) + Number(tooltipItem.dataset.data[2]) + Number(tooltipItem.dataset.data[3]) + Number(tooltipItem.dataset.data[4]))) * 100).toFixed(2) + "%";
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    //MAKE SURE TEST DATA IS COMMENTED OUT OTHERWISE U GET BIG ERROR AND STAY UP UNTIL 2AM UNTIL YOU FIX IT
     var diceSumChart = new Chart(ctx, config);
     var resourcePieChart = new Chart(ctx2, config2);
+    var resourceBarChart = new Chart(ctx3, config3);
 }
 
 function getElementsOfListOfArrays(A) {
@@ -239,7 +328,7 @@ var jsonArrayObj = {
 function sideBarLogging(json) {
     for (i of json) {
         sidebarElement.innerHTML += '<div class="sidebarContent"> <h6 class="sidebarTitle">Turn: ' + i.turn + '</h6> <p class="sidebarInfo"> Roll: ' + i.sum + '</p><p class="sidebarInfo"> Resources: ' + i.resourcesGained + '</p> </div>';
-        console.log(i);
+        //console.log(i);
     }
 }
 

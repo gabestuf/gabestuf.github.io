@@ -198,6 +198,8 @@ buildSettlementBtn.addEventListener('click', () => {
     }
 });
 
+console.log(board.getAdjacentNodeIDs(11));
+
 logBtn.addEventListener('click', () => {
 
     //variables 

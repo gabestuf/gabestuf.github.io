@@ -112,7 +112,7 @@ class Board {
                         this.nodeArray[i].adjacentHexIDs.push(Math.floor(i / 2) - 4);
                         this.nodeArray[i].adjacentNodeIDs.push(i - 1);
                         this.nodeArray[i].adjacentNodeIDs.push(i + 1);
-                        this.nodeArray[i].adjacentNodeIDs.push(i - (secondRowLength - 1));
+                        this.nodeArray[i].adjacentNodeIDs.push(i + (secondRowLength + 1));
                     }
                     break;
                 case 3:
