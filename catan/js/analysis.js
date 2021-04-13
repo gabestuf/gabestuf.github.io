@@ -7,11 +7,14 @@ finishBtn.addEventListener('click', () => {
     diceButtonContainer.style.display = 'none';
     diceAreaContainer.style.display = 'none';
 
+    analysisBtn.style.display = 'block';
+    downloadBtn.style.display = 'block';
+
     diceSumLabel.innerHTML = 'Game Over';
     finishLayer.style.display = 'block';
 
     gameLogJSON = JSON.stringify(player.turnInformation, null, "\t");
-    console.log(gameLogJSON);
+    console.log('Gamelog: \n' + gameLogJSON);
 });
 
 analysisBtn.addEventListener('click', () => {

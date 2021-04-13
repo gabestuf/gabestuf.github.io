@@ -181,19 +181,17 @@ board.initBoard('vanilla');
 const player = new Player([]);
 
 buildSettlementBtn.addEventListener('click', () => {
-    for (let i = 0; i < board.nodeArray.length; i++) {
+    for (let i = 0; i < board.nodeArray.length; i++) { // show and enable all nodes
         board.nodeBtnArray[i].disabled = false;
         board.nodeBtnArray[i].style.display = 'block';
     }
-    for (let k = 0; k < board.nodeArray.length; k++) {
+    for (let k = 0; k < board.nodeArray.length; k++) { // hide nodes where adajcent nodes have settlements on them
         if (board.nodeArray[k].hasSettlement) {
             var adjacentNodeIDToSettlement = board.getAdjacentNodeIDs(k);
             for (let d = 0; d < adjacentNodeIDToSettlement.length; d++) {
                 board.nodeBtnArray[adjacentNodeIDToSettlement[d]].disabled = true;
                 board.nodeBtnArray[adjacentNodeIDToSettlement[d]].style.display = 'none';
             }
-
-
         }
     }
 });

@@ -7,6 +7,7 @@ const hexInfoContainer = document.querySelector('.hexInfoContainer');
 const hexResourceLabel = document.getElementById('hexResource');
 const hexDiceNumberLabel = document.getElementById('hexDiceNumber');
 var infoLabel = document.getElementById('infoLabel');
+var hexDiceNumberIconArray = document.querySelectorAll('.diceNumberIcon');
 
 // Settlements Layer
 const settlementsLayer = document.getElementById('settlementsLayer');
@@ -20,9 +21,10 @@ const rollAgainBtn = document.getElementById('roll-again');
 const logBtn = document.getElementById('log-value');
 //finish game
 const finishBtn = document.getElementById('finish-game');
+const analysisBtn = document.getElementById('analysis-btn');
+const downloadBtn = document.getElementById('download-json');
 // build settlements or cities
 const buildSettlementBtn = document.getElementById('build-settlement');
-const analysisBtn = document.getElementById('analysis-btn');
 const robberBtn = document.getElementById('move-robber');
 
 const diceSumLabel = document.getElementById('dice-sum');
@@ -59,6 +61,11 @@ toSettlementLayerBtn.addEventListener('click', function () {
     hexInfoContainer.style.display = 'none';
     hexResourceLabel.style.display = 'none';
     hexDiceNumberLabel.style.display = 'none';
+
+    analysisBtn.style.display = 'none';
+    downloadBtn.style.display = 'none';
+
+
     infoLabel.innerHTML = "Place First Settlement";
 
     //BELOW IS ROBBER STUFF
@@ -72,6 +79,7 @@ toSettlementLayerBtn.addEventListener('click', function () {
             for (let e = 0; e < board.hexArray.length; e++) {
                 board.hexArray[e].hasRobber = false;
             }
+            // Set hex at that hexID to hasRobber true
             board.hexArray[s].hasRobber = true;
 
             for (x = 0; x < board.hexArray.length; x++) { // reset all hex diceNumberIcons to default color 
@@ -80,11 +88,11 @@ toSettlementLayerBtn.addEventListener('click', function () {
 
             backgroundWrapper.querySelectorAll('.hex')[s].querySelector('.diceNumberIcon').style.background = 'rgb(255,0,0,.69)'; // set selected hex to different color
 
-            settlementsLayer.style.zIndex = '69'; //reapplies the settlements Layer
+            settlementsLayer.style.zIndex = '67'; //reapplies the settlements Layer
             robberBtn.style.background = 'rgba(0, 0, 0, .2)';
 
-            robberBtn.onmouseover = () => { robberBtn.style.background = 'rgba(255, 0, 200, 0.6' };
-            robberBtn.onmouseout = () => { robberBtn.style.background = 'rgba(0, 0, 0, .2)' };
+            //robberBtn.onmouseover = () => { robberBtn.style.background = 'rgba(255, 0, 200, 0.6' };
+            //robberBtn.onmouseout = () => { robberBtn.style.background = 'rgba(0, 0, 0, .2)' };
         });
     }
 });

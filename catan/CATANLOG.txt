@@ -42,9 +42,15 @@ V1.7 4/13
 - Can no longer place settlements directly next to one another 
 - started thinking about ways to balance the board generator, (NOT BOGOSORT pls :/)
 
-v1.7.1
+V1.7.1
 - fixed but where 2nd row Odd ID'd nodes were hiding the wrong nodes that it thought were adjacent 
 - spent about 2 hours chasing a bug because I forgot to comment out some test code bruh
+V1.7.2
+- changes so small I dont remember
+V1.7.3 
+- more settlement node fixes 
+- hide JSON and analysis until after finish game btn has been clicked 
+
 
 
 GOALS FOR V2
@@ -53,8 +59,7 @@ GOALS FOR V2
   2. Dice information, such as sum of dice frequency, also individual red vs yellow die stats
   3. Resource frequency
   4. Dice Resource correlation
-- Can't build two settlements next to each other
-- Work on balanced map making? Start with making sure 8s and 6s can't be adjacent 
+- Work on balanced map making? Start with making sure 8s and 6s can't be adjacent
 
 
 GOALS FOR V3

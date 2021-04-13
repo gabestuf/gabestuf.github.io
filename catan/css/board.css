@@ -27,6 +27,9 @@
   background: url("/images/catan/emptyHighlighted.png");
   cursor: pointer;
 }
+.hex:hover .diceNumberIcon {
+  background-color: rgba(255, 0, 200, 0.69);
+}
 
 .hex:nth-of-type(1) {
   top: 25px;

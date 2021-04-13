@@ -244,6 +244,7 @@ class Board {
                         this.nodeArray[i].adjacentHexIDs.push(Math.floor(i / 2) - 8);
                         this.nodeArray[i].adjacentNodeIDs.push(i - 1);
                         this.nodeArray[i].adjacentNodeIDs.push(i + 1);
+                        this.nodeArray[i].adjacentNodeIDs.push(i - 8);
                     }
                     break;
                 default:
@@ -275,6 +276,8 @@ class Board {
             const s = i; //why did I have to make a constant to make i work in the selectHex function?
             hexBtnArray[i].addEventListener('click', () => { selectHex(s) });
         }
+
+
     }
 
 
@@ -376,6 +379,16 @@ class Board {
                 replaceHexDiceNumber(number);
             }
         }
+
+        // Icon hover effect
+        hexDiceNumberIconArray = document.querySelectorAll('.diceNumberIcon');
+        for (let i = 0; i < this.hexArray.length; i++) {
+            hexBtnArray[i].onmouseover = () => { hexDiceNumberIconArray[i].style.background = 'rgba(255, 0, 200, 0.6' };
+            hexBtnArray[i].onmouseout = () => { hexDiceNumberIconArray[i].style.background = 'rgb(236, 194, 79)' };
+        }
+
+
+
         //balancing
         thereAreAdjacent68s = this.checkIfAdjacent68();
 
@@ -394,7 +407,7 @@ class Board {
             if (this.hexArray[i].hexDiceNumber == 6 || this.hexArray[i].hexDiceNumber == 8) {
 
                 for (let k = 0; k < this.getAdjacentHexIDs(i).length; k++) { //for every adjacent hexID 
-                    //console.log('First Hex DiceNumber: ' + this.hexArray[i].hexDiceNumber + ' AdjacentHexDiceNumber: ' + this.hexArray[this.getAdjacentHexIDs(i)[k]].hexDiceNumber);
+
                     if (this.hexArray[this.getAdjacentHexIDs(i)[k]].hexDiceNumber == 6) {
                         check = true;
                     }
@@ -406,7 +419,6 @@ class Board {
         }
         return check;
     }
-
     getAdjacentHexIDs(hexID) {
         var ans = [];
         switch (hexID) {
@@ -473,7 +485,6 @@ class Board {
         return ans;
     }
 }
-
 
 class Hex {
     constructor(hexName_, hexID_, hexResourceName_, hexDiceNumber_, hasRobber_) {
