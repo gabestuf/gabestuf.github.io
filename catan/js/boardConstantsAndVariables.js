@@ -91,8 +91,8 @@ toSettlementLayerBtn.addEventListener('click', function () {
             settlementsLayer.style.zIndex = '67'; //reapplies the settlements Layer
             robberBtn.style.background = 'rgba(0, 0, 0, .2)';
 
-            //robberBtn.onmouseover = () => { robberBtn.style.background = 'rgba(255, 0, 200, 0.6' };
-            //robberBtn.onmouseout = () => { robberBtn.style.background = 'rgba(0, 0, 0, .2)' };
+            robberBtn.onmouseover = () => { robberBtn.style.background = 'rgba(255, 0, 200, 0.6' };
+            robberBtn.onmouseout = () => { robberBtn.style.background = 'rgba(0, 0, 0, .2)' };
         });
     }
 });

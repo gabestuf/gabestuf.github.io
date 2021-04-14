@@ -381,11 +381,11 @@ class Board {
         }
 
         // Icon hover effect
-        hexDiceNumberIconArray = document.querySelectorAll('.diceNumberIcon');
-        for (let i = 0; i < this.hexArray.length; i++) {
-            hexBtnArray[i].onmouseover = () => { hexDiceNumberIconArray[i].style.background = 'rgba(255, 0, 200, 0.6' };
-            hexBtnArray[i].onmouseout = () => { hexDiceNumberIconArray[i].style.background = 'rgb(236, 194, 79)' };
-        }
+        // hexDiceNumberIconArray = document.querySelectorAll('.diceNumberIcon');
+        // for (let i = 0; i < this.hexArray.length; i++) {
+        //     hexBtnArray[i].onmouseover = () => { hexDiceNumberIconArray[i].style.background = 'rgba(255, 0, 200, 0.6' };
+        //     hexBtnArray[i].onmouseout = () => { hexDiceNumberIconArray[i].style.background = 'rgb(236, 194, 79)' };
+        // }
 
 
 
