@@ -387,8 +387,6 @@ class Board {
         //     hexBtnArray[i].onmouseout = () => { hexDiceNumberIconArray[i].style.background = 'rgb(236, 194, 79)' };
         // }
 
-
-
         //balancing
         thereAreAdjacent68s = this.checkIfAdjacent68();
 
