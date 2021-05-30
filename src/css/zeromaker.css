@@ -3,20 +3,24 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: url("/images/space/space3.png");
   font-family: Truculenta;
   color: white;
   font-size: 5ch;
 }
+
 body fieldset {
   min-height: 10vh;
   max-width: 100%;
   overflow-wrap: anywhere;
 }
+
 body input {
   font-size: 2ch;
 }
+
 body .middle a {
   position: relative;
   top: 5vh;
@@ -29,14 +33,17 @@ body .middle a {
   margin-top: 6vh;
   color: lightblue;
 }
+
 body .middle a:hover {
   background-color: rgba(69, 69, 69, 0.9);
   border: 2px solid #29b3e0;
 }
+
 body .middle .fieldsets {
   position: relative;
   top: 8vh;
 }
+
 body .middle .fieldsets button {
   border-radius: 10px;
   border: 2px solid red;
@@ -46,12 +53,15 @@ body .middle .fieldsets button {
   color: red;
   background: yellow;
 }
+
 body .middle .fieldsets button:hover {
   background-color: lightgreen;
   border: 2px solid purple;
   color: purple;
   cursor: pointer;
 }
+
 body p {
-  font-size: 0.95ch;
-}/*# sourceMappingURL=test.css.map */
+  font-size: .95ch;
+}
+/*# sourceMappingURL=zeromaker.css.map */

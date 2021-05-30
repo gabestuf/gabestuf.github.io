@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Arapey");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url("/images/space/space3.png");
+  font-family: Truculenta;
+  color: white;
+  font-size: 5ch;
+}
+
+body fieldset {
+  min-height: 10vh;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+body input {
+  font-size: 2ch;
+}
+
+body .middle a {
+  position: relative;
+  top: 5vh;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid lightblue;
+  border-radius: 15px;
+  margin-left: 10vw;
+  padding: 10px 20px;
+  margin-top: 6vh;
+  color: lightblue;
+}
+
+body .middle a:hover {
+  background-color: rgba(69, 69, 69, 0.9);
+  border: 2px solid #29b3e0;
+}
+
+body .middle .fieldsets {
+  position: relative;
+  top: 8vh;
+}
+
+body .middle .fieldsets button {
+  border-radius: 10px;
+  border: 2px solid red;
+  height: 37px;
+  width: 69px;
+  font-weight: bold;
+  color: red;
+  background: yellow;
+}
+
+body .middle .fieldsets button:hover {
+  background-color: lightgreen;
+  border: 2px solid purple;
+  color: purple;
+  cursor: pointer;
+}
+
+body p {
+  font-size: .95ch;
+}
+/*# sourceMappingURL=test.css.map */

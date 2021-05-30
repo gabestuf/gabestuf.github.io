@@ -31,6 +31,8 @@ header {
 }
 
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 500vw;
   max-width: calc(100vw *5);
@@ -39,34 +41,44 @@ header {
   height: 100%;
   /* makes panels the entire window height */
 }
+
 .wrapper section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: #EFEFEF;
   width: 100vw;
   height: 100vh;
 }
+
 .wrapper section h3 {
   text-transform: capitalize;
 }
+
 .wrapper .one {
   background: url("/images/space/space1.png");
   background-size: cover;
 }
+
 .wrapper .one h3 {
   font-size: 10ch;
 }
+
 .wrapper .two {
   background: url("/images/space/space2.png");
   background-size: cover;
 }
+
 .wrapper .three {
   background: url("/images/space/space3.png");
   background-size: cover;
 }
+
 .wrapper .four {
   background: url("/images/space/space4.png");
   background-size: cover;
 }
+
 .wrapper .five {
   background: url("/images/space/space5.png");
   background-size: cover;
@@ -83,11 +95,16 @@ a {
   z-index: 69;
   width: 100%;
   background-color: rgba(37, 37, 37, 0.5);
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
+
 .main-header .home .name {
-  font-family: "Truculenta";
+  font-family: 'Truculenta';
   text-transform: capitalize;
   color: #44DFFF;
   font-size: 6.62ch;
@@ -98,28 +115,37 @@ a {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.75);
 }
+
 .main-header .anchor-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .main-header .anchor-nav a {
   color: white;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: center;
-  padding: 0.75% 0% 0.5% 0%;
+  padding: .75% 0% .5% 0%;
   font-size: 1.75ch;
   text-transform: uppercase;
 }
+
 .main-header .anchor-nav a.active {
   color: #65ff0b;
 }
+
 .main-header .anchor-nav a:hover {
   background-color: #131c4636;
 }
+
 .main-header .div-line {
   background-color: white;
   width: 100%;
-  height: 0.25vh;
+  height: .25vh;
 }
 
 .bottom-overlay {
@@ -128,9 +154,11 @@ a {
   left: 0;
   height: 18vh;
 }
+
 .bottom-overlay img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}/*# sourceMappingURL=about.css.map */
+}
+/*# sourceMappingURL=about.css.map */
