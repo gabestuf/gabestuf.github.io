@@ -5,26 +5,31 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon_io/site.webmanifest">
   <title>Gabe Camacho</title>
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/header.css" />
 </head>
 
 <body>
-  <div class="hero-bg">
+  <div class="header">
+    <section class="home">
+      <a class="name" href="index.html">Gabe Camacho</a>
+    </section>
+    <div class="div-line"></div>
+    <section class="menu" id="myHeader">
+      <button onclick="location.href='html/about.html'" id="about-btn">About</button>
+      <button onclick="location.href='randomstuf/zeromaker/zeromaker.html'" id="zeros-btn">Blog</button>
+      <button id="random-btn">Projects</button>
+      <button onclick="location.href='catan/html/board.html'" id="catan-btn">Something else</button>
+      <button onclick="location.href='html/clicker.html'" id="counter-btn">Contact</button>
+    </section>
+  </div>
 
-    <div class="header">
-      <section class="home">
-        <a class="name" href="index.html">Gabe Camacho</a>
-      </section>
-      <div class="div-line"></div>
-      <section class="menu" id="myHeader">
-        <button onclick="location.href='html/about.html'" id="about-btn">About</button>
-        <button onclick="location.href='randomstuf/zeromaker/zeromaker.html'" id="zeros-btn">ZEROS</button>
-        <button id="random-btn">Facts</button>
-        <button onclick="location.href='catan/html/board.html'" id="catan-btn">Catan</button>
-        <button onclick="location.href='html/clicker.html'" id="counter-btn">L'moo</button>
-      </section>
-    </div>
+  <div class="hero-bg">
 
     <div class="title-text">
       <h2 class="slogan-desc">
@@ -38,14 +43,8 @@
 
     <section class="bottom">
       <img src="/images/backgrounds/bottom.png" alt="bottom graphic" />
-      <p>pls don't scroll down :(</p>
     </section>
   </div>
-
-  <section class="bottomSection">
-    <h1>get rekt noob</h1>
-  </section>
-  <button id="test-btn" class="testButton">Secret Button</button>
 </body>
 <script defer src="js/main.js"></script>
 

@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body, html {
@@ -19,65 +20,21 @@ a {
   text-decoration: none;
 }
 
-.header {
-  font-family: "Montserrat", sans-serif;
-  min-height: 100px;
-  height: 8.8vh;
-}
-.header .home {
-  background: rgba(0, 0, 0, 0.75);
-  text-align: center;
-  font-family: "Truculenta";
-  text-transform: capitalize;
-  height: 65%;
-}
-.header .home .name {
-  color: #44DFFF;
-  text-decoration: none;
-  font-size: 3.3rem;
-  font-weight: 600;
-}
-.header .div-line {
-  background-color: white;
-  width: 100%;
-  height: 3px;
-}
-.header .menu {
-  height: 38px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 100%;
-}
-.header .menu button {
-  background: rgba(49, 49, 49, 0.4);
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  border: none;
-  padding-top: 0.3em;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  outline: none;
-}
-.header .menu button:hover {
-  background: #131c4636;
-}
-
 .hero-bg {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: url("/images/space/space3.png") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
+
 .hero-bg .menu-sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
+
 .hero-bg .title-text {
   position: absolute;
   left: 2%;
@@ -85,19 +42,27 @@ a {
   color: white;
   width: 75%;
 }
+
 .hero-bg .title-text .slogan-desc {
   text-align: left;
   margin-left: 5vw;
   font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-bottom: 1vh;
   width: 75%;
   line-height: 100%;
 }
+
 .hero-bg .title-text .slogan-desc span {
   margin-left: -2vw;
 }
+
 .hero-bg .title-text .div-line {
   background-color: white;
   margin-left: 4vw;
@@ -107,16 +72,21 @@ a {
   font-size: large;
   font-weight: bold;
 }
+
 .hero-bg .title-text .slogan {
   text-transform: uppercase;
   margin-left: 2.4vw;
   font-size: 300%;
   font-weight: bold;
   line-height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 90%;
 }
+
 .hero-bg .bottom {
   position: absolute;
   bottom: 0;
@@ -125,82 +95,79 @@ a {
   text-align: right;
   color: white;
 }
+
 .hero-bg .bottom img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .hero-bg .bottom p {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.testButton {
-  margin-top: 2000px;
-}
-
-@media (min-aspect-ratio: 1/1) {
+@media (min-aspect-ratio: 1 / 1) {
   .hero-bg .title-text .div-line {
     width: 65%;
   }
-
   .hero-bg .title-text .slogan {
     line-height: 95%;
   }
 }
+
 @media (max-width: 365px) {
   .hero-bg .header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-
   .hero-bg .header .menu a {
     padding-left: 3vw;
     padding-right: 3vw;
   }
 }
+
 @media (min-width: 600px) {
   .hero-bg .header .menu {
     margin-left: 0%;
     margin-right: 0%;
   }
-
   .hero-bg .title-text .div-line {
     width: 69%;
   }
-
   .hero-bg .title-text .slogan-desc {
     font-size: 300%;
   }
-
   .hero-bg .title-text .slogan {
     font-size: 500%;
   }
 }
+
 @media (min-width: 724px) {
   .hero-bg .title-text {
     width: 69%;
   }
-
   .hero-bg .title-text .slogan-desc {
     font-size: 200%;
     margin-left: 7%;
     line-height: normal;
   }
-
   .hero-bg .title-text .div-line {
     width: 69%;
   }
-
   .hero-bg .title-text .slogan {
     margin-left: 7%;
     font-size: 450%;
   }
 }
+
 @media (min-width: 1400px) {
   .hero-bg .title-text .div-line {
     width: 660px;
   }
-}/*# sourceMappingURL=main.css.map */
+}

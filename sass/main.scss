@@ -19,54 +19,7 @@ a {
     text-decoration: none;
 }
 
-// header 
-.header {
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100px;
-    height: 8.8vh;
-    .home {
-        background: rgba(0, 0, 0, 0.75);
-        text-align: center;
 
-        font-family: 'Truculenta';
-        text-transform: capitalize;
-        height: 65%;
-        .name {
-            color: #44DFFF;
-            text-decoration: none;
-            font-size: 3.3rem;
-            font-weight: 600;
-        }
-    }
-    .div-line {
-        background-color: white;
-        width: 100%;
-        height: 3px;
-    }
-    .menu {
-        height: 38px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        width: 100%;
-
-        button {
-            background: rgba(49, 49, 49, 0.4);
-            text-decoration: none;
-            color: white;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            border: none;
-            padding-top: .3em;
-            letter-spacing: .1em;
-            cursor: pointer;
-            outline: none;
-        }
-        button:hover {
-            background: #131c4636;
-        }
-    }
-}
 
 //mobile first
 .hero-bg {
@@ -140,10 +93,6 @@ a {
             left: 0;
         }
     }
-}
-
-.testButton {
-    margin-top: 2000px;
 }
 
 //when wider than 1/1, use this code
