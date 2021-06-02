@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
 body .blackgrond {
   z-index: -1;
   position: absolute;
@@ -22,6 +24,7 @@ body .blackgrond {
   left: 0;
   height: 100vh;
 }
+
 body .blackgrond span {
   position: absolute;
   pointer-events: none;
@@ -29,9 +32,11 @@ body .blackgrond span {
   -webkit-animation: animate 5s linear infinite;
           animation: animate 5s linear infinite;
 }
+
 @-webkit-keyframes animate {
   0% {
-    transform: scale(0) translateY(0) rotate(0deg);
+    -webkit-transform: scale(0) translateY(0) rotate(0deg);
+            transform: scale(0) translateY(0) rotate(0deg);
     opacity: 0;
   }
   10% {
@@ -42,12 +47,15 @@ body .blackgrond span {
   }
   100% {
     opacity: 0;
-    transform: scale(1) translateY(-500%) rotate(360deg);
+    -webkit-transform: scale(1) translateY(-500%) rotate(360deg);
+            transform: scale(1) translateY(-500%) rotate(360deg);
   }
 }
+
 @keyframes animate {
   0% {
-    transform: scale(0) translateY(0) rotate(0deg);
+    -webkit-transform: scale(0) translateY(0) rotate(0deg);
+            transform: scale(0) translateY(0) rotate(0deg);
     opacity: 0;
   }
   10% {
@@ -58,7 +66,8 @@ body .blackgrond span {
   }
   100% {
     opacity: 0;
-    transform: scale(1) translateY(-500%) rotate(360deg);
+    -webkit-transform: scale(1) translateY(-500%) rotate(360deg);
+            transform: scale(1) translateY(-500%) rotate(360deg);
   }
 }
 
@@ -68,6 +77,8 @@ body .blackgrond span {
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 5%;
 }
@@ -77,6 +88,8 @@ body .blackgrond span {
 }
 
 .btn-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 5px;
 }
@@ -102,7 +115,8 @@ p {
 fieldset {
   color: white;
   width: 25%;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   margin-bottom: 20px;
 }
 
@@ -119,4 +133,4 @@ fieldset button {
   min-height: 300px;
   top: 75px;
   left: 500px;
-}/*# sourceMappingURL=clicker.css.map */
+}

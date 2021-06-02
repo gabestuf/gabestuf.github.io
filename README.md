@@ -1,6 +1,4 @@
-# gabestuf.github.io
-
-hi its gabestuf2
-
-this is a test 
-suck my ass
+Great.
+Now you've read me.
+Good job.
+heeello

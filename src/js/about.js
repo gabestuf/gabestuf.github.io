@@ -10,7 +10,6 @@ var controller = new ScrollMagic.Controller({
     vertical: false
 });
 
-
 /*
 object to hold href values of links inside our nav with
 the class '.anchor-nav'
@@ -55,10 +54,9 @@ for (var key in scenes) {
     }
 }
 
-
 // Change behaviour of controller
 // to animate scroll instead of jump
-controller.scrollTo(function(target) {
+controller.scrollTo(function (target) {
 
     TweenMax.to(window, 0.5, {
         scrollTo: {
@@ -70,11 +68,10 @@ controller.scrollTo(function(target) {
 
 });
 
-
 //  Bind scroll to anchor links using Vanilla JavaScript
 var anchor_nav = document.querySelector('.anchor-nav');
 
-anchor_nav.addEventListener('click', function(e) {
+anchor_nav.addEventListener('click', function (e) {
     var target = e.target,
         id = target.getAttribute('href');
 
@@ -87,8 +84,6 @@ anchor_nav.addEventListener('click', function(e) {
         }
     }
 });
-
-
 
 var $navs = $('.anchor-nav a');
 
@@ -115,5 +110,4 @@ function onWheel(event) {
     if (newIndex >= 0 && newIndex < $navs.length) {
         $navs.eq(newIndex)[0].click()
     }
-
 }
