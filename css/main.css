@@ -7,19 +7,6 @@
           box-sizing: border-box;
 }
 
-body, html {
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-a {
-  display: block;
-  text-decoration: none;
-}
-
 .hero-bg {
   font-family: 'Montserrat', sans-serif;
   background: url("/images/space/space3.png") no-repeat center center fixed;
@@ -29,10 +16,9 @@ a {
   overflow: hidden;
 }
 
-.hero-bg .menu-sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.main {
+  display: -ms-grid;
+  display: grid;
 }
 
 .hero-bg .title-text {
@@ -52,8 +38,8 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding-bottom: 1vh;
   width: 75%;
   line-height: 100%;
@@ -83,7 +69,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 90%;
 }
 
@@ -100,7 +86,7 @@ a {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .hero-bg .bottom p {
@@ -124,7 +110,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .hero-bg .header .menu a {
     padding-left: 3vw;
@@ -171,3 +157,4 @@ a {
     width: 660px;
   }
 }
+/*# sourceMappingURL=main.css.map */

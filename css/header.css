@@ -34,14 +34,16 @@ a {
 
 .header .menu {
   height: 38px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
 }
 
 .header .menu button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background: rgba(49, 49, 49, 0.4);
   text-decoration: none;
   color: white;
@@ -58,3 +60,4 @@ a {
 .header .menu button:hover {
   background: #131c4636;
 }
+/*# sourceMappingURL=header.css.map */
