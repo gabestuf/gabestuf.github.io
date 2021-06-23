@@ -1,67 +1,64 @@
-@import url("https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Arapey");
+.navbar {
+  background: black;
+  min-height: 69px;
+  text-align: center;
+}
+
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
-  padding: 0;
+  font-size: 26px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ffffff;
+  height: 100vh;
+  -webkit-perspective: 1px;
+          perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("/images/space/space3.png");
-  font-family: Truculenta;
-  color: white;
-  font-size: 5ch;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
-body fieldset {
-  min-height: 10vh;
-  max-width: 100%;
-  overflow-wrap: anywhere;
+.parallax-wrapper::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("/images/space/space3.png");
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
 }
 
-body input {
-  font-size: 2ch;
-}
-
-body .middle a {
+.regular-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  background: #de2121;
+  background: radial-gradient(circle, #de2121 0%, #4b0874 33%, #790976 35%, #5000ff 100%);
+  z-index: 2;
   position: relative;
-  top: 5vh;
-  text-decoration: none;
-  font-weight: bold;
-  border: 2px solid lightblue;
-  border-radius: 15px;
-  margin-left: 10vw;
-  padding: 10px 20px;
-  margin-top: 6vh;
-  color: lightblue;
 }
 
-body .middle a:hover {
-  background-color: rgba(69, 69, 69, 0.9);
-  border: 2px solid #29b3e0;
-}
-
-body .middle .fieldsets {
-  position: relative;
-  top: 8vh;
-}
-
-body .middle .fieldsets button {
-  border-radius: 10px;
-  border: 2px solid red;
-  height: 37px;
-  width: 69px;
-  font-weight: bold;
-  color: red;
-  background: yellow;
-}
-
-body .middle .fieldsets button:hover {
-  background-color: lightgreen;
-  border: 2px solid purple;
-  color: purple;
-  cursor: pointer;
-}
-
-body p {
-  font-size: .95ch;
+.content {
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+  background: #aaa;
 }
 /*# sourceMappingURL=test.css.map */
