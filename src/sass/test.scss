@@ -1,54 +1,11 @@
-
-.navbar {
-    background: black;
-    min-height: 69px;
-    text-align: center;
-}
-
-html {
-    overflow: hidden;
-}
-body {
-    margin: 0;
-    font-size: 26px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #ffffff;
-    height: 100vh;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-x:hidden;
-    overflow-y:auto;
-}
-.parallax-wrapper {
-    width: 100vw;
-    height:100vh;
-    padding-top:20vh;
+* {
+    margin:0;
+    padding:0;
     box-sizing: border-box;
-    transform-style: preserve-3d;
 }
-.parallax-wrapper::before {
-    content:"";
-    width: 100vw;
-    height: 100vh;
-    top:0;
-    left:0;
-    background-image: url("/images/space/space3.png");
-    position: absolute;
-    z-index: -1;
-    transform:translateZ(-1px) scale(2);
+
+
+.background-wrapper {
+    background-color: black;
 }
-.regular-wrapper {
-    width: 100vw;
-    height:100vh;
-    padding-top:20vh;
-    background: rgb(222,33,33);
-background: radial-gradient(circle, rgba(222,33,33,1) 0%, rgba(75,8,116,1) 33%, rgba(121,9,118,1) 35%, rgba(80,0,255,1) 100%);
-    z-index: 2;
-    position: relative;
-}
-.content {
-    margin: 0 auto;
-    padding: 50px;
-    width: 50%;
-    background: #aaa;
-}
+
