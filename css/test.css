@@ -1,26 +1,59 @@
 * {
   margin: 0;
-  font-size: 26px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #ffffff;
-  height: 100vh;
-  -webkit-perspective: 1px;
-          perspective: 1px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.parallax-wrapper {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 20vh;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
 }
 
 .background-container {
-  background: radial-gradient(ellipse at center, #242938, #000 100%);
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+.star {
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 1px 2px rgba(179, 246, 255, 0.75);
+          box-shadow: 0px 0px 1px 2px rgba(179, 246, 255, 0.75);
+}
+
+.star1 {
+  -webkit-animation: anim1 200s linear infinite;
+          animation: anim1 200s linear infinite;
+}
+
+.star2 {
+  -webkit-animation: anim1 170s linear infinite;
+          animation: anim1 170s linear infinite;
+}
+
+.star3 {
+  -webkit-animation: anim1 100s linear infinite;
+          animation: anim1 100s linear infinite;
+}
+
+@-webkit-keyframes anim1 {
+  from {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  to {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+}
+
+@keyframes anim1 {
+  from {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  to {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
 }
 /*# sourceMappingURL=test.css.map */
