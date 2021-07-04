@@ -1,41 +1,87 @@
+$speed: 1s;
+$bigstarspeed: $speed * 60;
+$medstarspeed: $speed * 90;
+$smallstarspeed: $speed * 150;
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .background-container {
-   width: 100vw;
-   height: 100vh;
-   background: black;
-   // background: radial-gradient(ellipse at center, #242938, #000 100%);
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  // background: radial-gradient(ellipse at center, #242938, #000 100%);
 }
 
 .star {
-    background: white;
-    position: absolute;
-    border-radius: 50%;
-
-    box-shadow: 0px 0px 1px 2px rgba(179, 246, 255, 0.75);
+  background: white;
+  position: absolute;
+  border-radius: 50%;
 }
 
 .star1 {
-    animation: anim1 200s linear infinite;
-  
+  background-color: red;
 }
 .star2 {
-    animation: anim1 170s linear infinite;
+  background-color: yellow;
 }
 .star3 {
-    animation: anim1 100s linear infinite;
+  background-color: magenta;
 }
 
-@keyframes anim1 {
-    from {
-        transform: translateX(-100vw)
-    }
-    to {
-        transform: translateX(100vw)
-    }
+.midpos.star1 {
+  animation: slide ($smallstarspeed) linear forwards;
+
 }
+.midpos.star2 {
+  animation: slide ($medstarspeed) linear forwards;
+}
+.midpos.star3 {
+  animation: slide ($bigstarspeed) linear forwards;
+}
+
+.leftpos1.star1 {
+  animation: slide2 ($smallstarspeed * 2) linear infinite;
+}
+.leftpos1.star2 {
+  animation: slide2 ($medstarspeed * 2) linear infinite;
+}
+.leftpos1.star3 {
+  animation: slide2 ($bigstarspeed * 2) linear infinite;
+}
+.leftpos2.star1 {
+  animation: slide2 ($smallstarspeed * 2) linear ($smallstarspeed) infinite;
+}
+.leftpos2.star2 {
+  animation: slide2 ($medstarspeed * 2) linear ($medstarspeed) infinite;
+}
+.leftpos2.star3 {
+  animation: slide2 ($bigstarspeed * 2) linear ($bigstarspeed) infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  99% {
+    transform: translateX(100vw);
+  }
+  100% {
+      transform: translateX(101vw);
+      display: none;
+  }
+
+}
+
+@keyframes slide2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200vw);
+  }
+}
+
