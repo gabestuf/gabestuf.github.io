@@ -1,65 +1,81 @@
-$speed: 1s;
-$bigstarspeed: $speed * 60;
-$medstarspeed: $speed * 90;
-$smallstarspeed: $speed * 150;
+
+
+:root {
+  --speed: 1s;
+  --bigstar-speed: calc(var(--speed) * 60);
+  --medstar-speed: calc(var(--speed) * 90);
+  --smallstar-speed: calc(var(--speed) * 150);
+  --animation-direction: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 .background-container {
   width: 100vw;
   height: 100vh;
   background: black;
-  // background: radial-gradient(ellipse at center, #242938, #000 100%);
+  overflow: hidden;
+  //background: radial-gradient(ellipse at center, #242938, #000 100%);
+  position: absolute;
+  z-index: -1;
 }
 
 .star {
   background: white;
   position: absolute;
   border-radius: 50%;
+  background-color: white;
+  
 }
 
 .star1 {
-  background-color: red;
+  box-shadow: 0 0 25px 3px #00c3ffde;
+  //background-color: rgb(255, 253, 107)
 }
 .star2 {
-  background-color: yellow;
-}
-.star3 {
-  background-color: magenta;
+  box-shadow: 0 0 50px 5px #00c3ffde;
+    //background-color: rgb(37, 240, 255)
+    
+  }
+  .star3 {
+    box-shadow: 0 0 100px 7px #00c3ffde;
+  //background-color: rgb(1, 1, 1)
+  
 }
 
 .midpos.star1 {
-  animation: slide ($smallstarspeed) linear forwards;
+  animation: slide var(--smallstar-speed) linear forwards;
 
 }
 .midpos.star2 {
-  animation: slide ($medstarspeed) linear forwards;
+  animation: slide var(--medstar-speed) linear forwards;
 }
 .midpos.star3 {
-  animation: slide ($bigstarspeed) linear forwards;
+  animation: slide var(--bigstar-speed) linear forwards;
 }
 
 .leftpos1.star1 {
-  animation: slide2 ($smallstarspeed * 2) linear infinite;
+  animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite var(--animation-direction);
 }
 .leftpos1.star2 {
-  animation: slide2 ($medstarspeed * 2) linear infinite;
+  animation: slide2 calc(var(--medstar-speed) * 2) linear infinite var(--animation-direction);
 }
 .leftpos1.star3 {
-  animation: slide2 ($bigstarspeed * 2) linear infinite;
+  animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite var(--animation-direction);
 }
 .leftpos2.star1 {
-  animation: slide2 ($smallstarspeed * 2) linear ($smallstarspeed) infinite;
+  animation: slide2 calc(var(--smallstar-speed) * 2) linear (var(--smallstar-speed)) infinite var(--animation-direction);
 }
 .leftpos2.star2 {
-  animation: slide2 ($medstarspeed * 2) linear ($medstarspeed) infinite;
+  animation: slide2 calc(var(--medstar-speed) * 2) linear (var(--medstar-speed)) infinite var(--animation-direction);
 }
 .leftpos2.star3 {
-  animation: slide2 ($bigstarspeed * 2) linear ($bigstarspeed) infinite;
+  animation: slide2 calc(var(--bigstar-speed) * 2) linear (var(--bigstar-speed)) infinite var(--animation-direction);
 }
 
 @keyframes slide {
@@ -73,7 +89,6 @@ $smallstarspeed: $speed * 150;
       transform: translateX(101vw);
       display: none;
   }
-
 }
 
 @keyframes slide2 {
@@ -85,3 +100,12 @@ $smallstarspeed: $speed * 150;
   }
 }
 
+
+
+
+
+.foreground-container {
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid green;
+}

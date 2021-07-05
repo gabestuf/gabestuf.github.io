@@ -1,78 +1,92 @@
+:root {
+  --speed: 1s;
+  --bigstar-speed: calc(var(--speed) * 60);
+  --medstar-speed: calc(var(--speed) * 90);
+  --smallstar-speed: calc(var(--speed) * 150);
+  --animation-direction: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden;
 }
 
 .background-container {
   width: 100vw;
   height: 100vh;
   background: black;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .star {
   background: white;
   position: absolute;
   border-radius: 50%;
+  background-color: white;
 }
 
 .star1 {
-  background-color: red;
+  -webkit-box-shadow: 0 0 25px 3px #00c3ffde;
+          box-shadow: 0 0 25px 3px #00c3ffde;
 }
 
 .star2 {
-  background-color: yellow;
+  -webkit-box-shadow: 0 0 50px 5px #00c3ffde;
+          box-shadow: 0 0 50px 5px #00c3ffde;
 }
 
 .star3 {
-  background-color: magenta;
+  -webkit-box-shadow: 0 0 100px 7px #00c3ffde;
+          box-shadow: 0 0 100px 7px #00c3ffde;
 }
 
 .midpos.star1 {
-  -webkit-animation: slide 150s linear forwards;
-          animation: slide 150s linear forwards;
+  -webkit-animation: slide var(--smallstar-speed) linear forwards;
+          animation: slide var(--smallstar-speed) linear forwards;
 }
 
 .midpos.star2 {
-  -webkit-animation: slide 90s linear forwards;
-          animation: slide 90s linear forwards;
+  -webkit-animation: slide var(--medstar-speed) linear forwards;
+          animation: slide var(--medstar-speed) linear forwards;
 }
 
 .midpos.star3 {
-  -webkit-animation: slide 60s linear forwards;
-          animation: slide 60s linear forwards;
+  -webkit-animation: slide var(--bigstar-speed) linear forwards;
+          animation: slide var(--bigstar-speed) linear forwards;
 }
 
 .leftpos1.star1 {
-  -webkit-animation: slide2 300s linear infinite;
-          animation: slide2 300s linear infinite;
+  -webkit-animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite var(--animation-direction);
+          animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite var(--animation-direction);
 }
 
 .leftpos1.star2 {
-  -webkit-animation: slide2 180s linear infinite;
-          animation: slide2 180s linear infinite;
+  -webkit-animation: slide2 calc(var(--medstar-speed) * 2) linear infinite var(--animation-direction);
+          animation: slide2 calc(var(--medstar-speed) * 2) linear infinite var(--animation-direction);
 }
 
 .leftpos1.star3 {
-  -webkit-animation: slide2 120s linear infinite;
-          animation: slide2 120s linear infinite;
+  -webkit-animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite var(--animation-direction);
+          animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite var(--animation-direction);
 }
 
 .leftpos2.star1 {
-  -webkit-animation: slide2 300s linear 150s infinite;
-          animation: slide2 300s linear 150s infinite;
+  -webkit-animation: slide2 calc(var(--smallstar-speed) * 2) linear var(--smallstar-speed) infinite var(--animation-direction);
+          animation: slide2 calc(var(--smallstar-speed) * 2) linear var(--smallstar-speed) infinite var(--animation-direction);
 }
 
 .leftpos2.star2 {
-  -webkit-animation: slide2 180s linear 90s infinite;
-          animation: slide2 180s linear 90s infinite;
+  -webkit-animation: slide2 calc(var(--medstar-speed) * 2) linear var(--medstar-speed) infinite var(--animation-direction);
+          animation: slide2 calc(var(--medstar-speed) * 2) linear var(--medstar-speed) infinite var(--animation-direction);
 }
 
 .leftpos2.star3 {
-  -webkit-animation: slide2 120s linear 60s infinite;
-          animation: slide2 120s linear 60s infinite;
+  -webkit-animation: slide2 calc(var(--bigstar-speed) * 2) linear var(--bigstar-speed) infinite var(--animation-direction);
+          animation: slide2 calc(var(--bigstar-speed) * 2) linear var(--bigstar-speed) infinite var(--animation-direction);
 }
 
 @-webkit-keyframes slide {
@@ -127,5 +141,11 @@
     -webkit-transform: translateX(200vw);
             transform: translateX(200vw);
   }
+}
+
+.foreground-container {
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid green;
 }
 /*# sourceMappingURL=test.css.map */
