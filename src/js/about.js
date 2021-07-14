@@ -1,6 +1,6 @@
 //https://greensock.com/forums/topic/17564-scrollmagic-horizontal-scroll-with-anchor-navigation/
 
-$(document).ready(function () {
+$(function () {
     var pageWidth = $(window).width();
     if (pageWidth >= 1000) {
         // Init controller

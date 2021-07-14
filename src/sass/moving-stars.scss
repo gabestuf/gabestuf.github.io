@@ -1,0 +1,98 @@
+:root {
+  --speed: 5s;
+  --bigstar-speed: calc(var(--speed) * 175);
+  --medstar-speed: calc(var(--speed) * 220);
+  --smallstar-speed: calc(var(--speed) * 300);
+  --animation-direction: normal;
+}
+
+
+
+.background-container {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+  //background: radial-gradient(ellipse at center, #242938, #000 100%);
+  position: absolute;
+  z-index: -1;
+}
+
+.star {
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.star1 {
+  box-shadow: 0 0 25px 3px #00c3ffe1;
+  //background-color: rgb(255, 253, 107)
+}
+.star2 {
+  box-shadow: 0 0 50px 5px #00c3ffe1;
+  //background-color: rgb(37, 240, 255)
+}
+.star3 {
+  box-shadow: 0 0 75px 7px #00c3ffe1;
+  //background-color: rgb(1, 1, 1)
+}
+
+
+.midpos.star1 {
+  animation: slide var(--smallstar-speed) linear forwards;
+}
+.midpos.star2 {
+  animation: slide var(--medstar-speed) linear forwards;
+}
+.midpos.star3 {
+ animation: slide var(--bigstar-speed) linear forwards;
+}
+
+.leftpos1.star1 {
+ animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite
+   var(--animation-direction);
+}
+.leftpos1.star2 {
+ animation: slide2 calc(var(--medstar-speed) * 2) linear infinite
+   var(--animation-direction);
+}
+.leftpos1.star3 {
+ animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite
+   var(--animation-direction);
+}
+.leftpos2.star1 {
+ animation: slide2 calc(var(--smallstar-speed) * 2) linear
+   (var(--smallstar-speed)) infinite var(--animation-direction);
+}
+.leftpos2.star2 {
+ animation: slide2 calc(var(--medstar-speed) * 2) linear (var(--medstar-speed))
+   infinite var(--animation-direction);
+}
+.leftpos2.star3 {
+  animation: slide2 calc(var(--bigstar-speed) * 2) linear (var(--bigstar-speed))
+    infinite var(--animation-direction);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  99% {
+    transform: translateX(800vw);
+  }
+  100% {
+    transform: translateX(801);
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes slide2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(800vw);
+  }
+}

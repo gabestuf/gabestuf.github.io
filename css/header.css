@@ -9,6 +9,7 @@ a {
   min-height: 100px;
   height: 8.8vh;
   width: 100%;
+  z-index: 5;
 }
 
 .header .home {

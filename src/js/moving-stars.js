@@ -1,4 +1,4 @@
-const STAR_COUNT = 1000;
+const STAR_COUNT = 690;
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -19,18 +19,18 @@ for (let x = 0; x < STAR_COUNT; x++) {
   switch (x % 3) {
     case 0:
       //console.log("0");
-      X_POS = getRandomInt(10000) / 100 + 100;
+      X_POS = (getRandomInt(100000) / 1000) + 100;
       Y_POS = getRandomInt(10000) / 100;
       div.classList.add("leftpos1");
       break;
     case 1:
       //console.log("1");
-      X_POS = getRandomInt(10000) / 100 + 100;
+      X_POS = (getRandomInt(100000) / 1000) + 100;
       Y_POS = getRandomInt(10000) / 100;
       div.classList.add("leftpos2");
       break;
     case 2:
-      X_POS = getRandomInt(10000) / 100;
+      X_POS =(getRandomInt(100000) / 1000);
       Y_POS = getRandomInt(10000) / 100;
       div.classList.add("midpos");
       break;
@@ -41,27 +41,10 @@ for (let x = 0; x < STAR_COUNT; x++) {
 
   div.classList.add("star");
 
-  div.style.right = `${X_POS}vw`;
+  div.style.right = `${X_POS}%`;
   div.style.top = `${Y_POS}vh`;
 
   CANVAS.appendChild(div);
 }
 
 
-
-
-let root = document.documentElement;
-
-
-const btn = document.querySelector('.reverse')
-btn.addEventListener('click', () => {
-  root.style.setProperty('--animation-direction', 'reverse')
-})
-
-const btn2 = document.querySelector('.speed')
-btn2.addEventListener('click', () => {
-  root.style.setProperty('--speed', '.01s')
-})
-
-
-//setInterval(updateStarPosition, 1000);

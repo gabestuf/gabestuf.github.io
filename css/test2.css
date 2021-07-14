@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.main {
+  height: 400vh;
+  width: 400vw;
+  background: url("/images/space/largeemptyspace.png");
+  position: relative;
+  z-index: 0;
+}
+
+.page {
+  width: 100vw;
+  border: 2px solid yellow;
+  text-align: center;
+}
+
+.main-wrapper {
+  padding-top: 12vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+/*# sourceMappingURL=test2.css.map */
