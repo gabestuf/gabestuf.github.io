@@ -10,25 +10,159 @@ body {
 }
 
 .main {
-  height: 400vh;
   width: 400vw;
-  background: url("/images/space/largeemptyspace.png");
   position: relative;
   z-index: 0;
 }
 
-.page {
-  width: 100vw;
-  border: 2px solid yellow;
-  text-align: center;
-}
-
-.main-wrapper {
-  padding-top: 12vh;
+.background-container {
+  padding-top: clamp(100px, 8.8vh, 8.8vh);
   width: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: white;
+  background-color: black;
 }
-/*# sourceMappingURL=test2.css.map */
+
+.page {
+  width: 100vw;
+  text-align: center;
+}
+
+:root {
+  --speed: .5s;
+  --bigstar-speed: calc(var(--speed) * 175);
+  --medstar-speed: calc(var(--speed) * 220);
+  --smallstar-speed: calc(var(--speed) * 300);
+}
+
+.background-container {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.star {
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.star1 {
+  -webkit-box-shadow: 0 0 10px 7px #00c3ff0e;
+          box-shadow: 0 0 10px 7px #00c3ff0e;
+}
+
+.star2 {
+  -webkit-box-shadow: 0 0 20px 14px #00c3ff0e;
+          box-shadow: 0 0 20px 14px #00c3ff0e;
+}
+
+.star3 {
+  -webkit-box-shadow: 0 0 30px 21px #00c3ff0e;
+          box-shadow: 0 0 30px 21px #00c3ff0e;
+}
+
+.midpos.star1 {
+  -webkit-animation: slide var(--smallstar-speed) linear forwards;
+          animation: slide var(--smallstar-speed) linear forwards;
+}
+
+.midpos.star2 {
+  -webkit-animation: slide var(--medstar-speed) linear forwards;
+          animation: slide var(--medstar-speed) linear forwards;
+}
+
+.midpos.star3 {
+  -webkit-animation: slide var(--bigstar-speed) linear forwards;
+          animation: slide var(--bigstar-speed) linear forwards;
+}
+
+.leftpos1.star1 {
+  -webkit-animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite;
+          animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite;
+}
+
+.leftpos1.star2 {
+  -webkit-animation: slide2 calc(var(--medstar-speed) * 2) linear infinite;
+          animation: slide2 calc(var(--medstar-speed) * 2) linear infinite;
+}
+
+.leftpos1.star3 {
+  -webkit-animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite;
+          animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite;
+}
+
+.leftpos2.star1 {
+  -webkit-animation: slide2 calc(var(--smallstar-speed) * 2) linear var(--smallstar-speed) infinite;
+          animation: slide2 calc(var(--smallstar-speed) * 2) linear var(--smallstar-speed) infinite;
+}
+
+.leftpos2.star2 {
+  -webkit-animation: slide2 calc(var(--medstar-speed) * 2) linear var(--medstar-speed) infinite;
+          animation: slide2 calc(var(--medstar-speed) * 2) linear var(--medstar-speed) infinite;
+}
+
+.leftpos2.star3 {
+  -webkit-animation: slide2 calc(var(--bigstar-speed) * 2) linear var(--bigstar-speed) infinite;
+          animation: slide2 calc(var(--bigstar-speed) * 2) linear var(--bigstar-speed) infinite;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  99% {
+    -webkit-transform: translateX(400vw);
+            transform: translateX(400vw);
+  }
+  100% {
+    -webkit-transform: translateX(401vw);
+            transform: translateX(401vw);
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  99% {
+    -webkit-transform: translateX(400vw);
+            transform: translateX(400vw);
+  }
+  100% {
+    -webkit-transform: translateX(401vw);
+            transform: translateX(401vw);
+    display: none;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide2 {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(800vw);
+            transform: translateX(800vw);
+  }
+}
+
+@keyframes slide2 {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(800vw);
+            transform: translateX(800vw);
+  }
+}

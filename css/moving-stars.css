@@ -1,9 +1,8 @@
 :root {
-  --speed: 5s;
+  --speed: .2s;
   --bigstar-speed: calc(var(--speed) * 175);
   --medstar-speed: calc(var(--speed) * 220);
   --smallstar-speed: calc(var(--speed) * 300);
-  --animation-direction: normal;
 }
 
 .background-container {
@@ -23,18 +22,18 @@
 }
 
 .star1 {
-  -webkit-box-shadow: 0 0 25px 3px #00c3ffe1;
-          box-shadow: 0 0 25px 3px #00c3ffe1;
+  -webkit-box-shadow: 0 0 25px 10px #00c3ff20;
+          box-shadow: 0 0 25px 10px #00c3ff20;
 }
 
 .star2 {
-  -webkit-box-shadow: 0 0 50px 5px #00c3ffe1;
-          box-shadow: 0 0 50px 5px #00c3ffe1;
+  -webkit-box-shadow: 0 0 50px 15px #00c3ff20;
+          box-shadow: 0 0 50px 15px #00c3ff20;
 }
 
 .star3 {
-  -webkit-box-shadow: 0 0 75px 7px #00c3ffe1;
-          box-shadow: 0 0 75px 7px #00c3ffe1;
+  -webkit-box-shadow: 0 0 75px 20px #00c3ff20;
+          box-shadow: 0 0 75px 20px #00c3ff20;
 }
 
 .midpos.star1 {
@@ -53,33 +52,33 @@
 }
 
 .leftpos1.star1 {
-  -webkit-animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite var(--animation-direction);
-          animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite var(--animation-direction);
+  -webkit-animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite;
+          animation: slide2 calc(var(--smallstar-speed) * 2) linear infinite;
 }
 
 .leftpos1.star2 {
-  -webkit-animation: slide2 calc(var(--medstar-speed) * 2) linear infinite var(--animation-direction);
-          animation: slide2 calc(var(--medstar-speed) * 2) linear infinite var(--animation-direction);
+  -webkit-animation: slide2 calc(var(--medstar-speed) * 2) linear infinite;
+          animation: slide2 calc(var(--medstar-speed) * 2) linear infinite;
 }
 
 .leftpos1.star3 {
-  -webkit-animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite var(--animation-direction);
-          animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite var(--animation-direction);
+  -webkit-animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite;
+          animation: slide2 calc(var(--bigstar-speed) * 2) linear infinite;
 }
 
 .leftpos2.star1 {
-  -webkit-animation: slide2 calc(var(--smallstar-speed) * 2) linear var(--smallstar-speed) infinite var(--animation-direction);
-          animation: slide2 calc(var(--smallstar-speed) * 2) linear var(--smallstar-speed) infinite var(--animation-direction);
+  -webkit-animation: slide2 calc(var(--smallstar-speed) * 2) linear var(--smallstar-speed) infinite;
+          animation: slide2 calc(var(--smallstar-speed) * 2) linear var(--smallstar-speed) infinite;
 }
 
 .leftpos2.star2 {
-  -webkit-animation: slide2 calc(var(--medstar-speed) * 2) linear var(--medstar-speed) infinite var(--animation-direction);
-          animation: slide2 calc(var(--medstar-speed) * 2) linear var(--medstar-speed) infinite var(--animation-direction);
+  -webkit-animation: slide2 calc(var(--medstar-speed) * 2) linear var(--medstar-speed) infinite;
+          animation: slide2 calc(var(--medstar-speed) * 2) linear var(--medstar-speed) infinite;
 }
 
 .leftpos2.star3 {
-  -webkit-animation: slide2 calc(var(--bigstar-speed) * 2) linear var(--bigstar-speed) infinite var(--animation-direction);
-          animation: slide2 calc(var(--bigstar-speed) * 2) linear var(--bigstar-speed) infinite var(--animation-direction);
+  -webkit-animation: slide2 calc(var(--bigstar-speed) * 2) linear var(--bigstar-speed) infinite;
+          animation: slide2 calc(var(--bigstar-speed) * 2) linear var(--bigstar-speed) infinite;
 }
 
 @-webkit-keyframes slide {
@@ -88,12 +87,12 @@
             transform: translateX(0);
   }
   99% {
-    -webkit-transform: translateX(800vw);
-            transform: translateX(800vw);
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
   100% {
-    -webkit-transform: translateX(801);
-            transform: translateX(801);
+    -webkit-transform: translateX(101vw);
+            transform: translateX(101vw);
     display: none;
     opacity: 0;
   }
@@ -105,12 +104,12 @@
             transform: translateX(0);
   }
   99% {
-    -webkit-transform: translateX(800vw);
-            transform: translateX(800vw);
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
   100% {
-    -webkit-transform: translateX(801);
-            transform: translateX(801);
+    -webkit-transform: translateX(101vw);
+            transform: translateX(101vw);
     display: none;
     opacity: 0;
   }
@@ -122,8 +121,8 @@
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(800vw);
-            transform: translateX(800vw);
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
   }
 }
 
@@ -133,8 +132,7 @@
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(800vw);
-            transform: translateX(800vw);
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
   }
 }
-/*# sourceMappingURL=moving-stars.css.map */
