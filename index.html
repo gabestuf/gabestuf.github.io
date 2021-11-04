@@ -1,73 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./images/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./images/favicon_io/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./images/favicon_io/site.webmanifest" />
-    <title>Gabe Camacho</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/moving-stars.css" />
-  </head>
 
-  <body>
-    <div class="header">
-      <section class="home">
-        <a class="name" href="index.html">Gabe Camacho</a>
-      </section>
-      <div class="div-line"></div>
-      <section class="menu" id="myHeader">
-        <button onclick="location.href='src/html/about.html'" id="about-btn">
-          About Me
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="./images/favicon_io/site.webmanifest" />
+  <title>Gabe Camacho</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/moving-stars.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <section class="home">
+      <a class="name" href="index.html">Gabe Camacho</a>
+    </section>
+    <div class="div-line"></div>
+    <section class="menu" id="myHeader">
+      <button onclick="location.href='src/html/about.html'" id="about-btn">
+        About Me
+      </button>
+      <button onclick="location.href='randomstuf/zeromaker/zeromaker.html'" id="zeros-btn">
+        Stories
+      </button>
+      <button id="random-btn">Projects</button>
+      <button onclick="location.href='src/html/contact.html'">Contact</button>
+    </section>
+  </div>
+
+  <div class="hero-bg">
+    <div class="background-container"></div>
+    <t1 class="temporary-title">There is nothing here. Please leave</t1>
+
+    <div class="hero-text">
+      <div class="title-text">
+        <h2 class="slogan-desc">
+          Stop looking inward.<br><span>Think outside the box...</span>
+        </h2>
+        <div class="div-line"></div>
+        <h1 class="slogan">
+          <span class="dashed-out">out-</span><span>novation</span>
+        </h1>
+        <button class="bn54" onClick="window.location.href='src/html/about.html'"> <span class="bn54span">about
+            me</span>
         </button>
-        <button
-          onclick="location.href='randomstuf/zeromaker/zeromaker.html'"
-          id="zeros-btn"
-        >
-          Stories
-        </button>
-        <button id="random-btn">Projects</button>
-        <button onclick="location.href='src/html/contact.html'">Contact</button>
-      </section>
-    </div>
-
-    <div class="hero-bg">
-      <div class="background-container"></div>
-
-      <div class="hero-text">
-        <div class="title-text">
-          <h2 class="slogan-desc">
-            Stop looking inward.<br><span>Think outside the box...</span>
-          </h2>
-          <div class="div-line"></div>
-          <h1 class="slogan">
-            <span class="dashed-out">out-</span><span>novation</span>
-          </h1>
-        </div>
       </div>
 
-      <img src="/images/space/planet1.png" alt="planet-img" />
     </div>
 
-    <script defer src="/src/js/moving-stars.js"></script>
-    <script defer src="src/js/main.js"></script>
-  </body>
+
+    <img src="/images/space/planet1.png" alt="planet-img" />
+  </div>
+
+  <script defer src="/src/js/moving-stars.js"></script>
+  <script defer src="src/js/main.js"></script>
+</body>
+
 </html>
