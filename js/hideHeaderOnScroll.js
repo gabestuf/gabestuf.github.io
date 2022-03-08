@@ -4,7 +4,6 @@ const desktopHeaderElement = document.querySelector(".desktop-header")
 window.onscroll = () => {hideOnScroll()}
 
 const hideOnScroll = () => {
-    console.log(window.scrollY)
     if (window.scrollY < 10) {
         if (desktopHeaderElement.classList.contains("closed-header")) {
             desktopHeaderElement.classList.remove("closed-header")

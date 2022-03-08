@@ -5,7 +5,6 @@
 const cardWrapperElement = document.querySelector(".card-wrapper")
 const desktopHeaderElement = document.querySelector(".desktop-header")
 
-
 cardWrapperElement.onscroll = () => {hideOnScroll()}
 
 const hideOnScroll = () => {

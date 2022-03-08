@@ -7,8 +7,6 @@
     padding: 0;
 }
 
-
-
 body {
     font-family: 'Quicksand', sans-serif;
     z-index: 0;
@@ -17,28 +15,35 @@ body {
 /* navigation */
 .nav-wrapper {
     z-index: 1;
-    background-color: rgb(161, 94, 255);
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     display: grid;
     user-select: none;
     transition: height 1s;
+    background:rgb(161, 94, 255);
 }
 
 .menu-button {
-    z-index: 2;
+    z-index: 1;
     position: fixed;
-    right: 2rem;
-    font-size: 2.5em;
+    display: flex;
+    margin-top: 1rem;
+    right: 1rem;
+    font-size: 190%;
+    border: 2px solid rgb(161, 94, 255);
+    border-radius: 50%;
     color:rgb(66, 66, 66);
-}
-
-.color-light {
-    color: rgb(161, 94, 255);
+    height: 3.1rem;
+    width: 3.1rem;
+    justify-content: space-around;
+    align-items: center;
+    transition: .2s;
 }
 
 .menu-button:hover {
+    color: #f4edfb;
     cursor:pointer;
+    border: 2px solid #f4edfb;
 }
 
 .header-buttons {
@@ -58,13 +63,16 @@ body {
     font-weight: 700;
     margin: 1em;
     color: #551A8B;
+    transition: .2s;
+}
+.header-buttons a:hover {
+    transform: scale(1.2, 1.2);
+    color: white;
 }
 
 .header-buttons a:active {
     color: #d2c7dd;
 }
-
-
 
 /* Main Page */
 
@@ -125,16 +133,18 @@ body {
     margin: 1rem;
     background-color: rgba(174, 229, 255, 0.1);
     font-size: 1rem;
+    transition: .1s;
 }
 .content button:hover {
     cursor: pointer;
-    border: 2px solid #d2c7dd;
-    color: #d2c7dd;
+    border: 3px solid #f4edfb;
+    color: #f4edfb;
+    font-weight: bold;
 }
 .content button:active {
     cursor: pointer;
-    border: 2px solid #d2c7dd;
-    color: #d2c7dd;
+    border: 2px solid #f4edfb;
+    color: #f4edfb;
     background-color: rgba(174, 229, 255, 0);
 }
 
@@ -166,9 +176,11 @@ footer {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+    transition: .1s;
 }
 .desktop-header a:hover {
-    text-shadow: 0px 0px 1em #ffffff;
+    transform: scale(1.1,1.1);
+    text-shadow: 0px 0px 1em #ffb1cf;;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -179,9 +191,7 @@ footer {
         flex-direction: row-reverse;
         justify-content: space-evenly;
     }
-    .desktop-header {
-        display: flex;
-    }
+    
 
     .content h1 {
         font-size: 4rem;
@@ -190,8 +200,11 @@ footer {
     font-size:1.5rem;
     }
 
-    .header {
+    .menu-button {
         display: none;
+    }
+    .desktop-header {
+        display: flex;
     }
     .desktop-header {
         margin-top: .5rem;
@@ -228,6 +241,12 @@ footer {
     }
   }
 
+  .color-light {
+    color: rgb(161, 94, 255);
+}
+.border-dark {
+    border: 2px solid #551A8B;
+}
 
 /* disappearing elements*/
 .hideElement {
