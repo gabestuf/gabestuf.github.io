@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
+
+
+.content-wrapper {
+    background-color: white;
+    background-image: url("/img/beach.jpg");
+}
+
+.card-wrapper {
+    padding-top: 5vh;
+    overflow-x: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    border-radius: 2em;
+    margin: 5vh 10vw;
+    display: flex;
+    flex-direction: column-reverse;
+    background: rgba(161, 94, 255, .2);
+}   
+
+/* 
+.card:hover {
+    box-shadow: 0 0 1em .1em rgba(255, 255, 255, 0.5),  0 0 5em 1em #541a8b93;
+    cursor: pointer;
+}
+*/
+
+.info-wrapper {
+    flex: 1;
+}
+
+.image-wrapper {
+    flex: 1;
+    border-radius: 2em 2em 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper img {
+    width: 80%;
+    min-width: 200px;
+    margin-top: 5vh;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 8vw;
+    border: 3px solid rgb(39, 39, 39);
+    box-shadow: 0 0 5em 1em rgba(174, 229, 255, 0.3);
+}
+
+.card h4 {
+    margin-top: .5em;
+    text-align: center;
+    font-size: 2em;
+}
+
+.card p {
+    text-align: start;
+    font-size: 1em;
+    margin: 1em 2em 2em 2em;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+    .card-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 8vh;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 2em;
+        
+        font-family: 'Poppins', sans-serif;
+        color: rgb(255, 255, 255);;
+        box-sizing: border-box;
+        box-shadow: 0 0 1em 1em rgba(0,0,0,.1);
+    }
+    /*
+    .card img {
+        flex: 1;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        box-shadow: none;
+        margin-top: 0;
+        border-radius: 0 2em 2em 0;
+        display: block;
+        border: none;
+    }
+    */
+    .image-wrapper img {
+        margin: 5vh 0;
+    }
+    
+    .info-wrapper {
+        flex: 1;
+        border-radius: 2em 0 0 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .card h4 {
+        text-align: start;
+        margin: 0 2rem 0 2rem;
+        font-size: 4vw;
+    }
+    
+    .card p {
+        text-align: start;
+        margin: 0 2rem;
+        font-size: 1.3vw;
+    }
+
+  }
