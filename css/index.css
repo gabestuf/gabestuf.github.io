@@ -50,7 +50,7 @@ body {
 .menu-button:hover {
     cursor: pointer;
     box-shadow: 0 0 .5em .1em #f4edfb9f;
-    transform: scale(1.1,1.1)
+    transform: scale(1.1,1.1);
 }
 
 .header-buttons {
@@ -140,13 +140,14 @@ body {
     margin: 1rem;
     background-color: rgba(174, 229, 255, 0.1);
     font-size: 1rem;
-    transition: .1s;
+    transition: .2s;
 }
 .content button:hover {
     cursor: pointer;
-    border: 3px solid #f4edfb;
+    border: 2px solid #f4edfb;
     color: #f4edfb;
     font-weight: bold;
+    border-radius: 1.5em .4em;
 }
 .content button:active {
     cursor: pointer;
@@ -194,7 +195,15 @@ footer {
 .close-icon {
     display: none;
 }
-
+@media only screen and (min-width: 1435px) {
+    .content h1 {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+    .content p {
+        font-size:1.5rem;
+    }
+}
 
 @media only screen and (min-width: 750px) {
     .content .mobile-picture {
@@ -203,13 +212,6 @@ footer {
     .content {
         flex-direction: row-reverse;
         justify-content: space-evenly;
-    }
-
-    .content h1 {
-        font-size: 4rem;
-    }
-    .content p {
-        font-size:1.5rem;
     }
 
     .menu-button {
@@ -232,6 +234,9 @@ footer {
         justify-content:space-around;
         border-radius: .4em 1.5em;
         transition: .2s;
+    }
+    .content .mobile-picture {
+        animation: imageBounce 5s ease-in-out infinite;
     }
 
     .close-icon {
@@ -277,6 +282,24 @@ footer {
     }
    
   }
+  
+@media only screen and (max-width: 1435px) and (min-width: 750) {
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content p {
+        font-size:1.5rem;
+    }
+}
+
+@keyframes imageBounce {
+    0%,100% {
+        transform: translateY(1rem);
+    }
+    50% {
+        transform: translateY(0rem);
+    }
+}
 
 .color-light {
     color: rgb(161, 94, 255);
