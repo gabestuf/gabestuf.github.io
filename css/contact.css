@@ -6,6 +6,9 @@
     padding-top: 8vh;
 }
 
+body {
+    background: linear-gradient(330deg, rgba(7,16,35,1) 0%, rgb(25, 9, 36) 25%, rgba(7,16,35,1) 50%,rgb(43, 8, 83) 75%, rgba(7,16,35,1) 100%);
+}
 
 
 .contact-info {
@@ -15,7 +18,86 @@
 
 
 
+.action-button {
+    color: rgb(161, 94, 255);
+    width: 10em;
+    height: 1.5em;
+    border-radius: .4em 1.5em;
+    border: 2px solid rgb(161, 94, 255);
+    border-color:rgb(161, 94, 255);
+    box-shadow:  none;
+    padding: .5rem 0rem;
+    background-color: rgba(174, 229, 255, 0.1);
+    font-size: 1rem;
+    transition: .1s;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 10em;
+    text-align: center;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+    transition: height .3s, border-radius .3s, border .3s;
+    user-select: none;
 
+}
+
+.action-button .button-option {
+    display: none;
+    color: #f4edfb;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: .1s;
+}
+
+.action-button:hover .button-option {
+    display: block;
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+.action-button:hover span {
+    display: none;
+}
+
+.action-button:hover {
+    cursor: pointer;
+    color: #f4edfb;
+    font-weight: bold;
+    height: 1.5em;
+    border-radius: 1.5em .4em;
+    border-color:#f4edfb;
+}
+
+.action-button:active {
+    cursor: pointer;
+    border: 2px solid #f4edfb;
+    color: #f4edfb;
+    background-color: rgba(174, 229, 255, 0);
+}
+
+.info-wrapper {
+    color: white;
+    border: 2px solid white;
+    margin: 5vh 20vw;
+    border-radius: 1.5em .4em;
+}
+
+.button-wrapper {
+    margin: 1rem 2rem;
+}
+
+.info-wrapper h1 {
+    text-align: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.contact-info {
+    margin: 1rem 1rem;
+}
+.spacer {
+    height: 3em
+}
 
 
 

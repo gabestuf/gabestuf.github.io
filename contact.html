@@ -22,28 +22,49 @@
   <div class="nav-wrapper" data-menuopen=0>
     <div class="header-buttons">
         <a href="index.html">Home</a>
-        <a href="bio.html">About Me</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a> 
     </div>
   </div>
-  <header class="desktop-header">
+  <header class="desktop-header closed-header">
     <a href="index.html">Home</a>
-    <a href="bio.html">About Me</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a> 
-    <i class="fa fa-bars hamburger"></i>
+    <i class="fa fa-window-close close-icon" aria-hidden="true" onclick="hideDesktopHeader()" ></i> 
+    <i class="fa fa-bars hamburger" onclick="showDesktopHeader()" data-manualopen=0></i>
   </header>
 
     <div class="content-wrapper">
+
+      
+
+      <div class="info-wrapper">
+
+        <h1>Gabriel Camacho's File</h1>
+
+        <a href="img/resume22.pdf" download="resume" class="button-wrapper" >
+          <div type="button" class="action-button" > 
+            <span>Resume</span> 
+            <p class="button-option">pdf <i class="fa fa-download" aria-hidden="true"></i></p>
+          </div>
+        </a>
+
         <div class="contact-info">
-            <h4>Resume</h4>
-            <a href="#">download pdf</a>
+          <h4>Phone</h4>
+          <a>6969696969</a>
         </div>
         <div class="contact-info">
-            <h4>Email</h4>
-            <a href="#">gtcamacho@wpi.edu</a>
+          <h4>Email</h4>
+          <a>gtcamacho@wpi.edu</a>
         </div>
+        <div class="contact-info">
+          <h4>Website</h4>
+          <a>gabecamacho@wpi.edu</a>
+        </div>
+        <div class="spacer"></div>
+      </div>
+
+        
         
        
     </div>

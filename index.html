@@ -4,51 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script defer src="js/index.js"></script>
+    <title>Bio</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bio.css">
+    <script defer src="js/index.js"></script>
+    <script defer src="js/hideHeaderOnScroll.js"></script>
+
 </head>
 <body>
-  
-      <a class="menu-button" onclick="toggleDisplayMenu()">
+  <div class="header">
+    <a class="menu-button" onclick="toggleDisplayMenu()">
         <i class="fa fa-bars"></i>
-      </a>
-    
-   
-      <div class="nav-wrapper" data-menuopen=0>
-        <div class="header-buttons">
-          <a href="index.html"> Home </a>
-          <a href="bio.html">About Me</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html">Contact</a> 
-        </div>
-      </div>
-
-    <header class="desktop-header">
-      <a href="index.html">Home</a>
-      <a href="bio.html">About Me</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a> 
-    </header>
-
-    <div class="content-wrapper home-content-wrapper">
-        
-        <div class="content">
-            <img class="mobile-picture" src="/img/southampton.jpg" alt="photo of me">
-            <div class="words">
-                <h1>Hi, I'm Gabe</h1>
-                <p>I am a person. I like cows. </p>
-                <button onclick="toggleDisplayMenu()">Menu</button>
-            </div>
-
-            
-        </div>
-
-        
-        
+    </a>
+  </div>
+  <div class="nav-wrapper" data-menuopen=0>
+    <div class="header-buttons">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a> 
     </div>
+  </div>
+  <header class="desktop-header closed-header">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a> 
+    <i class="fa fa-window-close close-icon" aria-hidden="true" onclick="hideDesktopHeader()" ></i> 
+    <i class="fa fa-bars hamburger" onclick="showDesktopHeader()" data-manualopen=0></i>
+  </header>
+
+  <div class="content-wrapper home-content-wrapper">
+    <div class="content">
+      <img class="mobile-picture" src="/img/southampton.jpg" alt="photo of me">
+      <div class="words">
+          <h1>Hello future employers</h1>
+          <p>My name are Gabe. I am a person. I like cows. </p>
+          <button onclick="window.location.href='projects.html'">Projects</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-wrapper">
+   
+    <div class="about-card">
+      <h1>Hello There</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <i>Reiciendis accusamus aliquid</i>  deleniti! Pariatur accusamus commodi delectus, recusandae hic, nesciunt nemo architecto veritatis ad, cumque omnis accusantium. Facere cumque architecto porro repudiandae consequatur, dolorem repellat libero et suscipit nobis quasi nihil harum dolore tenetur officia quo ea obcaecati? Porro, dolore voluptas eligendi cupiditate, veritatis sequi sint alias libero quidem sit enim perferendis quisquam. Consectetur nisi eveniet a doloribus sapiente at! <br/> <span>-Gabe</span></p>
+    </div>
+  
+    <div class="info-card">
+      <div class="text-wrapper">
+        <h1>Guitar</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, tempore.</p>
+      </div>
+      <img src="img/guitar.jpg" alt="image">
+    </div>
+  
+    <div class="info-card">
+      <div class="text-wrapper">
+        <h1>Guitar</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, tempore.</p>
+      </div>
+      <img src="img/guitar.jpg" alt="image">
+    </div>
+  
+    <div class="info-card">
+      <div class="text-wrapper">
+        <h1>Guitar</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, tempore.</p>
+      </div>
+      <img src="img/guitar.jpg" alt="image">
+    </div>
+  
+    <div class="info-card">
+      <div class="text-wrapper">
+        <h1>Guitar</h1>
+        <p> <span>Hello</span> </p>
+      </div>
+      <img src="img/guitar.jpg" alt="image">
+    </div>
+  
+
+  </div>
+ 
 
 </body>
 </html>

@@ -19,31 +19,29 @@
         <a class="menu-button" onclick="toggleDisplayMenu()">
             <i class="fa fa-bars"></i>
         </a>
-    </div>
-    <div class="nav-wrapper" data-menuopen=0>
+      </div>
+      <div class="nav-wrapper" data-menuopen=0>
         <div class="header-buttons">
             <a href="index.html">Home</a>
-            <a href="bio.html">About Me</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a> 
         </div>
-    </div>
-    <header class="desktop-header">
+      </div>
+      <header class="desktop-header closed-header">
         <a href="index.html">Home</a>
-        <a href="bio.html">About Me</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a> 
-        <i class="fa fa-bars hamburger"></i>
-    </header>
+        <i class="fa fa-window-close close-icon" aria-hidden="true" onclick="hideDesktopHeader()"></i> 
+        <i class="fa fa-bars hamburger" onclick="showDesktopHeader()" data-manualopen=0></i>
+      </header>
 
     
     <div class="content-wrapper">
-      
 
         <div class="card-wrapper">
             
             <div class="card">
-
+                
                 <div class="info-wrapper">
                     <h4>Project Title</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, aliquid qui porro alias quia atque ipsum eveniet nam ratione debitis officia at officiis expedita harum totam aliquam ab vitae. Ut dolorem excepturi deleniti quam. Dolorum voluptatum facere adipisci voluptatibus a, sit quae. Cum aliquam excepturi non nisi, quod amet maiores.</p>
