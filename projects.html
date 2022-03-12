@@ -8,9 +8,11 @@
     <title>Projects</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/desktopHeader.css">
     <script defer src="js/index.js"></script>
+    <script defer src="js/projects.js"></script>
     <script defer src="js/hideHeaderOnScrollProjects.js"></script>
 
 </head>
@@ -39,44 +41,69 @@
     <div class="content-wrapper">
 
         <div class="card-wrapper">
-            
-            <div class="card">
-                
-                <div class="info-wrapper">
-                    <h4>Project Title</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, aliquid qui porro alias quia atque ipsum eveniet nam ratione debitis officia at officiis expedita harum totam aliquam ab vitae. Ut dolorem excepturi deleniti quam. Dolorum voluptatum facere adipisci voluptatibus a, sit quae. Cum aliquam excepturi non nisi, quod amet maiores.</p>
+            <div class="card" data-cardopen=0 data-cardid=0>
+                <!--
+                    <i class="fa fa-window-close card-close-icon card-component" aria-hidden="true"></i> 
+                -->
+                <div class="card-title card-component">
+                    <h1>Project Title</h1>
                 </div>
-                <div class="image-wrapper">
+                <div class="card-header card-component">
+                    <h2>Project Header</h2>
+                </div>
+                <div class="card-image-only card-component">
                     <img src="img/a3.jpg" alt="led board">
                 </div>
-            </div>
-    
-            <div class="card">
-                <div class="info-wrapper">
-                    <h4>Project Title 2</h4>
-                    <p>Lorem ipsum dolor sllendus ab necessitatibus iusto laboriosam? Soluta, quis.</p>
+                <div class="card-text-img card-component">
+                    <div class="card-text-img-text-wrapper">
+                        <h3>Text Header</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, aliquid qui porro alias quia atque ipsum eveniet nam ratione debitis officia at officiis expedita harum totam aliquam ab vitae. Ut dolorem excepturi deleniti quam. Dolorum voluptatum facere adipisci voluptatibus a, sit quae. Cum aliquam excepturi non nisi, quod amet maiores.</p>
+                    </div>
+                    <img src="img/a3.jpg" alt="led board">
                 </div>
-                <div class="image-wrapper">
-                    <img src="img/guitar.jpg" alt="led board">
-                </div>
-            </div>
-    
-            <div class="card">
-                <div class="info-wrapper">
-                    <h4>Project Title 2</h4>
-                    <p>Lorem ipsum dolor sllendus ab necessitatibus iusto laboriosam? Soluta, quis.</p>
-                </div>
-                <div class="image-wrapper">
-                    <img src="img/space3.png" alt="led board">
+                <div class="card-text-only card-component">
+                    <h3>Text Header</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, aliquid qui porro alias quia atque ipsum eveniet nam ratione debitis officia at officiis expedita harum totam aliquam ab vitae. Ut dolorem excepturi deleniti quam. Dolorum voluptatum facere adipisci voluptatibus a, sit quae. Cum aliquam excepturi non nisi, quod amet maiores.</p>
                 </div>
             </div>
+
+    <div class="card" data-cardopen=0 data-cardid=1>
+        <div class="card-title card-component">
+            <h1>Arduino Humidity Sensor</h1>
+        </div>
+        <div class="card-text-only card-component">
+            <h3>Text Header</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, aliquid qui porro alias quia atque ipsum eveniet nam ratione debitis officia at officiis expedita harum totam aliquam ab vitae. Ut dolorem excepturi deleniti quam. Dolorum voluptatum facere adipisci voluptatibus a, sit quae. Cum aliquam excepturi non nisi, quod amet maiores.</p>
+        </div>
+    </div>
+
+    <div class="card" data-cardopen=0 data-cardid=2>
+        <div class="card-title card-component">
+            <h1>Guitar Build</h1>
+        </div>
+        <div class="card-text-only card-component">
+            <h3>Text Header</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, aliquid qui porro alias quia atque ipsum eveniet nam ratione debitis officia at officiis expedita harum totam aliquam ab vitae. Ut dolorem excepturi deleniti quam. Dolorum voluptatum facere adipisci voluptatibus a, sit quae. Cum aliquam excepturi non nisi, quod amet maiores.</p>
+        </div>
+    </div>
+
+    <div class="card" data-cardopen=0 data-cardid=3>
+        <div class="card-title card-component">
+            <h1>B Term Songs</h1>
+        </div>
+        <div class="card-text-only card-component">
+            <h3>Text Header</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, aliquid qui porro alias quia atque ipsum eveniet nam ratione debitis officia at officiis expedita harum totam aliquam ab vitae. Ut dolorem excepturi deleniti quam. Dolorum voluptatum facere adipisci voluptatibus a, sit quae. Cum aliquam excepturi non nisi, quod amet maiores.</p>
+        </div>
+    </div>
+
 
             <footer>
             
             </footer>
         </div>
        
-    </div>
+    </div> 
 
 </body>
 </html>

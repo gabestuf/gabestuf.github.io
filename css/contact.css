@@ -1,24 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
 
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-top: 8vh;
-}
+
 
 body {
     background: linear-gradient(330deg, rgba(7,16,35,1) 0%, rgb(25, 9, 36) 25%, rgba(7,16,35,1) 50%,rgb(43, 8, 83) 75%, rgba(7,16,35,1) 100%);
+    min-height: 100vh;
 }
 
+
+/* Content Wrapper w/ White border  */
+.content-wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    color: white;
+    border: 2px solid white;
+    border-radius: 10vw .4rem;
+    margin: 10em 20vw;
+    padding-bottom: 2rem;
+    background: rgba(161, 94, 255, .05);
+    box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.6);
+}
+
+.content-wrapper h1 {
+    text-align: center;
+    margin: 1rem 2rem 3rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+}
+
+/* Contact Info*/ 
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 0rem 5rem;
+}
 
 .contact-info {
     font-family: 'Poppins', sans-serif;
-    padding: .5em 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.contact-info h4 {
+    font-size: 1.7rem;
+}
+
+.contact-info a {
+    font-size: 1.1rem;
 }
 
 
 
+/* Contact Buttons */
+.contact-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
+
 .action-button {
+    margin: 1rem 1rem;
     color: rgb(161, 94, 255);
     width: 10em;
     height: 1.5em;
@@ -27,21 +71,22 @@ body {
     border-color:rgb(161, 94, 255);
     box-shadow:  none;
     padding: .5rem 0rem;
-    background-color: rgba(174, 229, 255, 0.1);
-    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: .1s;
-    display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 10em;
     text-align: center;
     font-weight: normal;
-    position: relative;
-    display: inline-block;
     transition: height .3s, border-radius .3s, border .3s;
     user-select: none;
-
 }
 
+.action-button span {
+    color: rgb(161, 94, 255);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: .1s;
+}
 .action-button .button-option {
     display: none;
     color: #f4edfb;
@@ -76,28 +121,78 @@ body {
     background-color: rgba(174, 229, 255, 0);
 }
 
-.info-wrapper {
-    color: white;
-    border: 2px solid white;
-    margin: 5vh 20vw;
-    border-radius: 1.5em .4em;
+.action-icon {
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: .4em 1.2em;
 }
-
-.button-wrapper {
-    margin: 1rem 2rem;
+.action-icon i{
+    font-size: 1rem;
+    transform: scale(2,2);
 }
-
-.info-wrapper h1 {
-    text-align: center;
-    margin: 1rem 0 3rem 0;
-}
-
-.contact-info {
-    margin: 1rem 1rem;
-}
-.spacer {
-    height: 3em
+.action-icon:hover {
+    border-radius: 1.2em .4em;
 }
 
 
+
+@media only screen and (max-width: 1000px) {
+    
+    .content-wrapper h1 {
+        font-size: 4vw;
+    }
+    .contact-wrapper {
+        text-align: center;
+        margin: 0;
+    }
+
+    .contact-button-wrapper {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        margin: 0 1.5rem;
+    }
+    .action-button {
+        margin: 0;
+    }
+    .action-button-large {
+        grid-column: 1 / 4;
+        justify-self: center;
+    }
+    .action-icon {
+        grid-row: 2 / span 1;
+        justify-self: center;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .contact-info h4 {
+        font-size: 2.7vw;
+    }
+    .contact-info a {
+        font-size: 2vw;
+    }
+
+    .action-button {
+        margin: .5rem 0;
+    }
+    .action-icon {
+        margin: .5rem .5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 675px) {
+    .content-wrapper h1 {
+        font-size: 1.8rem;
+    }
+    .contact-info h4 {
+        font-size: 1.1rem;
+    }
+    .contact-info a {
+        font-size: .8rem;
+    }
+
+  
+}
 

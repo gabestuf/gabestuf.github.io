@@ -2,6 +2,7 @@
 const desktopHeaderElement = document.querySelector(".desktop-header")
 const hamburgerElement = document.querySelector(".hamburger")
 
+
 window.onscroll = () => {hideOnScroll()}
 
 const hideOnScroll = () => {

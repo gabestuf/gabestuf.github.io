@@ -1,0 +1,84 @@
+
+.desktop-header {
+    display: none;
+}
+.desktop-header .hamburger {
+    display: none;
+}
+
+.desktop-header a {
+    user-select: none;
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: .1s;
+}
+.desktop-header a:hover {
+    transform: scale(1.1,1.1);
+    text-shadow: 0px 0px 1em #ffb1cf;;
+}
+
+@media only screen and (min-width: 750px) {
+    
+    .desktop-header {
+        z-index: 1;
+        margin-top: .5rem;
+        right: 2rem;
+        display: flex;
+        position: fixed;
+        height: 3.1rem;
+        width: 30vw;
+        background-color: rgba(0, 41, 59, 0.6);
+        align-items: center;
+        border: 2px solid rgb(161, 94, 255);
+        justify-content:space-around;
+        border-radius: .4em 1.5em;
+        transition: .2s;
+    }
+    .close-icon {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        border-radius: 50%;
+        color: rgb(238, 212, 255);
+        font-size: 1.3rem;
+        right: 0;
+        bottom: -2rem;
+    }
+
+    .close-icon:hover {
+        transform: scale(1.1,1.1);
+        text-shadow: 0px 0px 1em #ffb1cf;
+        cursor: pointer;
+    }
+
+    .closed-header {
+        z-index: 1;
+        margin-top: .5rem;
+        right: 2rem;
+        height: 3.1rem;
+        width: 3.1rem;
+        border-radius: 50%;
+        color:rgb(161, 94, 255);
+        font-size: 190%;
+    }
+    .closed-header .hamburger {
+        display: block;
+        border-radius: 50%;
+        padding: 1rem;
+    }
+    .closed-header a {
+        display: none;
+    }
+    .closed-header .close-icon {
+        display: none;
+    }
+    .closed-header:hover {
+        cursor: pointer;
+        transform: scale(1.1,1.1);
+        box-shadow: 0 0 5px 5px rgba(233, 248, 255, 0.6);
+    }
+
+}
+

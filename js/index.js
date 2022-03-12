@@ -8,6 +8,7 @@ window.onload = () => {
     mobileMenuElement.classList.add('hideElement');
     mobileMenuButtonElement.classList.add('color-light');
     contentElement.classList.remove('hideElement');
+    autoShowDesktopHeader();
 }
 
 const toggleDisplayMenu = () => {
