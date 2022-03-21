@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
-body {
-    background: rgb(131,58,180);
-    background: linear-gradient(145deg, rgba(7,16,35,1) 0%, rgb(25, 9, 36) 25%, rgba(7,16,35,1) 50%,rgb(43, 8, 83) 75%, rgba(7,16,35,1) 100%);
-}
+
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
     font-family: 'Poppins', sans-serif;
+}
+
+.about-wrapper {
+    background: linear-gradient(145deg, rgba(7,16,35,1) 0%, rgb(25, 9, 36) 25%, rgba(7,16,35,1) 50%,rgb(43, 8, 83) 75%, rgba(7,16,35,1) 100%);
+    padding-bottom: 5vh;
 }
 
 .main {
@@ -38,8 +38,25 @@ body {
 .about-card h1 {
     margin-bottom: 1rem;
 }
-.about-card span {
-    font-weight: bold;
+
+.info-card-image {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.info-card-image img {
+    justify-self: center;
+    border-radius: 3vw;
+    border: 3px solid rgb(33, 33, 33);
+    box-shadow: 0 0 5vw .1rem rgba(133, 214, 252, 0.3);
+    max-width: 50%;
+}
+.info-card-image p {
+    padding: .5rem 1rem 0 1rem;
+    font-size: 1.1rem;
+    justify-self: center;
+    color: white;
+    font-style: italic;
+    max-width: 50%;
 }
 
 .info-card {
@@ -59,6 +76,7 @@ body {
 .info-card p {
     font-size: 1.2rem;
     margin-top: .5rem;
+    text-indent: 3rem;
 }
 .info-card img {
     height: 50vh;
@@ -74,5 +92,50 @@ body {
 @media only screen and (min-width: 750px) {
     .about-card {
         margin: 5vh 30vw;       
+    }
+
+    .about-card {
+        font-size: 1.4rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 5vh 10vw;
+    }
+    .about-card h1 {
+        margin-bottom: 1rem;
+    }
+    .about-card span {
+        font-family:fantasy;
+    }
+    
+    .info-card {
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin: 5vh 20vw;
+        max-width: 100vw;
+        grid-auto-flow: dense;
+    }
+    
+    .info-card h1 {  
+        font-size: 3rem;
+        margin-left: 2rem;
+    }
+    .info-card p {
+        font-size: 1.2rem;
+        margin-top: .5rem;
+    }
+    .info-card img {
+        height: 50vh;
+        justify-self: center;
+        width: auto;
+    }
+    
+    .backwards {
+        grid-column: 2 / span 1;
     }
 }

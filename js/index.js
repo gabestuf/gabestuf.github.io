@@ -18,7 +18,7 @@ const toggleDisplayMenu = () => {
         contentElement.classList.remove('hideElement');
         mobileMenuButtonElement.classList.add('color-light');
         mobileMenuButtonElement.classList.remove('color-white');
-        if (aboutWrapperElement){
+        if (aboutWrapperElement) {
             aboutWrapperElement.classList.remove('hideElement')
         }
     } else if (mobileMenuElement.dataset.menuopen == 0) { // mobile menu open
@@ -27,7 +27,7 @@ const toggleDisplayMenu = () => {
         contentElement.classList.add('hideElement');
         mobileMenuButtonElement.classList.remove('color-light');
         mobileMenuButtonElement.classList.add('color-white');
-        if (aboutWrapperElement){
+        if (aboutWrapperElement) {
             aboutWrapperElement.classList.add('hideElement')
         }
     }

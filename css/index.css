@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -88,11 +89,17 @@ body {
     flex-direction: column; 
 }
 
-.home-content-wrapper {
+
+
+.background-image-main {
+    z-index: -100;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-image: url('/img/beach.jpg');    
-    background-position:top;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* Content */
@@ -106,7 +113,7 @@ body {
     color: white;
     text-align: center;
     align-items: center;
-    padding: 5vh 2em;
+    padding: 5vh 2em 0 2em;
 }
 
 .content .mobile-picture {
@@ -185,6 +192,14 @@ footer {
     transform: scaleY(0);
     height: 1px;
     width: 0px;
+}
+.intext-a {
+    font-weight: bold;
+    color: rgb(161, 94, 255);
+}
+.intext-a:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .close-icon {

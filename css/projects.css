@@ -22,7 +22,7 @@
     margin: 5vh 10vw;
     display: flex;
     flex-direction: column;
-    background: rgba(33, 22, 49, 0.7);
+    background: linear-gradient(330deg, rgba(7,16,35,.8) 0%, rgba(25, 9, 36,.8) 25%, rgba(7,16,35,.8) 50%,rgba(43, 8, 83,.8) 75%, rgba(7,16,35,.8) 100%);
     border-radius: 20vw .4rem;
     box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.8);
     border: 2px solid white;
@@ -61,7 +61,7 @@
 .card-image-only > * {
     grid-column: 1 / span 2;
     justify-self: center;
-    align-self: center;
+    align-self:  center;
     border-radius: 3vw;
     border: 3px solid rgb(33, 33, 33);
 }
@@ -131,9 +131,6 @@
     .card-text-img > *{
         grid-column: auto;
     }
-
-
-
 }
 
 @media only screen and (min-width: 1000px) {

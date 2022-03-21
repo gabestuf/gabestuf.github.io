@@ -15,14 +15,14 @@ window.onload = () => {
     mobileMenuElement.classList.add('hideElement');
     mobileMenuButtonElement.classList.add('color-light');
     contentElement.classList.remove('hideElement');
-    autoShowDesktopHeader();    
+    autoShowDesktopHeader();
 
     /* Projects */
     cardelements.forEach((card) => {
         for (child of card.children) {
-                if (child.classList.contains('card-component') && !child.classList.contains('card-title')) {
-                    child.classList.add("hideElement")
-                }
+            if (child.classList.contains('card-component') && !child.classList.contains('card-title')) {
+                child.classList.add("hideElement")
+            }
         }
     })
 }
@@ -60,23 +60,23 @@ const toggleCardOpen = (cardid, isOpen) => {
 }
 
 cardelements.forEach((card) => {
-    
+
     card.onclick = () => {
         // toggle
-        card.dataset.cardopen = toggle10(card.dataset.cardopen)
-        
-        if (card.dataset.cardopen == 0) { // Click on card again to close it
-            displayClosedCard(card.dataset.cardid)
-            console.log('card closed')
-        } else 
+        // card.dataset.cardopen = toggle10(card.dataset.cardopen)
+
+        // if (card.dataset.cardopen == 0) { // Click on card again to close it
+        //     displayClosedCard(card.dataset.cardid)
+        //     console.log('card closed')
+        // } else 
 
         // no toggle :( 
-        //card.dataset.cardopen = 1
-        
+        card.dataset.cardopen = 1
+
         if (card.dataset.cardopen == 1) {
             displayOpenCard(card.dataset.cardid)
             //console.log('card opened')
-        } 
+        }
     }
 })
 

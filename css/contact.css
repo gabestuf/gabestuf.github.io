@@ -65,7 +65,7 @@ body {
     margin: 1rem 1rem;
     color: rgb(161, 94, 255);
     width: 10em;
-    height: 1.5em;
+    height: max-content;
     border-radius: .4em 1.5em;
     border: 2px solid rgb(161, 94, 255);
     border-color:rgb(161, 94, 255);
@@ -77,7 +77,7 @@ body {
     grid-template-columns: 10em;
     text-align: center;
     font-weight: normal;
-    transition: height .3s, border-radius .3s, border .3s;
+    transition: .2s;
     user-select: none;
 }
 
@@ -98,7 +98,6 @@ body {
 .action-button:hover .button-option {
     display: block;
     cursor: pointer;
-    transform: scale(1.2,1.2);
 }
 
 .action-button:hover span {
@@ -109,7 +108,7 @@ body {
     cursor: pointer;
     color: #f4edfb;
     font-weight: bold;
-    height: 1.5em;
+    height: max-content;
     border-radius: 1.5em .4em;
     border-color:#f4edfb;
 }
@@ -122,9 +121,10 @@ body {
 }
 
 .action-icon {
-    height: 1.5rem;
+    height: max-content;
     width: 3rem;
     border-radius: .4em 1.2em;
+  
 }
 .action-icon i{
     font-size: 1rem;
@@ -133,7 +133,6 @@ body {
 .action-icon:hover {
     border-radius: 1.2em .4em;
 }
-
 
 
 @media only screen and (max-width: 1000px) {
