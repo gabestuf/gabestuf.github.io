@@ -89,10 +89,8 @@ body {
     flex-direction: column; 
 }
 
-
-
 .background-image-main {
-    z-index: -100;
+    z-index: -1;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -105,6 +103,7 @@ body {
 /* Content */
 
 .content {
+    position: relative;
     background-color: rgba(0, 0, 0, .4);
     height: 100vh;
     display: flex;
