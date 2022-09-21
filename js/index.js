@@ -1,4 +1,4 @@
-
+//const splashElement = document.querySelector('.splash')
 const mobileMenuElement = document.querySelector(".nav-wrapper")
 const mobileMenuButtonElement = document.querySelector(".menu-button")
 const contentElement = document.querySelector(".content-wrapper")
@@ -9,6 +9,9 @@ window.onload = () => {
     mobileMenuButtonElement.classList.add('color-light');
     contentElement.classList.remove('hideElement');
     autoShowDesktopHeader();
+    // setTimeout(() => {
+    //     splashElement.classList.add('hideSplash')
+    // }, 1000);
 }
 
 const toggleDisplayMenu = () => {
