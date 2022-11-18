@@ -36,3 +36,10 @@ const toggleDisplayMenu = () => {
     }
 }
 
+document.getElementById('ftrcontact').addEventListener('click', () => {
+    window.location = "/contact.html"
+})
+document.getElementById('ftrhome').addEventListener('click', () => {
+    window.location = "/index.html"
+})
+

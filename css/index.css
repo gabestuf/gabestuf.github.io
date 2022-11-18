@@ -207,15 +207,22 @@ a {
 }
 
 footer {
-    margin-top: 15vh;
+    padding: 5ch 0;
     text-align: center;
     min-height: 2vh;
     background-color: rgb(31, 31, 31);
     color: rgb(200, 200, 200);
-    box-shadow:0 -1em 5em 5em rgb(31, 31, 31);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1ch;
+}
+
+
+footer span:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .divider {
