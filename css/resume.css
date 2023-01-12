@@ -39,6 +39,3 @@ h2 {
     font-weight: bold;
 }
 
-.unclickable:hover {
-    text-decoration: line-through;
-}

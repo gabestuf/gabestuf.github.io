@@ -6,12 +6,9 @@ const aboutWrapperElement = document.querySelector(".about-wrapper")
 
 window.onload = () => {
     mobileMenuElement.classList.add('hideElement');
+    mobileMenuElement.style.display = "grid";
     mobileMenuButtonElement.classList.add('color-light');
-    contentElement.classList.remove('hideElement');
     autoShowDesktopHeader();
-    // setTimeout(() => {
-    //     splashElement.classList.add('hideSplash')
-    // }, 1000);
 }
 
 const toggleDisplayMenu = () => {
