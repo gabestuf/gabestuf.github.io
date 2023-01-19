@@ -221,6 +221,10 @@ footer {
     gap: 1ch;
 }
 
+footer > span > a {
+    color: rgb(200, 200, 200);
+}
+
 
 footer span:hover {
     text-decoration: underline;
