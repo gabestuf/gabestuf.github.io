@@ -9,6 +9,7 @@ window.onload = () => {
     mobileMenuElement.style.display = "grid";
     mobileMenuButtonElement.classList.add('color-light');
     autoShowDesktopHeader();
+
 }
 
 const toggleDisplayMenu = () => {
