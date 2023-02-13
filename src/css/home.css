@@ -1,0 +1,9 @@
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.home {
+    outline: solid thin white;
+    min-height: 100vh;
+}

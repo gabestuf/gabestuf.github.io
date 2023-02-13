@@ -1,0 +1,22 @@
+.header {
+    position: fixed;
+    background-color: rgba(213, 244, 255,.5);
+    width: 100vw;
+}
+
+.header ul {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+ul {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+.link:hover {
+    color:blue;
+}
