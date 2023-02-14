@@ -87,9 +87,8 @@
           <i class="fa fa-lg fa-github"></i>
         </a>
 
-        <a class="action-button action-icon" href="https://www.youtube.com/channel/UC-f81lKVQdAJrdToiNGOlCQ"
-          target="_blank">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
+        <a class="action-button action-icon" target="_blank" onclick="copyEmail()">
+          <i class="fa fa-envelope" aria-hidden="true" style="font-size: 80%"></i>
         </a>
       </div>
 
@@ -101,7 +100,12 @@
     <span id="ftrcontact"> <a href="./contact.html">Contact</a> </span>
   </footer> -->
 
-
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText("gcamacho1258@gmail.com")
+      alert("email copied to clipboard")
+    }
+  </script>
 
 </body>
 

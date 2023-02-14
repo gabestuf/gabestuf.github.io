@@ -2,16 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
+:root {
+    color-scheme: light dark;
+
+    --main-color-light: #f4edfb;
+    --main-color: rgb(161, 94, 255);
+    --main-color-dark: rgb(18, 18, 18);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
     backface-visibility: hidden;
-    
 }
 
 /* navigation */
@@ -43,7 +59,7 @@ body {
 }
 
 .menu-button:active {
-    color: #f4edfb;
+    color: var(--main-color-light);
     cursor:pointer;
     border: 2px solid #f4edfb;
 }
@@ -75,62 +91,14 @@ body {
 }
 .header-buttons a:hover {
     transform: scale(1.2, 1.2);
-    color: white;
+    color: var(--main-color-light);;
 }
 
 .header-buttons a:active {
-    color: #d2c7dd;
+    color: var(--main-color-light);
 }
-
-/* splash screen */
-/* .splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #11051b;
-    z-index: 200;
-    color: white;
-    text-align: center;
-    line-height: 90vh;
-
-}
-.splash.hideSplash{
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #11051b;
-    z-index: 200;
-    color: white;
-    text-align: center;
-    line-height: 90vh;
-    z-index: -100;
-    transition: all 1s;
-
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-} */
-
-/* .fade-in{
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-} */
 
 /* Main Page */
-
-.content-wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column; 
-}
 
 .background-image-main {
     z-index: -1;
@@ -138,27 +106,48 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background: linear-gradient(330deg, rgba(7,16,35,1) 0%, rgb(25, 9, 36) 25%, rgba(7,16,35,1) 50%,rgb(43, 8, 83) 75%, rgba(7,16,35,1) 100%);
+    background-image: linear-gradient(330deg, rgba(7,16,35,1) 0%, rgb(25, 9, 36) 25%, rgba(7,16,35,1) 50%,rgb(43, 8, 83) 75%, rgba(7,16,35,1) 100%);
+}
+
+/* Scroll Parallax */
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
 }
 
 /* Content */
 
-.content {
+
+
+.content-wrapper {
     position: relative;
-    background-color: rgba(0, 0, 0, .4);
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color: white;
+    flex-direction: column-reverse;
+    color: var(--main-color-light);
     text-align: center;
     align-items: center;
-    padding: 5vh 2em 0 2em;
+    justify-content: space-evenly;
+    transform-style: preserve-3d;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0);
 }
 
-.content .mobile-picture {
+.content-wrapper::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background: linear-gradient(330deg, rgba(7,16,35,.8) 0%, rgba(25, 9, 36,.8) 25%, rgba(7,16,35,.8) 50%,rgba(43, 8, 83,.8) 75%, rgba(7,16,35,.8) 100%);
+    z-index: -2;
+    transform-style: preserve-3d;
+    transform: translateZ(-50px) scale(6.5)
+}
+
+.content-wrapper .mobile-picture {
     user-select: none;
     max-width: 50vw;
     max-height: 75vh;
@@ -168,16 +157,21 @@ body {
     display: inline-block;
     vertical-align: middle;
     border-radius: 20%;
+
+    transform-style: preserve-3d;
+    transform: translateZ(-15px)  scale(2.5)
 }
 
-.content h1 {
+.content-wrapper h1 {
     font-size: 2.5rem;
     margin-top: 1rem;
+    line-height: 1em;
 }
 
-.content button {
+
+
+.btn {
     color: rgb(161, 94, 255);
-    font-size: 1rem;
     font-weight: bold;
     width: 10em;
     height: 3em;
@@ -189,18 +183,18 @@ body {
     transition: .2s;
 }
 
-.content button:hover {
+.btn:hover {
     cursor: pointer;
-    border: 2px solid #f4edfb;
-    color: #f4edfb;
+    border: 2px solid var(--main-color-light);
+    color: var(--main-color-light);
     font-weight: bold;
     border-radius: 1.5em .4em;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.content button:active {
+.btn:active {
     cursor: pointer;
-    border: 2px solid #f4edfb;
-    color: #f4edfb;
+    border: 2px solid var(--main-color-light);
+    color: var(--main-color-light);
     background-color: rgba(174, 229, 255, 0);
 }
 
@@ -213,16 +207,19 @@ footer {
     text-align: center;
     min-height: 2vh;
     background-color: rgb(31, 31, 31);
-    color: rgb(200, 200, 200);
+    color: var(--main-color-light);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1ch;
+    z-index: 5;
+    position: relative;
+    box-shadow: 0px -10px 10px 5px rgb(31, 31, 31);;
 }
 
 footer > span > a {
-    color: rgb(200, 200, 200);
+    color: var(--main-color-light);
 }
 
 
@@ -231,11 +228,6 @@ footer span:hover {
     cursor: pointer;
 }
 
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: #11051b;
-}
 .nothing {
     opacity: 0;
     transform: scaleY(0);
@@ -254,22 +246,28 @@ footer span:hover {
 .close-icon {
     display: none;
 }
+
+
+
 @media only screen and (min-width: 1435px) {
-    .content h1 {
+    .content-wrapper h1 {
         font-size: 4rem;
         margin-bottom: 0;
     }
-    .content p {
+    .content-wrapper p {
         font-size:1.5rem;
     }
 }
 
 @media only screen and (min-width: 750px) {
-    .content .mobile-picture {
+
+
+    .content-wrapper .mobile-picture {
         border-radius: 5rem;
+        transform: translateZ(-15px) translateX(25vw) scale(2)
     }
-    .content {
-        flex-direction: row-reverse;
+    .content-wrapper {
+        flex-direction: row;
         justify-content: space-evenly;
     }
     .menu-button {
@@ -282,10 +280,10 @@ footer span:hover {
   }
   
 @media only screen and (max-width: 1435px) and (min-width: 750) {
-    .content h1 {
+    .content-wrapper h1 {
         font-size: 2rem;
     }
-    .content p {
+    .content-wrapper p {
         font-size:1.5rem;
     }
 }
@@ -303,8 +301,8 @@ footer span:hover {
     color: rgb(161, 94, 255);
 }
 .color-white {
-    color: rgb(238, 212, 255);
-    border: 2px solid rgb(238, 212, 255);
+    color: var(--main-color-light);
+    border: 2px solid var(--main-color-light);
 }
 
 /* disappearing elements*/

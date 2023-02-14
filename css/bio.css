@@ -5,30 +5,48 @@
 }
 
 .about-wrapper {
-    background-color: white;
+    background-color: rgb(18, 18, 18);
     padding-bottom: 5vh;
-    
+    z-index: 1;
+    position: relative;
+    transform-style: preserve-3d;
+    color: white;
+
+}
+
+
+
+.about-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: skewY(-3deg);
+    background-color: rgb(18, 18, 18);
+    z-index: -1;
+    top: -7vh;
 }
 
 .main {
     padding-left: 1em;
     padding-top: 8vh;
-    color: black;
     display: flex;
     flex-direction: column;
+
 }
 
 .bio-title {
     text-align: center;
+
 }
 
 .header {
     background-color: #551A8B;
+
 }
 
 .about-card {
     font-size: 1.4rem;
-    color: black;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,7 +59,6 @@
 }
 
 .info-card {
-    color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -81,7 +98,6 @@
     padding: .5rem 1rem 0 1rem;
     font-size: 1.1rem;
     justify-self: center;
-    color: black;
     font-style: italic;
     max-width: 50%;
 }
@@ -113,7 +129,6 @@
 
     .about-card {
         font-size: 1.4rem;
-        color: black;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -129,7 +144,6 @@
     }
     
     .info-card {
-        color: black;
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 5vh 20vw;
