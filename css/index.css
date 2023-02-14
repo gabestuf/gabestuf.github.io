@@ -132,12 +132,15 @@ body {
     text-align: center;
     align-items: center;
     justify-content: space-evenly;
-    transform-style: preserve-3d;
-    z-index: -1;
     background: rgba(0, 0, 0, 0);
 }
 
-.content-wrapper::before {
+.content-wrapper-main {
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.content-wrapper-main::before {
     position: absolute;
     inset: 0;
     content: '';
