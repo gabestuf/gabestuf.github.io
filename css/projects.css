@@ -15,14 +15,14 @@
     flex-direction: column;
 }
 .close-icon {
-    color:rgb(161, 94, 255);
+    color:var(--main-color);
 }
 .card-link {
     text-decoration: underline;
     color: white;
 }
 a:hover {
-    color: rgb(161, 94, 255);
+    color: var(--main-color);
 }
 /* CARDS */
 .card {

@@ -12,6 +12,18 @@
     transform-style: preserve-3d;
     color: white;
 }
+.about-wrapper .toAbout {
+    position: absolute;
+    top: -8rem;
+    left: calc(50% - .5ch);
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(.5rem);}
+    100% {transform: translateY(0);}
+}
 
 .about-wrapper::after {
     content: '';
