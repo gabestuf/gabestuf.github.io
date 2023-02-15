@@ -5,9 +5,10 @@
 :root {
     color-scheme: light dark;
 
-    --main-color-light: #f4edfb;
+    --light-color: #f4edfb;
     --main-color: rgb(161, 94, 255);
-    --main-color-dark: rgb(18, 18, 18);
+    --main-color-dark: rgb(161, 94, 255);
+    --dark-color: rgb(18, 18, 18);
 }
 
 * {
@@ -37,7 +38,7 @@ body {
     display: grid;
     user-select: none;
     transition: height 1s;
-    background:rgb(161, 94, 255);
+    background:var(--main-color);
     display: none;
 }
 
@@ -48,7 +49,7 @@ body {
     margin-top: 1rem;
     right: 1rem;
     font-size: 190%;
-    border: 2px solid rgb(161, 94, 255);
+    border: 2px solid var(--main-color);
     border-radius: 50%;
     color:rgb(66, 66, 66);
     height: 3.1rem;
@@ -59,7 +60,7 @@ body {
 }
 
 .menu-button:active {
-    color: var(--main-color-light);
+    color: var(--light-color);
     cursor:pointer;
     border: 2px solid #f4edfb;
 }
@@ -91,11 +92,11 @@ body {
 }
 .header-buttons a:hover {
     transform: scale(1.2, 1.2);
-    color: var(--main-color-light);;
+    color: var(--light-color);
 }
 
 .header-buttons a:active {
-    color: var(--main-color-light);
+    color: var(--light-color);
 }
 
 /* Main Page */
@@ -121,14 +122,12 @@ body {
 
 /* Content */
 
-
-
 .content-wrapper {
     position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;
-    color: var(--main-color-light);
+    color: var(--light-color);
     text-align: center;
     align-items: center;
     justify-content: space-evenly;
@@ -162,7 +161,7 @@ body {
     border-radius: 20%;
 
     transform-style: preserve-3d;
-    transform: translateZ(-15px)  scale(2.5)
+    transform: translateZ(-15px)  scale(2)
 }
 
 .content-wrapper h1 {
@@ -171,15 +170,26 @@ body {
     line-height: 1em;
 }
 
+.content-wrapper .words > * {
+    text-shadow:  black 0px 0px .5rem;
+    color: white;
+}
 
+.content-wrapper .words {
+    transform-style: preserve-3d;
+    transform: translateZ(-10px) scale(2);
+}
+.content-wrapper .mobile-picture {
+    transform: translateZ(-10px) translateY(-5rem) scale(2);
+}
 
 .btn {
-    color: rgb(161, 94, 255);
+    color: var(--main-color);
     font-weight: bold;
     width: 10em;
     height: 3em;
     border-radius: .4em 1.5em;
-    border: 2px solid rgb(161, 94, 255);
+    border: 2px solid var(--main-color);
     margin: 1rem;
     background-color: rgba(107, 189, 228, 0.05);
     font-size: 1rem;
@@ -188,16 +198,16 @@ body {
 
 .btn:hover {
     cursor: pointer;
-    border: 2px solid var(--main-color-light);
-    color: var(--main-color-light);
+    border: 2px solid var(--light-color);
+    color: var(--light-color);
     font-weight: bold;
     border-radius: 1.5em .4em;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .btn:active {
     cursor: pointer;
-    border: 2px solid var(--main-color-light);
-    color: var(--main-color-light);
+    border: 2px solid var(--light-color);
+    color: var(--light-color);
     background-color: rgba(174, 229, 255, 0);
 }
 
@@ -210,7 +220,7 @@ footer {
     text-align: center;
     min-height: 2vh;
     background-color: rgb(31, 31, 31);
-    color: var(--main-color-light);
+    color: var(--light-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,11 +228,11 @@ footer {
     gap: 1ch;
     z-index: 5;
     position: relative;
-    box-shadow: 0px -10px 10px 5px rgb(31, 31, 31);;
+    box-shadow: 0px -10px 10px 5px rgb(31, 31, 31);
 }
 
 footer > span > a {
-    color: var(--main-color-light);
+    color: var(--light-color);
 }
 
 
@@ -239,7 +249,7 @@ footer span:hover {
 }
 .intext-a {
     font-weight: bold;
-    color: rgb(161, 94, 255);
+    color: var(--main-color);
 }
 .intext-a:hover {
     cursor: pointer;
@@ -250,7 +260,12 @@ footer span:hover {
     display: none;
 }
 
-
+@media only screen and (max-width: 1480px) {
+    .content-wrapper-main {
+        display: flex;
+        gap: 20vw;
+    }
+}
 
 @media only screen and (min-width: 1435px) {
     .content-wrapper h1 {
@@ -263,7 +278,6 @@ footer span:hover {
 }
 
 @media only screen and (min-width: 750px) {
-
 
     .content-wrapper .mobile-picture {
         border-radius: 5rem;
@@ -301,14 +315,15 @@ footer span:hover {
 } */
 
 .color-light {
-    color: rgb(161, 94, 255);
+    color: var(--main-color);
 }
 .color-white {
-    color: var(--main-color-light);
-    border: 2px solid var(--main-color-light);
+    color: var(--light-color);
+    border: 2px solid var(--light-color);
 }
 
 /* disappearing elements*/
 .hideElement {
     display: none !important;
 }
+

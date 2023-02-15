@@ -5,25 +5,23 @@
 }
 
 .about-wrapper {
-    background-color: rgb(18, 18, 18);
+    background-color: var(--dark-color);
     padding-bottom: 5vh;
     z-index: 1;
     position: relative;
     transform-style: preserve-3d;
     color: white;
-
 }
-
-
 
 .about-wrapper::after {
     content: '';
     position: absolute;
     inset: 0;
     transform: skewY(-3deg);
-    background-color: rgb(18, 18, 18);
+    background-color: var(--dark-color);
     z-index: -1;
     top: -7vh;
+    border-top:2px solid var(--light-color);
 }
 
 .main {
@@ -40,19 +38,20 @@
 }
 
 .header {
-    background-color: #551A8B;
+    background-color: var(--main-color);
 
 }
 
 .about-card {
     font-size: 1.4rem;
-
+    opacity: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     margin: 5vh 10vw;
+    transform: scale(.1) !important;
 }
 .about-card h1 {
     margin-bottom: 1rem;
@@ -104,30 +103,48 @@
 
 .backwards {
     grid-column: 2 / span 1;
+
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1000px) {
     .info-card {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        gap: 1vh;
+        margin-bottom: 5rem;
     }
     .info-card > * {
         margin: 0;
         padding: 0;
+        
+    }
+    .info-card .text-wrapper {
+        opacity: 100%;
     }
     .info-card p {
         text-indent: 0;
     }
-}
-
-@media only screen and (min-width: 750px) {
-    .about-card {
-        margin: 5vh 30vw;       
+    .info-card .text-wrapper > p {
+        font-size: 1.2rem;
     }
 
+    .info-card .text-wrapper > h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-card img {
+        margin: 0;
+        padding: 0;
+        opacity: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
     .about-card {
+        margin: 5vh 30vw;       
         font-size: 1.4rem;
         display: flex;
         flex-direction: column;
@@ -175,4 +192,20 @@
     .infocardbackwards img {
         margin-right: 12rem;
     }
+    
+}
+
+
+
+.opacity0 {
+    opacity: 0 !important;
+    transition: opacity 1.5s;
+    transition: transform .4s, opacity 1.2s ease;
+    transform: translateY(25%)
+}
+
+
+.show {
+    opacity: 1 !important;
+    transform: translateX(0)  scale(1) !important;
 }

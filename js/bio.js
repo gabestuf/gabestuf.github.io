@@ -1,6 +1,18 @@
 
-const actionButtonElement = document.querySelector(".action-button")
+const hiddenElements = document.querySelectorAll(".opacity0")
 
-actionButtonElement.onmouseover = () => {
-    console.log('hello')
-}
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+            observer.unobserve(entry.target)
+        }
+    })
+}, {
+    threshold: .5
+})
+
+hiddenElements.forEach(element => {
+    observer.observe(element)
+})
