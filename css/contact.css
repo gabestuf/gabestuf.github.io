@@ -26,7 +26,8 @@ body {
     color: var(--light-color);
     border-radius: 10vw .4rem;
     max-width: 1000px;
-    padding-bottom: 2rem;
+    padding: 5vh 2rem;
+    margin: 5vh min(8vw, 100px);
 }
 
 .content-wrapper::after {

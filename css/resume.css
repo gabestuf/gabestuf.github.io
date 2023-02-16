@@ -7,14 +7,7 @@ h2 {
 
 
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    padding-top: 5vh;
-    margin-left: max(8vw, 100px);
-    margin-right: max(8vw, 100px);
-    margin-top: 5vh;
-    margin-bottom: 6vh;
 }
 
 .content-wrapper > * {
