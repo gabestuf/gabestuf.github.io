@@ -8,6 +8,7 @@
     --light-color: #f4edfb;
     --main-color: rgb(161, 94, 255);
     --dark-color: rgb(18, 18, 18);
+    --dark-med-color: rgb(31, 31, 31);;
 }
 
 * {
@@ -189,7 +190,7 @@ body {
     height: 3em;
     border-radius: .4em 1.5em;
     border: 2px solid var(--main-color);
-    margin: 1rem;
+    margin: .4rem .7rem;
     background-color: rgba(107, 189, 228, 0.05);
     font-size: 1rem;
     transition: .2s;
@@ -216,9 +217,6 @@ a {
 
 footer {
     padding: 2rem 0;
-    text-align: center;
-    
-    color: var(--light-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,11 +225,14 @@ footer {
     z-index: 2;
     position: relative;
     transform-style: preserve-3d;
-    transform:  translateZ(-1px) scale(calc(10/9));
-    margin-bottom: calc()
+    /* transform:  translateZ(-1px) scale(calc(10/9)); */
+    margin-bottom: -200rem;
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    background-color: var(--dark-med-color);
 }
 
-footer::after {
+/* footer::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -240,9 +241,7 @@ footer::after {
     z-index: -1;
     border-top: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
-}
-
-
+} */
 
 footer > span > a {
     color: var(--light-color);

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/desktopHeader.css">
 
   <script defer src="js/index.js"></script>
+  <script defer src="js/contact.js"></script>
   <script defer src="js/hideHeaderOnScroll.js"></script>
 
 </head>
@@ -24,11 +25,10 @@
       <i class="fa fa-bars"></i>
     </a>
   </div>
-
   <div class="nav-wrapper" data-menuopen=0>
     <div class="header-buttons">
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <!-- <a href="projects.html">Projects</a> -->
       <a href="contact.html">Contact</a>
     </div>
   </div>
@@ -36,13 +36,13 @@
   <div class="nothing"></div>
   <header class="desktop-header closed-header">
     <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <!-- <a href="projects.html">Projects</a> -->
     <a href="contact.html">Contact</a>
     <i class="fa fa-window-close close-icon" aria-hidden="true" onclick="hideDesktopHeader()"></i>
     <i class="fa fa-bars hamburger" onclick="showDesktopHeader()" data-manualopen=0></i>
   </header>
 
-  <div class="content-wrapper">
+  <div class="content-wrapper contact-content-wrapper">
 
     <h1>Gabriel Camacho</h1>
 
@@ -52,7 +52,6 @@
 
         <div class="contact-info">
           <h4>Email</h4>
-          <a>gtcamacho@wpi.edu</a>
           <a>gcamacho1258@gmail.com</a>
         </div>
         <div class="contact-info">
@@ -93,6 +92,17 @@
       </div>
 
     </div>
+
+    <!-- <form class="contact-form">
+      <h2>Contact Me!</h2>
+      <label for="title-input">Message Title</label>
+      <input type="text" name="title-input" id="title-input">
+      <label for="description-input">Message Description</label>
+      <input type="text" name="description-input" id="description-input">
+      <label for="contact-input">How can I contact you? (Leave a link or number)</label>
+      <input type="text" name="contact-input" id="contact-input">
+      <button>Submit</button>
+    </form> -->
 
   </div>
   <!-- <footer id="footer">
