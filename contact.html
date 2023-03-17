@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/desktopHeader.css">
 
   <script defer src="js/index.js"></script>
+  <script defer src="js/contact.js"></script>
   <script defer src="js/hideHeaderOnScroll.js"></script>
 
 </head>
@@ -24,11 +25,10 @@
       <i class="fa fa-bars"></i>
     </a>
   </div>
-
   <div class="nav-wrapper" data-menuopen=0>
     <div class="header-buttons">
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <!-- <a href="projects.html">Projects</a> -->
       <a href="contact.html">Contact</a>
     </div>
   </div>
@@ -36,67 +36,84 @@
   <div class="nothing"></div>
   <header class="desktop-header closed-header">
     <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <!-- <a href="projects.html">Projects</a> -->
     <a href="contact.html">Contact</a>
     <i class="fa fa-window-close close-icon" aria-hidden="true" onclick="hideDesktopHeader()"></i>
     <i class="fa fa-bars hamburger" onclick="showDesktopHeader()" data-manualopen=0></i>
   </header>
+  <div class="wrapper2">
 
-  <div class="content-wrapper">
+    <div class="content-wrapper contact-content-wrapper">
 
-    <h1>Gabriel Camacho's File</h1>
+      <h1>Gabriel Camacho</h1>
 
-    <div class="contact-wrapper">
+      <div class="contact-wrapper">
 
-      <div class="contact-info-wrapper">
+        <div class="contact-info-wrapper">
 
-        <div class="contact-info">
-          <h4>Email</h4>
-          <a>gtcamacho@wpi.edu</a>
-          <a>gtcamacho1258@gmail.com</a>
-        </div>
-        <div class="contact-info">
-          <h4>Phone</h4>
-          <a>631-830-7021</a>
-
-        </div>
-        <div class="contact-info">
-          <h4>Website</h4>
-          <a>gabecamacho.com</a>
-        </div>
-        <div class="contact-info">
-          <h4>Education</h4>
-          <a>Worcester Polytechnic Institute (BA)</a>
-          <a>Ronald McDonalds School of Lesbian Dance Theory</a>
-        </div>
-      </div>
-
-      <div class="contact-button-wrapper">
-        <a href="resume.html" class="action-button action-button-large">
-          <div type="button">
-            <span>Resume</span>
-            <p class="button-option">Resume</p>
+          <div class="contact-info">
+            <h4>Email</h4>
+            <a>gcamacho1258@gmail.com</a>
           </div>
-        </a>
+          <div class="contact-info">
+            <h4>Phone</h4>
+            <a>631-830-7021</a>
+          </div>
+          <div class="contact-info">
+            <h4>Website</h4>
+            <a>gabecamacho.com</a>
+          </div>
+          <div class="contact-info">
+            <h4>Education</h4>
+            <a>Worcester Polytechnic Institute - <span style="font-style: italic;">Computer Science BS</span> </a>
+          </div>
+        </div>
 
+        <div class="contact-button-wrapper">
+          <a href="resume.html" class="action-button action-button-large">
+            <div type="button">
+              <span>Resume</span>
+              <p class="button-option">Resume</p>
+            </div>
+          </a>
 
+          <a class="action-button action-icon" href="https://www.linkedin.com/in/gabriel-camacho-136135251/"
+            target="_blank">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
 
-        <a class="action-button action-icon">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
-        </a>
-        <a class="action-button action-icon">
-          <i href="https://github.com/" class="fa fa-lg fa-github"></i>
-        </a>
-        <a class="action-button action-icon">
-          <i href="https://github.com/" class="fa fa-discord" aria-hidden="true"></i>
-        </a>
+          <a class="action-button action-icon" href="https://github.com/gabestuf" target="_blank">
+            <i class="fa fa-lg fa-github"></i>
+          </a>
+
+          <a class="action-button action-icon" target="_blank" onclick="copyEmail()">
+            <i class="fa fa-envelope" aria-hidden="true" style="font-size: 80%"></i>
+          </a>
+        </div>
+
       </div>
+
+      <form class="contact-form">
+        <h2>Contact Me!</h2>
+        <label for="title-input">Message Title</label>
+        <input type="text" name="title-input" id="title-input" required />
+        <label for="description-input">Message</label>
+        <textarea type="text" name="description-input" id="description-input" required></textarea>
+        <label for="contact-input">Your Email</label>
+        <input type="email" name="contact-input" id="contact-input" required>
+        <button>Submit</button>
+      </form>
 
     </div>
-
   </div>
 
 
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText("gcamacho1258@gmail.com")
+      alert("email copied to clipboard")
+    }
+  </script>
 
 </body>
 

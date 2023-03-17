@@ -2,7 +2,9 @@
 
 
 .content-wrapper {
-    background-image: url("/img/beach.jpg");
+    background: linear-gradient(330deg, rgba(7,16,35,1) 0%, rgb(25, 9, 36) 25%, rgba(7,16,35,1) 50%,rgb(43, 8, 83) 75%, rgba(7,16,35,1) 100%);
+
+
 }
 
 .card-wrapper {
@@ -13,9 +15,15 @@
     flex-direction: column;
 }
 .close-icon {
-    color:rgb(161, 94, 255);
+    color:var(--main-color);
 }
-
+.card-link {
+    text-decoration: underline;
+    color: white;
+}
+a:hover {
+    color: var(--main-color);
+}
 /* CARDS */
 .card {
     position: relative;

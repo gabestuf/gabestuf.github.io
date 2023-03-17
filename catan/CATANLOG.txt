@@ -1,0 +1,92 @@
+Day 1 - 4/7/2021
+actually more like week 2 but I am just now creating the log
+
+CHANGELOG 
+
+V1.0 4/7/2021
+- Released first iteration of app
+- Able to place settlements on any node 
+- Roll or input dice rolls 
+- Game will track roll #'s and resources collected per turn
+
+V1.1
+- Settlements can be upgraded to cities without having to use settlement button. (For consistency)
+
+V1.2
+- Updated UI, still very wack but slightly better
+
+V1.3 
+- Added basic robber functionality
+
+V1.4  4/10
+- Added buttons to select dice numbers 
+- Added resources blocked variable to JSON object for analysis 
+- slightly improved UI using grid and JS for robber button highlighting
+- logged JSON in local storage
+- Added fogged out effect when finish game is clicked to end interaction with the board and some endgame changes to prep for V2 
+- Encountered bugs: 
+  1. Encountered a strange bug where when rolled a 6, hex 4 was a 6 and contained mud. The desert was on hex 3 with the robber on it.
+     I should have gained 1 mud, but instead I gained 1 sheep. I have not been able to recreate a situation like this since. Pls fix :(
+  2. If you click settlement button, then robber button, zIndexing creates some weird things. 
+     To fix, clicking one will toggle the other off. Will also give me a chance to turn some ugly bits of code into nice functions 
+     such as showSettlementLayer, hideSettlementLayer, showBoardLayer,HideBoardLayer
+
+V1.5 4/11
+- More CSS safauhsof
+
+V1.6 4/12
+- Added Chart JS library for analyzing data 
+- Added Sum graph and Resource percentage pie chart 
+
+V1.7 4/13
+- Can no longer place settlements directly next to one another 
+- started thinking about ways to balance the board generator, (NOT BOGOSORT pls :/)
+
+V1.7.1
+- fixed but where 2nd row Odd ID'd nodes were hiding the wrong nodes that it thought were adjacent 
+- spent about 2 hours chasing a bug because I forgot to comment out some test code bruh
+V1.7.2
+- changes so small I dont remember
+V1.7.3 
+- more settlement node fixes 
+- hide JSON and analysis until after finish game btn has been clicked 
+
+
+
+GOALS FOR V2
+- look at data such as:
+  1. Resources gained graph, # of resources on Y, turn on X
+  2. Dice information, such as sum of dice frequency, also individual red vs yellow die stats
+  3. Resource frequency
+  4. Dice Resource correlation
+- Work on balanced map making? Start with making sure 8s and 6s can't be adjacent
+
+
+GOALS FOR V3
+- Implement Inventory System
+- Be able to have buttons to buy roads, settlements, cities, and dev cards and track inflow and outflow of resources,
+- Be able to discard if a seven is rolled
+- On analysis html page, add resources gained vs resources lost, 
+- Analyze resource efficiency 
+- What resources were most valuable/rare, which were most useless
+
+GOALS FOR V4
+- Better UI, make sure trading UI is good
+- Clean up code, improve the CSS and HTML by doing it with JS
+- Work on that node making function
+- Document 
+
+GOALS FOR V5
+- Implement tracking for multiple people (3-4 person games)
+- Track whose turn it is
+- Be able to trade between players 
+- Player names
+
+GOALS FOR V6
+- Analyze that information to see who got the most/best trades, who got the least/worst trades
+
+GOALS FOR V7
+- Database to store previous games 
+
+
+

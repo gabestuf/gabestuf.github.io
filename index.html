@@ -13,11 +13,15 @@
   <link rel="stylesheet" href="css/bio.css">
   <link rel="stylesheet" href="css/desktopHeader.css">
   <script defer src="js/index.js"></script>
+  <script defer src="js/bio.js"></script>
   <script defer src="js/hideHeaderOnScroll.js"></script>
 
 </head>
 
 <body>
+  <!-- <div class="splash">
+    <h1 class="fade-in">Welcome to My Website</h1>
+  </div> -->
   <div class="header">
     <a class="menu-button" onclick="toggleDisplayMenu()">
       <i class="fa fa-bars"></i>
@@ -26,72 +30,199 @@
   <div class="nav-wrapper" data-menuopen=0>
     <div class="header-buttons">
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <!-- <a href="projects.html">Projects</a> -->
       <a href="contact.html">Contact</a>
     </div>
   </div>
   <header class="desktop-header closed-header">
     <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <!-- <a href="projects.html">Projects</a> -->
     <a href="contact.html">Contact</a>
     <i class="fa fa-window-close close-icon" aria-hidden="true" onclick="hideDesktopHeader()"></i>
     <i class="fa fa-bars hamburger" onclick="showDesktopHeader()" data-manualopen=0></i>
   </header>
 
-  <div class="content-wrapper">
-    <div class="background-image-main">
-    </div>
-    <div class="content">
-      <img class="mobile-picture" src="/img/southampton.jpg" alt="photo of me">
-      <div class="words">
-        <h1>Hello future employers</h1>
-        <p>My name are Gabe. I am a person. I like cows. </p>
-        <button onclick="window.location.href='projects.html'">Projects</button>
+  <div class="wrapper">
+
+    <div class="content-wrapper content-wrapper-main" id="main">
+      <div class="words ">
+        <h1>Hi, I'm Gabe</h1>
+        <p>Learn more about me below!</p>
+        <a href="contact.html"><button class="btn">Contact</button></a>
+        <a href="#about"><button class="btn">About Me</button></a>
       </div>
+      <img class="mobile-picture" src="/img/photo6.jpg" alt="photo of me">
     </div>
+
+
+
+    <div class="about-wrapper" id="about">
+      <a href="#about" class="toAbout"><i class="fa fa-angle-down"></i></a>
+
+
+
+
+      <div class="about-card opacity0">
+        <h1 class="main-h1">Hello There</h1>
+        <p>I am currently a student at Worcester Polytechnic Institute studying Computer Science, where I have
+          participated in many software development teams and projects. For my contact information and resume, please
+          click <a class="intext-a" href="contact.html">here</a>. Keep scrolling to learn a little about me!
+          <!-- I am working on a
+          number
+          of other projects
+          which you can check out <a class="intext-a" href="projects.html">here</a>. If you are interested in learning
+          more about me, I
+          have left some snippets below. Thank you! -->
+
+        </p>
+      </div>
+
+      <div class="about-card opacity0">
+        <h1>Weekend Web Projects</h1>
+        <p> Once in a while when there's a new framework I want to try, or I have an idea in mind, I'll spend a weekend
+          seeing how far I can get with the project. Here are some recent ones I've done!
+        </p>
+        <a class="projectsContainer" href="https://bowling-scores.vercel.app/">
+          <div class="webProject">
+            <div class="webProjectImgWrapper">
+              <div class="webProjectText">
+                <h3>Bowling Scorekeeper</h3>
+                <p>An application to keep track of bowling scores!</p>
+              </div>
+              <img class="webProjectImg" src="./img/BowlingAppNewt.jpg" />
+            </div>
+          </div>
+        </a>
+        <a class="projectsContainer" href="https://in-q.vercel.app/">
+          <div class="webProject">
+            <div class="webProjectImgWrapper">
+              <div class="webProjectText">
+                <h3>InQ</h3>
+                <p>Create and share surveys!</p>
+              </div>
+              <img class="webProjectImg" src="./img/inq.png" />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="about-card opacity0">
+        <h1 class="main-h1">About Me</h1>
+        <p>
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="text-wrapper opacity0">
+          <h1>Computer Science</h1>
+          <p> Studying computer science at WPI has been an incredible journey! I've had the opportunity to defuse binary
+            bombs in assembly, teach agents to nagivate worlds, and design my own programs such as this website!
+            Programming is a way for me to express my ideas and be creative in a unique and evolving manner.</p>
+        </div>
+        <div class="image-container">
+          <img src="img/code.jpg" alt="image" class="opacity0">
+        </div>
+      </div>
+      <div class="info-card ">
+        <div class="text-wrapper  opacity0">
+          <h1>Music Technology & Production</h1>
+          <p> I love to discover and create new music. Whether I'm jamming with my friends or listening in solitude, I
+            always enjoy the presence of music. I've been fortunate to continue my musical education in college. I've
+            worked at a music summer camp, and even released a few of my own songs! </p>
+        </div>
+        <div class="image-container">
+          <img src="img/music_hardware.jpg" alt="image" class="opacity0">
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="text-wrapper opacity0">
+          <h1>Gaming</h1>
+          <p> It all began here. I bought my first computer in order to play Minecraft without having to steal my mom's
+            laptop. Messing around with that machine made me curious and inspired me to study Computer Science in
+            college. My favorite games include the Witcher, Counter-Strike, Portal, Minecraft, and Battlefield</p>
+        </div>
+        <div class="image-container">
+          <img src="img/computer2.jpg" alt="image" class="opacity0">
+        </div>
+      </div>
+      <div class="info-card ">
+        <div class="text-wrapper  opacity0">
+          <h1>Guitar</h1>
+          <p> Another way for me to express my creativity! Learning guitar with my friends resulted in some of my
+            fondest memories. My roommate recently started learning guitar which has boosted my inspiration to keep
+            improving as well. In college I've played in a few bands including Mourning Routine and Emergency Stop. </p>
+        </div>
+        <div class="image-container">
+
+          <img src="img/guitar.jpg" alt="image" class="opacity0">
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="text-wrapper opacity0">
+          <h1>Sports</h1>
+          <p>Playing varsity baseball in high school was one of the most demanding and satisfying experiences I've had.
+            Competition at that level forced me to approach problems differently. Training and preparing taught me that
+            it
+            takes a long time to develop skills. Now I play squash, golf and go bowling regularly. </p>
+        </div>
+        <div class="image-container">
+
+          <img src="img/baseball.jpg" alt="image" class="opacity0">
+        </div>
+      </div>
+
+      <div class="info-card ">
+        <div class="text-wrapper  opacity0">
+          <h1>Study Abroad - Lyon, France!</h1>
+          <p>For my Interactive Qualifying Project at WPI, I was fortunate enough to be able to travel to Lyon, France,
+            and work with an organization called SINGA! They work with migrants and refugees integrate them into host
+            countries, such as France.
+            We worked on SINGA Lyon's entrepreneurial incubation program, specifically how to incorporate the program's
+            alumni. Read our report <a class="intext-a"
+              href="https://digital.wpi.edu/concern/student_works/s1784q206?locale=en">here</a>. </p>
+        </div>
+        <div class="image-container">
+
+          <img src="img/Lyon.jpg" alt="image" class="opacity0">
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="text-wrapper opacity0">
+          <h1>Bowling</h1>
+          <p>I've recently gotten into bowling! I've built a small web app to keep track of my scores. I recently hit
+            257! Still chasing that 300.</p>
+        </div>
+        <div class="image-container">
+          <img src="img/BowlingApp.png" alt="image" class="opacity0">
+        </div>
+      </div>
+
+      <div class="info-card ">
+        <div class="text-wrapper  opacity0 ">
+          <h1>Living in Massachussetts</h1>
+          <p> College is the first time I've lived outside of New York. Luckily, the changes weren't too drastic (except
+            the quality of pizza). Having roommates turned out to be a great experience and I can't imagine life without
+            them! </p>
+        </div>
+        <div class="image-container">
+          <img src="img/arcade.jpg" alt="image" class="opacity0">
+        </div>
+      </div>
+
+
+    </div>
+    <footer id="footer">
+      <span id="ftrhome"> <a href="./index.html">Home</a> </span>
+      <span id="ftrcontact"> <a href="./contact.html">Contact</a> </span>
+    </footer>
+
 
   </div>
 
-  <div class="about-wrapper">
-    <div class="divider"></div>
-
-    <div class="about-card">
-      <h1>Hello There</h1>
-      <p>I am currently a student at Worcester Polytechnic Institute studying Computer Science. I am working on a number
-        of other projects
-        which you can check out <a class="intext-a" href="projects.html">here</a>. If you are interested in learning
-        more about me, I
-        have left some snippets below. Thank you! </p>
-    </div>
-
-    <div class="info-card-image">
-      <img src="img/a3.jpg" alt="My friends and I holding an LED board we constructed">
-      <p>My roommates and I (2nd from right) after finishing a programmable LED board</p>
-    </div>
-
-    <div class="info-card">
-      <div class="text-wrapper text-only">
-        <h1>The LED Board</h1>
-        <p> When I first arrived at Worcester Polytechnic Institute in 2019, I knew next to nothing about
-          Computer Science. This project's main contributors were Jake, Zach, and Ted, who wired the board, programmed
-          the raspberry pi, and designed the entire system. The system featured a web app which could change the text,
-          which could scroll across the board or do a number of other animations. Between each LED are diffusers made of
-          paper and tape. That's the part I helped with. Though my contribution was small, it was fascinating to be part
-          of this team. </p>
-      </div>
-
-    </div>
-
-    <div class="info-card">
-      <div class="text-wrapper backwards">
-        <h1>Guitar</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, tempore.</p>
-      </div>
-      <img src="img/guitar.jpg" alt="image">
-    </div>
 
   </div>
-
 </body>
 
 </html>

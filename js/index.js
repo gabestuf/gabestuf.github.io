@@ -1,13 +1,14 @@
-
+//const splashElement = document.querySelector('.splash')
 const mobileMenuElement = document.querySelector(".nav-wrapper")
 const mobileMenuButtonElement = document.querySelector(".menu-button")
 const contentElement = document.querySelector(".content-wrapper")
 const aboutWrapperElement = document.querySelector(".about-wrapper")
+// const footerElement = document.getElementById('footer')
 
 window.onload = () => {
     mobileMenuElement.classList.add('hideElement');
+    mobileMenuElement.style.display = "grid";
     mobileMenuButtonElement.classList.add('color-light');
-    contentElement.classList.remove('hideElement');
     autoShowDesktopHeader();
 }
 
@@ -18,6 +19,7 @@ const toggleDisplayMenu = () => {
         contentElement.classList.remove('hideElement');
         mobileMenuButtonElement.classList.add('color-light');
         mobileMenuButtonElement.classList.remove('color-white');
+        // footerElement.classList.remove('hideElement')
         if (aboutWrapperElement) {
             aboutWrapperElement.classList.remove('hideElement')
         }
@@ -27,6 +29,7 @@ const toggleDisplayMenu = () => {
         contentElement.classList.add('hideElement');
         mobileMenuButtonElement.classList.remove('color-light');
         mobileMenuButtonElement.classList.add('color-white');
+        // footerElement.classList.add('hideElement')
         if (aboutWrapperElement) {
             aboutWrapperElement.classList.add('hideElement')
         }
