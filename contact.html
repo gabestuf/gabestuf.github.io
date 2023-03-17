@@ -58,7 +58,6 @@
           <div class="contact-info">
             <h4>Phone</h4>
             <a>631-830-7021</a>
-
           </div>
           <div class="contact-info">
             <h4>Website</h4>
@@ -94,23 +93,20 @@
 
       </div>
 
-      <!-- <form class="contact-form">
-      <h2>Contact Me!</h2>
-      <label for="title-input">Message Title</label>
-      <input type="text" name="title-input" id="title-input">
-      <label for="description-input">Message Description</label>
-      <input type="text" name="description-input" id="description-input">
-      <label for="contact-input">How can I contact you? (Leave a link or number)</label>
-      <input type="text" name="contact-input" id="contact-input">
-      <button>Submit</button>
-    </form> -->
+      <form class="contact-form">
+        <h2>Contact Me!</h2>
+        <label for="title-input">Message Title</label>
+        <input type="text" name="title-input" id="title-input" required />
+        <label for="description-input">Message</label>
+        <textarea type="text" name="description-input" id="description-input" required></textarea>
+        <label for="contact-input">Your Email</label>
+        <input type="email" name="contact-input" id="contact-input" required>
+        <button>Submit</button>
+      </form>
 
     </div>
   </div>
-  <!-- <footer id="footer">
-    <span id="ftrhome"> <a href="./index.html">Home</a> </span>
-    <span id="ftrcontact"> <a href="./contact.html">Contact</a> </span>
-  </footer> -->
+
 
   <script>
     function copyEmail() {

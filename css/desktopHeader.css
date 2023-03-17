@@ -10,9 +10,9 @@
     user-select: none;
     display: block;
     color: white;
-    font-size: 1.2rem;
     font-weight: bold;
     transition: .1s;
+
 }
 .desktop-header a:hover {
     transform: scale(1.1,1.1);
@@ -42,7 +42,6 @@
         position: absolute;
         border-radius: 50%;
         color: rgb(238, 212, 255);
-        font-size: 1.3rem;
         right: 0;
         bottom: -2rem;
     }
@@ -61,7 +60,6 @@
         width: 3.1rem;
         border-radius: 50%;
         color:rgb(161, 94, 255);
-        font-size: 190%;
     }
     .closed-header .hamburger {
         display: block;

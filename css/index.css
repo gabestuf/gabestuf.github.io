@@ -8,13 +8,15 @@
     --light-color: #f4edfb;
     --main-color: rgb(161, 94, 255);
     --dark-color: rgb(18, 18, 18);
-    --dark-med-color: rgb(31, 31, 31);;
+    --dark-med-color: rgb(31, 31, 31);
+    --clear-main-color: rgba(161, 94, 255,.4);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 22px;
 }
 
 *,html {
@@ -29,6 +31,17 @@
 body {
     font-family: 'Quicksand', sans-serif;
     backface-visibility: hidden;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.2rem;
 }
 
 /* navigation */
@@ -48,7 +61,6 @@ body {
     display: flex;
     margin-top: 1rem;
     right: 1rem;
-    font-size: 190%;
     border: 2px solid var(--main-color);
     border-radius: 50%;
     color:rgb(66, 66, 66);
@@ -84,7 +96,6 @@ body {
 .header-buttons a {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 2em;
     font-weight: 700;
     margin: 1em;
     color: #551A8B;
@@ -165,7 +176,7 @@ body {
 }
 
 .content-wrapper h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-top: 1rem;
     line-height: 1em;
 }
@@ -192,8 +203,8 @@ body {
     border: 2px solid var(--main-color);
     margin: .4rem .7rem;
     background-color: rgba(107, 189, 228, 0.05);
-    font-size: 1rem;
     transition: .2s;
+    font-size: .8rem;
 }
 
 .btn:hover {
@@ -272,6 +283,17 @@ footer span:hover {
     display: none;
 }
 
+@media only screen and (max-width: 500px) {
+    * {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    * {
+        font-size: 18px;
+    }
+}
+
 @media only screen and (max-width: 1480px) {
     .content-wrapper-main {
         display: flex;
@@ -282,16 +304,7 @@ footer span:hover {
     }
 }
 
-@media only screen and (min-width: 1435px) {
-    .content-wrapper h1 {
-        font-size: 4rem;
-        margin-bottom: 0;
-    }
-    .content-wrapper p {
-        font-size:1.5rem;
-    }
-   
-}
+
 
 @media only screen and (min-width: 750px) {
     
@@ -313,25 +326,8 @@ footer span:hover {
     }    */
   }
   
-@media only screen and (max-width: 1435px) and (min-width: 750) {
-  
-   
-    .content-wrapper h1 {
-        font-size: 2rem;
-    }
-    .content-wrapper p {
-        font-size:1.5rem;
-    }
-}
 
-/* @keyframes imageBounce {
-    0%,100% {
-        transform: translateY(1rem);
-    }
-    50% {
-        transform: translateY(0rem);
-    }
-} */
+
 
 .color-light {
     color: var(--main-color);
