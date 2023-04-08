@@ -8,7 +8,7 @@ const onContactFormSubmit = async (e) => {
     const msgBody = e.target[1].value
     const msgContact = e.target[2].value
 
-    const response = await fetch("https://gabestuf@gmail.com/emailMe/contactGabe", {
+    const response = await fetch("https://gabestuf.com/emailMe/contactGabe", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
